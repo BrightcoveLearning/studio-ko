@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">클라우드 플레이 아웃 채널 관리<strong> +</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">플레이어 관리<strong>+</strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">지금 트렌드 보고서 참조</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">레거시 인제스트 프로파일 생성</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일 (레거시)</a></li>
                   
                 
                   
@@ -885,10 +924,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
     <p>브라이트코브는 Video Cloud 계정과 연결된 기본 인제스트 프로필을 업데이트할 권리를 보유합니다. 또한 사용자 지정 인제스트 프로파일을 업데이트해야 할 수도 있습니다. 인제스트 프로필이 변경되면 새 인제스트 프로필 설정에 해당하는 변환을 갖도록 계정의 기존 동영상을 다시 트랜스코딩할 수 있습니다.</p>
     <aside class="bcls-aside bcls-aside--information">참고: 기존 비디오를 다시 트랜스코딩하는 기능은 프로페셔널 및 엔터프라이즈 계정에서만 사용할 수 있습니다. 이 기능에 관심이 있으시면 계정 관리자에게 문의하십시오.</aside>
-    <p>미디어 모듈을 사용하거나 동적 인제스트 API를 사용하여 비디오를 다시 트랜스코딩할 수 있습니다. 다시 코드 변환이 필요한 동영상이 많을 때 를 사용하는 것이 더 나은 해결책이<span translate="No">Dynamic Ingest API</span>될 수 있습니다. 동적 인제스트 API를 사용하여 비디오를 다시 트랜스코딩하려면<a href="https://apis.support.brightcove.com/dynamic-ingest-legacy/getting-started/overview-dynamic-ingest-api-legacy-ingest.html">동적 인제스트 API 개요</a>개발자 문서를 참조하십시오.</p>
+    <p>미디어 모듈을 사용하거나 동적 인제스트 API를 사용하여 비디오를 다시 트랜스코딩할 수 있습니다. 다시 코드 변환이 필요한 동영상이 많을 때 를 사용하는 것이 더 나은 해결책이<span translate="No">Dynamic Ingest API</span>될 수 있습니다. 동적 인제스트 API를 사용하여 비디오를 다시 트랜스코딩하려면<a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html">동적 인제스트 API 개요</a>개발자 문서를 참조하십시오.</p>
     <aside class="bcls-aside bcls-aside--information">참고: 계정에 공유된 동영상은 다시 트랜스코딩할 수 없습니다.</aside>
     <aside class="bcls-aside bcls-aside--information">참고: 업로드 모듈을 사용하거나 동적 인제스트 API를 사용하여 업로드한 비디오만 다시 트랜스코딩할 수 있습니다. 비디오를 다시 코드 변환할 수 없으면 다시 코드 변환이 실패합니다.</aside>
-    <aside class="bcls-aside bcls-aside--information">참고: 동영상이 계정에 추가되었을 때 동영상 마스터가 보관된 경우에만 동영상을 다시 코드 변환할 수 있습니다. 모든<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일은</a>마스터를 아카이브합니다.</aside>
+    <aside class="bcls-aside bcls-aside--information">참고: 동영상이 계정에 추가되었을 때 동영상 마스터가 보관된 경우에만 동영상을 다시 코드 변환할 수 있습니다. 사용 된 인제 스트 프로파일에 따라 오래된 비디오에는 마스터가 없을 수 있습니다.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="steps">비디오를 다시 트랜스코딩하는 단계</h2>
@@ -899,7 +938,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>[ <strong>비디오 파일</strong> ] 섹션에서 [ <strong>다시 코드 변환</strong> ] 을 클릭합니다.</li>
       <li>사용할 인제스트 프로파일을 선택합니다.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15921-retranscode-settings.png"/></figure>
-        <aside class="bcls-aside bcls-aside--information">참고: 동적 전송 또는 컨텍스트 인식 인제스트 프로필을 사용하여 처음에 트랜스코딩된 비디오는 이러한 인제스트 프로필 유형 중 하나를 사용해서만 다시 트랜스코딩할 수 있습니다. 레거시 인제스트 프로파일을 사용하여 트랜스코딩된 비디오는 모든 유형의 프로파일을 사용하여 다시 트랜스코딩할 수 있습니다.</aside>
+        <!-- <aside class="bcls-aside bcls-aside--information">Note: Videos that were initially transcoded using a Dynamic Delivery or Context Aware ingest profile can only be retranscoded using one of those ingest profile types. Videos transcoded using a Legacy ingest profile can be retranscoded with any type of profile.</aside> -->
       </li>
       <li>기존 이미지를<strong>유지하려면 기존 축소판 및 포스터 이미지</strong>유지를 선택합니다. 이 확인란의 선택을 취소하면 선택한 인제스트 프로파일의 이미지 설정에 따라 새 이미지가 생성됩니다.</li>
       <li>[ <strong>코드 변환] 을</strong>클릭합니다.</li>
@@ -922,7 +961,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  페이지 최종 업데이트 : 2021 년 1 월 31 일
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -984,7 +1030,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -995,8 +1041,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

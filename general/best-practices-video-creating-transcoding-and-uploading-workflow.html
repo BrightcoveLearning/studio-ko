@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">클라우드 플레이 아웃 채널 관리<strong> +</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">플레이어 관리<strong>+</strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">지금 트렌드 보고서 참조</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">레거시 인제스트 프로파일 생성</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일 (레거시)</a></li>
                   
                 
                   
@@ -1015,11 +1054,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li><strong>파일 크기에 인색하지 마십시오.</strong> Video Cloud는 대용량 파일 업로드를 처리할 수 있도록 제작되었습니다. 성공적인 업로드를 위해 파일을 압축하는 데 익숙하다면 하지 마십시오. 고품질 소스 파일을 업로드해야 합니다.</li>
         <li><strong>고품질 파일을 받으십시오. </strong>생성 할 것으로 예상되는 가장 높은 변환의 비트 전송률이 2-3 배인 소스를 권장합니다. 따라서 비디오 비트 전송률이 3Mbps인 최상위 변환을 사용하려는 경우 에서 6~9Mbps의 비트 전송률을 가진 소스 비디오를 업로드하려고 합니다. 또한 데이터가 너무 많은 비디오가 HTTP를 통해 원활하게 스트리밍되지 않는 경우도 있습니다. 지나치게 높은 품질의 비디오는 버퍼링을 유발할 수 있습니다. <br/>
           <!-- <p>
-      Video Cloud Express customers have access to fixed renditions and need not exceed the bit rate for their fastest rendition when considering data compression rates. Video Cloud Pro and Enterprise customers should consider the bit rate of their current fastest rendition as well as any rendition they might opt to create in the future when re-encoding existing videos with new transcoding settings.
+      Video Cloud Express customers have access to fixed renditions and need not exceed the bit rate for their fastest rendition when considering data compression rates. Video Cloud Enterprise customers should consider the bit rate of their current fastest rendition as well as any rendition they might opt to create in the future when re-encoding existing videos with new transcoding settings.
     </p> --></li>
         <li><strong>프레임 속도와 일관성 유지</strong> . 끊김 현상을 방지하기 위해 촬영한 프레임 속도로 내보냅니다. 또한 내보내기 프레임 속도 설정이 소스와 동일하지 않으면 비동기 비디오 및 오디오 트랙이 발생할 위험이 있습니다.</li>
         <li><strong>기본 파일의 사본을 보관하십시오.</strong> : 네이티브 비디오 파일을 편집하거나 새로 압축하거나 다시 인코딩하려는 경우 네이티브 비디오 파일을 저장하는 것이 좋습니다. 다음의 프로필 사용<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">표준 수집 프로필 목록</a>대상 고객과 일치하거나 자체 수집 프로필을 만듭니다. <!-- <p>
-        <a href="node/3412">Re-encoding existing videos</a> is available only to Video Cloud Pro and Enterprise publishers. You may find after publication that your video would benefit by making changes to the exporting settings. Video Cloud does provide a way to <a href="node/3412#newsource">re-encode your video from a higher quality source</a> file, which allows you to keep all the metadata assigned to a title but to upload a video in the latest most flexible encoding format.
+        <a href="node/3412">Re-encoding existing videos</a> is available only to Video Cloud Enterprise publishers. You may find after publication that your video would benefit by making changes to the exporting settings. Video Cloud does provide a way to <a href="node/3412#newsource">re-encode your video from a higher quality source</a> file, which allows you to keep all the metadata assigned to a title but to upload a video in the latest most flexible encoding format.
       </p> --></li>
         <li><strong>고해상도로 내보낼 때 작업 및 크기 고려</strong> : 고해상도 동영상은 특히 최소 비트 전송률을 사용하는 동시에 고품질 재생을 유지함으로써 이점을 누릴 수 있습니다. 보다<a href="video-source-file-specifications-and-recommendations.html#highres">고해상도 인코딩 권장 사항</a>비디오 크기, 종횡비 및 콘텐츠의 작업량을 고려할 때 비트 전송률 최소값</li>
         <li><strong>모바일 전략 채택</strong> . 데스크톱 모니터와 함께 모바일 장치에 비디오를 표시하려면 비디오를 유연한 H.264 형식으로 인코딩하고 다른 인코딩 옵션을 고려해야 합니다. <!-- <p>
@@ -1080,7 +1119,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  페이지 최종 업데이트 08 Dec 2020
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1142,7 +1188,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1153,8 +1199,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

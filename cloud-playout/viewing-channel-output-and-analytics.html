@@ -1,12 +1,12 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="이 항목에서는 실행중인 Cloud Playout 채널에 대한 출력 및 분석을 보는 방법을 배웁니다.">
   
-  <title>비디오 클라우드 스튜디오 교육 비디오</title>
+  <title>채널 출력 및 분석보기</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -129,9 +137,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/training/">교육</a></li>
+      <li class="breadcrumb-item"><a href="/cloud-playout/">클라우드 플레이 아웃</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">비디오 클라우드 스튜디오 교육 비디오</li>
+      <li class="breadcrumb-item active" aria-current="page">채널 출력 및 분석보기</li>
     </ol>
   </nav>
 </header>
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">클라우드 플레이 아웃 채널 관리<strong> +</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">플레이어 관리<strong>+</strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">지금 트렌드 보고서 참조</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">레거시 인제스트 프로파일 생성</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일 (레거시)</a></li>
                   
                 
                   
@@ -877,85 +916,42 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<!-- don't remove any script or stylesheet links! --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/css/learning-paths/tabs.css" />
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous" />
-<link href="https://learning-services-media.brightcove.com/doc-assets/css/landing-page/landing-page.css" rel="stylesheet" />
-<!-- wrapper for landing page -->
-<article class="landing-page-wrapper">
-<!-- wrapper for all landing-page-header blocks --><!-- the first td should contain an image or video, the second, text -->
-
-<h1>비디오 클라우드 스튜디오 교육 비디오</h1>
-<summary>이 항목은 모든 비디오 클라우드 스튜디오 교육 비디오의 목록입니다.</summary>
-<section class="bcls-section">
-    <a href="register-training.html">
-<h4><i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;&nbsp;강사 주도식 교육 등록</h4></a>
-<!-- don't delete this break tag! -->
-
-<section class="tabs"><!-- tabs; href values should be #tab1, #tab2, etc. -->
-  <ul class="tab-links">
-    <li class="active"><a href="#tab1">개요<br/>&nbsp;</a></li>
-    <li><a href="#tab2"><br/>비디오 추가</a></li>
-    <li><a href="#tab3"><br/>비디오 관리</a></li>
-    <li><a href="#tab4"><br/>비디오 게시하기</a></li>
-    <li><a href="#tab5"><br/>플레이어 관리</a></li>
-    <li><a href="#tab6">분석<br/>&nbsp;</a></li>
-    <li><a href="#tab7">행정 기관<br/>&nbsp;</a></li>
-    <li><a href="#tab8">지원<br/>&nbsp;</a></li>
-  </ul>
-  <section class="tab-content">
-    <section id="tab1" class="tab active">
-      <h2>개요</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="4344773087001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
-    <section id="tab2" class="tab">
-      <h2>비디오 추가</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="4344773085001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
-    <section id="tab3" class="tab">
-      <h2>비디오 관리</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="4344773088001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
-    <section id="tab4" class="tab">
-      <h2>비디오 게시</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="4365619157001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
-    <section id="tab5" class="tab">
-      <h2>플레이어 관리</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="4389672424001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
-    <section id="tab6" class="tab">
-      <h2>분석 도구</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="4344773110001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
-    <section id="tab7" class="tab">
-      <h2>관리</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="4344773086001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
-    <section id="tab8" class="tab">
-      <h2>지원</h2>
-      <section class="landing-page-section">
-        <div data-experience="59934f41e7588f000f8a6b5d" data-playlist-id="6051809867001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_59934f41e7588f000f8a6b5d/live.js"></script></section>
-    </section>
+<h1>채널 출력 및 분석보기</h1>
+<article class="bcls-article">
+  <summary>이 항목에서는 실행중인 Cloud Playout 채널에 대한 출력 및 분석을 보는 방법을 배웁니다.</summary>
+  <section class="bcls-section">
+    <h2 id="analytics">채널 출력 및 분석 보기</h2>
+    <p>채널이<strong>달리는</strong>상태, 채널 출력 및 분석을 볼 수 있습니다. 채널을 클릭하십시오. <strong>채널</strong>페이지를 클릭하여 채널 세부 정보를 엽니 다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/cloud-playout/cloudplayout-program-analytics.png"/></figure>
+    <aside class="bcls-aside bcls-aside--information">참고: 미리보기 이미지는 3초마다 업데이트됩니다.</aside>
+    <p>딸깍 하는 소리<strong> Brightcove Live에서보기</strong>현재 실행중인 프로그램이있는 라이브 모듈 제어실 페이지를 엽니 다. 프로그램에서 현재 재생중인 비디오는<strong>지금 플레이</strong>배너. 또한<strong>상태</strong>오른쪽 상단의 알림 및<img src="/assets/images/cloud-playout/cloudplayout-video-icon.png" alt="라이브 아이콘"/>사용 가능한 라이브 피드가 있으면 녹색으로 표시됩니다. 그렇지 않으면 라이브 이벤트가 현재 재생 중이면 빨간색으로 표시되고 VOD 콘텐츠가 재생 중이면 회색으로 표시됩니다.</p>
+    <p>다음과 같은 분석 값이 표시됩니다.</p>
+    <ul>
+      <li><strong>네트워크 입력</strong> -마지막 1 분 동안의 초당 평균 바이트</li>
+      <li><strong>네트워크 아웃</strong> -마지막 1 분 동안의 초당 평균 바이트</li>
+      <li><strong>드롭 된 프레임</strong> -마지막 순간에 삭제 된 프레임 비율</li>
+    </ul>
+    <p>그만큼<strong>네트워크 입력</strong>분석은 라이브 이벤트에 대한 스트림이 실패한시기를 감지하는 데 특히 유용합니다 (실시간 스트림이 아닌 출력에서 재생되는 슬레이트 비디오도 확인해야 함).
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/cloud-playout/cloudplayout-network-in-analytics.png" alt="Network In Analytics"/>
+        <figcaption class="bcls-caption--image">Network In Analytics</figcaption>
+      </figure>
+    </p>
   </section>
-</section>
+  <section class="bcls-section">
+    <h2 id="Related_topics">関連トピック</h2>
+    <ul>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+      <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">서버 측 광고 (SSAI) 활성화</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">개요: EPG API</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API 참조</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">채널 API 참조</a></li>
+    </ul>
+  </section>
 </article>
-<script src="https://learning-services-media.brightcove.com/doc-assets/js/landing-page/tabs.js"></script>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -970,7 +966,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  페이지 최종 업데이트 : 2021 년 2 월 1 일
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1032,7 +1035,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1043,8 +1046,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">클라우드 플레이 아웃 채널 관리<strong> +</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">플레이어 관리<strong>+</strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">지금 트렌드 보고서 참조</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">레거시 인제스트 프로파일 생성</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일 (레거시)</a></li>
                   
                 
                   
@@ -893,7 +932,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>프로필 이름 및 설명</strong></li>
       <li><strong>프로필 버전</strong> -사용되는 트랜스 코딩 유형을 나타냅니다. 표시되는 유형은 Video Cloud 계정 구성 방식에 따라 달라집니다.
         <ul>
-          <li><strong>유산</strong> -레거시 트랜스 코딩이 사용됩니다.</li>
           <li><strong>동적 전달</strong> -Dynamic Delivery 트랜스 코딩이 사용됩니다. Dynamic Delivery에 대한 자세한 내용은<a href="/general/overview-dynamic-delivery.html"> Dynamic Delivery 개요</a> .</li>
           <li><strong>상황 인식</strong>&nbsp; -상황 인식 트랜스 코딩이 사용됩니다. 컨텍스트 인식 인코딩에 대한 자세한 내용은<a href="/general/overview-context-aware-encoding.html">컨텍스트 인식 인코딩 개요</a> .</li>
         </ul>
@@ -911,11 +949,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
     <p>Brightcove에서 제공 한 수집 프로필에 대한 자세한 내용은<strong>유형</strong>의<strong>표준 VOD</strong>또는<strong>스탠다드 라이브</strong> ), 다음 문서 중 하나를 참조하십시오.</p>
     <ul>
-      <li><strong>레거시 프로필 버전</strong> - <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">레거시 트랜스 코딩을위한 표준 수집 프로필</a></li>
       <li><strong>동적 전달 또는 컨텍스트 인식 프로필 버전</strong> - <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">동적 전달 및 컨텍스트 인식 인코딩을위한 표준 수집 프로필</a></li>
       <li><strong>커스텀 라이브 유형</strong> - <a href="https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html">표준 Live Ingest 프로필</a></li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">참고: 품질이 낮은 소스 컨텐츠를 업로드하고 표준 프로파일 중 하나를 선택하면 Video Cloud는 소스와 같거나 낮은 품질의 변환만 생성합니다. 사용자 정의 프로필을 만들 때 다음을 사용할 수 있습니다. <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/conditional-output.html">조건부 출력 매개 변수</a>소스가 지정한 품질 기준과 일치하지 않는 경우 변환이 생성되지 않도록합니다. 이렇게 하면 품질이 낮은 소스 파일을 업로드할 때 동적 인제스트 시스템에서 더 높은 품질의 변환을 만들 수 없습니다.</aside>
+    <!-- <aside class="bcls-aside bcls-aside--information">Note: When lower quality source content is uploaded and one of the standard profiles is selected, Video Cloud will only produce renditions that are equal to or lower in quality than the source. When creating your own custom profiles, you may want to use <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/conditional-output.html">conditional output parameters</a> to prevent renditions from being generated if the source doesn't match the quality criteria you specify. This will prevent the dynamic ingest system from creating higher quality renditions when lower quality source files are uploaded.</aside> -->
     <p>[프로파일 수집 관리] 페이지에서는 다음과 같은 작업을 수행할 수 있습니다.</p>
     <ul>
       <li><a href="#create">새 수집 프로필 만들기</a></li>
@@ -925,10 +962,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="#hide">수집 프로필 숨기기 / 표시</a></li>
     </ul>
   </section>
-  <section class="bcls-section">
-    <h2 id="archivemasters">마스터 아카이빙 및 배포</h2>
-    <p>마스터 (소스) 파일을 보관 및 배포하도록 인제스트 프로파일을 구성할 수 있습니다. 마스터를 아카이브하면 마스터 파일의 복사본이 유지되며 비디오를 다시 업로드할 필요 없이 나중에 다시 트랜스코딩할 수 있습니다. 마스터를 배포하면 마스터를 CDN에 푸시하고 재생 가능한 변환으로 사용할 수 있습니다. 그만큼<strong>표준 VOD</strong>수집 프로파일은 마스터를 보관하고 배포하지 않도록 구성됩니다. 사용자 지정 인제스트 프로파일을 만들 때 이 동작을 변경할 수 있습니다. 마스터 아카이브 및 배포에 대한 추가 정보는 다음을 참조하십시오. <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">아카이빙 마스터</a>문서. 수집 프로필을 만들 때 구성 할 수있는 모든 필드 목록은<a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/ingest-profiles-api-fields-reference-legacy-ingest.html">수집 프로필 API 필드 참조</a>개발자 문서.</p>
-  </section>
+  <!-- <section class="bcls-section">
+    <h2 id="archivemasters">Archiving and distributing masters</h2>
+    <p>Ingest profiles can be configured to archive and distribute master (source) files. Archiving the master keeps a copy of the master file and provides the ability for the video to be re-transcoded in the future without the need to upload it again. Distributing the master enables the master to be pushed to the CDN and used as a playable rendition. The <strong>Standard VOD</strong> ingest profiles are configured to archive and not distribute the master. You may wish to change this behavior when creating a custom ingest profile. For additional information on archiving and distributing masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document. For a list of all the fields that can be configured when creating ingest profiles, see the <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/ingest-profiles-api-fields-reference-legacy-ingest.html">Ingest Profiles API Fields Reference</a> developer document.</p>
+  </section> -->
   <section class="bcls-section">
     <h2 id="create">새 인제스트 프로파일 만들기</h2>
     <aside class="bcls-aside bcls-aside--information">참고: 인제스트 프로필을 만들고 편집하는 기능은 엔터프라이즈 및 프로페셔널 계정을 가진 게시자만 사용할 수 있습니다.</aside>
@@ -936,8 +973,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node15628-new-profile.png"/></figure>
     <p>새 인제스트 프로파일을 만드는 프로세스는 생성 중인 프로파일 유형에 따라 달라집니다. 사용자 지정 인제스트 프로파일을 만드는 방법에 대한 자세한 내용은 다음 문서 중 하나를 참조하십시오.</p>
     <ul>
-      <li><a href="creating-legacy-ingest-profiles.html">레거시 수집 프로필 생성</a></li>
-      <li><a href="creating-ingest-profiles-dynamic-delivery.html">Dynamic Delivery를위한 수집 프로필 생성</a></li>
+      <!-- <li><a href="creating-legacy-ingest-profiles.html">Creating Legacy Ingest Profiles</a></li> -->
+      <li><a href="creating-ingest-profiles-dynamic-delivery.html">동적 전달을 위한 인제스트 프로파일 생성</a></li>
       <li><a href="creating-ingest-profiles-context-aware-encoding.html">컨텍스트 인식 인코딩을위한 수집 프로파일 생성</a></li>
       <li><a href="https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html">사용자 정의 라이브 인제 스트 프로파일 생성</a></li>
     </ul>
@@ -978,14 +1015,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
     </ol>
     <aside class="bcls-aside bcls-aside--information">참고: 기본 수집 프로필을 선택할 때 프로필이<a href="#hide">표시되고 숨겨지지 않음</a> .</aside>
-    <aside class="bcls-aside bcls-aside--information">참고: 동적 배달 프로필만 소셜 클리핑 기본 프로필로 설정할 수 있습니다. 레거시 및 CAE 프로파일은 지원되지 않습니다.</aside>
+    <aside class="bcls-aside bcls-aside--information">참고: 동적 배달 프로필만 소셜 클리핑 기본 프로필로 설정할 수 있습니다. CAE 프로필은 지원되지 않습니다.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="hide">인제스트 프로파일 숨기기 및 표시</h2>
     <p>프로필과 연결된 슬라이더를 클릭하여<strong>숨기기 위치로 인제스트 프로파일을 숨길</strong>수 있습니다. 이 기능은 필요하지 않을 수 있는 기본 프로파일을 숨기는 데 유용합니다.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node15628-hide-profile.png"/></figure>
-    <p>숨겨진 인제스트 프로파일은 업로드 모듈의 인제스트 프로파일 목록에 나타나지 않습니다. 이 예에서는<strong>높은 해상도</strong>프로필이 표시되지 않습니다.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node15628-upload-profiles.png"/></figure>
+    <p>숨겨진 인제스트 프로파일은 업로드 모듈의 인제스트 프로파일 목록에 나타나지 않습니다.</p>
+    <figure class="bcls-figure"></figure>
   </section>
 </article>
 
@@ -1003,7 +1040,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  페이지 최종 업데이트 : 2021 년 2 월 4 일
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1065,7 +1109,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1076,8 +1120,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">클라우드 플레이 아웃 채널 관리<strong> +</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">플레이어 관리<strong>+</strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">지금 트렌드 보고서 참조</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">레거시 인제스트 프로파일 생성</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일 (레거시)</a></li>
                   
                 
                   
@@ -950,14 +989,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>이 작업에서는 비디오 속성을 편집합니다.</p>
     <ol class="bcls-tasklist-restart">
       <li>비디오 클라우드 스튜디오에서 <strong>미디어</strong>를 클릭하여 미디어 모듈을 엽니다.</li>
-      <li>제목을 클릭하십시오. <strong>브라운 펠리컨</strong>비디오, <strong>비디오 정보</strong>섹션을 클릭 한 다음<strong>편집하다</strong> . 설정<strong>간단한 설명</strong> ...에<code translate="No">Pelican on the rocks</code> .
+      <li>제목을 클릭하십시오. <strong>브라운 펠리컨</strong>비디오, <strong>비디오 정보</strong>섹션을 클릭 한 다음<strong>편집하다</strong> . 설정<strong>간단한 설명</strong> ...에<code translate="No">Pelican on the rocks</code> .</li>
+      <li>을 추가하다<strong>꼬리표</strong>의<code translate="No">birds</code> .
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-pelican-properties.png"/></figure>
       </li>
-      <li><strong>저장</strong>을 클릭합니다.</li>
-      <li>에서<strong>분류</strong>섹션, 추가<strong>꼬리표</strong>의<code translate="No">birds</code> .
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-pelican-tags.png"/></figure>
-      <p>딸깍 하는 소리<strong>비디오로 돌아 가기</strong>동영상 목록으로 돌아갑니다.</p>
-      </li>
+      <li>딸깍 하는 소리<strong>비디오로 돌아 가기</strong>동영상 목록으로 돌아갑니다.</li>
       <li>제목을 클릭하십시오. <strong> http://learning-services-media.brightcove.com/vc-quick-start/oystercatcher.mp4</strong>비디오, <strong>비디오 정보</strong>섹션을 클릭 한 다음<strong>편집하다</strong> . 다음 등록 정보를 설정합니다.
         <ul>
           <li><strong>이름: </strong><code translate="No">Oystercatcher</code></li>
@@ -967,10 +1003,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>딸깍 하는 소리<strong>저장</strong>완료되면<strong>비디오로 돌아 가기</strong>동영상 목록으로 돌아갑니다.</p>
       </li>
       <li>둘 다 편집<strong>총칭</strong>그리고<strong>딱따구리</strong>동영상. 비디오에 태그 지정<code translate="No">birds</code> .</li>
-      <br/>
-      <li>업데이트된 비디오가 다음과 같이 나타나는지 확인합니다.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-updated-videos.png"/></figure>
-      </li>
       <li>(선택 사항) 일부 동물 비디오를 편집하고 비디오에<code translate="No">animals</code> .</li>
     </ol>
   </section>
@@ -1004,10 +1036,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3>단일 비디오 게시</h3>
       <ol class="bcls-tasklist-restart">
         <li>비디오 클라우드 스튜디오에서 <strong>미디어</strong>를 클릭하여 미디어 모듈을 엽니다.</li>
-        <li>옆에있는 확인란을 클릭합니다. <strong>브라운 펠리컨</strong>비디오를 클릭 한 다음<strong>게시 및 포함&gt; 웹 플레이어</strong> .
+        <li>옆에있는 확인란을 클릭합니다. <strong>브라운 펠리컨</strong>비디오를 클릭 한 다음<strong>게시 및 포함&gt; 웹에 게시</strong> .
           <aside class="bcls-aside bcls-aside--information">참고: 다른 게시 옵션에 대한 자세한 내용은 해당 문서를 참조하십시오.
             <ul>
-              <li><strong>이메일</strong> - <a href="/publish/publishing-video-email.html">이메일에 비디오 게시</a></li>
+              <li><strong>이메일 랜딩 페이지</strong> - <a href="/publish/publishing-video-email.html">이메일에 비디오 게시</a></li>
               <li><strong>소셜 네트워크</strong> - <a href="https://social.support.brightcove.com/general/publishing-videos-social-media-platforms.html">소셜 미디어 플랫폼에 비디오 게시</a></li>
               <li><strong>갤러리 인 페이지 경험</strong> - <a href="/publish/publishing-videos-page-experience.html">인 페이지 환경에 비디오 게시</a></li>
             </ul>
@@ -1047,7 +1079,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol class="bcls-tasklist-restart">
       <li>측면 탐색 패널에서 <strong>모든 비디오</strong>를 클릭하여 계정 내의 비디오를 모두 표시합니다.</li>
       <li>재생 목록에 추가하고자 하는 비디오 옆에 있는 확인란을 클릭합니다.</li>
-      <li>딸깍 하는 소리<strong>추가&gt; 재생 목록에 추가</strong> .</li>
+      <li><strong>더보기 재생 목록에 &gt; 추가를</strong>클릭합니다.</li>
       <li><strong>즐겨찾기</strong> 재생 목록을 선택한 다음 <strong>추가</strong>를 클릭합니다.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-select-playlist.png"/></figure>
       </li>
@@ -1094,7 +1126,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>딸깍 하는 소리<strong>미디어</strong>미디어 모듈을 엽니 다.</li>
       <li>딸깍 하는 소리<strong>모든 재생 목록</strong>측면 탐색 패널에서 모든 재생 목록을 표시합니다.</li>
       <li>옆에있는 확인란을 클릭합니다. <strong>조류</strong>재생 목록.</li>
-      <li>딸깍 하는 소리<strong>게시 및 포함&gt; 웹 플레이어</strong> .</li>
+      <li>딸깍 하는 소리<strong>게시 및 포함&gt; 웹에 게시</strong> .</li>
       <li>선택<strong>재생 목록 플레이어</strong> .</li>
       <li>클릭<strong> URL</strong>링크. 플레이어가 새 브라우저 탭에서 열립니다. 재생 목록 플레이어가 나타나고 재생 목록의 비디오를 재생할 수 있는지 확인합니다.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-published-playlist.png"/></figure>
@@ -1120,7 +1152,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  페이지 최종 업데이트 : 2021 년 2 월 3 일
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1182,7 +1221,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1193,8 +1232,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

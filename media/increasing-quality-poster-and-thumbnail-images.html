@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">클라우드 플레이 아웃 채널 관리<strong> +</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">플레이어 관리<strong>+</strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">지금 트렌드 보고서 참조</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">레거시 인제스트 프로파일 생성</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일 (레거시)</a></li>
                   
                 
                   
@@ -915,22 +954,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <ol class="bcls-tasklist-restart">
         <li>Studio 헤더에서<strong>관리자</strong>링크. ADMIN 메뉴에 액세스하려면 관리자 역할이있는 Video Cloud Studio 사용자 여야합니다.</li>
         <li>딸깍 하는 소리<strong>수집 프로필</strong> .</li>
-        <li>클릭<strong>프로필 이름</strong> . 프로필 편집기에 프로필 정의가 표시됩니다.</li>
-        <li>이미지 크기를 보는 방법은<strong>프로필 버전</strong> (예 : 레거시, 동적 전달 또는 컨텍스트 인식) 클릭.
-          <ul>
-            <li>에 대한<strong>유산</strong>프로필을 보려면 프로필 편집기 창 하단으로 스크롤하여<strong><code translate="No">"media_type": "image"</code></strong> . 두 개의 항목이 있어야합니다. 하나는 포스터 용이고 다른 하나는 썸네일 용입니다.</li>
-            <li>에 대한<strong>동적 전달</strong>과<strong>상황 인식</strong>프로필, 이미지 크기는<strong>이미지</strong>프로필 정의 섹션.</li>
-          </ul>
-          <p>다음 예는 Dynamic Delivery 프로필 버전에서 가져온 것입니다.</p>
+        <li>클릭<strong>프로필 이름</strong> . 프로필 편집기에 프로필 정의가 표시됩니다.
+        <!-- <li>The method to view the image sizes will vary based upon the <strong>Profile Version</strong> (i.e. Legacy, Dynamic Delivery or Context-Aware) that was clicked. -->
+            <!-- <li>For <strong>Legacy</strong> profiles, scroll to the bottom of the Profile Editor window and search for <strong><code translate="No">"media_type": "image"</code></strong>. There should be two entries, one for the poster and one for the thumbnail.</li> -->
+					에 대한<strong>동적 전달</strong>과<strong>상황 인식</strong>프로필, 이미지 크기는<strong>이미지</strong>프로필 정의 섹션. 다음 예는 Dynamic Delivery 프로필 버전에서 가져온 것입니다.
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16671-profile-editor.png"/></figure>
         </li>
         <li>포스터 및 이미지 크기를 확인하십시오. 플레이어가 포스터 크기보다 크면 이미지가 업 스케일된다는 점을 기억하십시오.</li>
       </ol>
-      <aside class="bcls-aside bcls-aside--information">참고: 표준 수집 프로필의 이미지 크기는 다음 문서 중 하나에도 설명되어 있습니다.
-        <ul>
-          <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">레거시 트랜스 코딩을위한 표준 수집 프로필</a></li>
-          <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">동적 전달 및 컨텍스트 인식 인코딩을위한 표준 수집 프로필</a></li>
-        </ul>
+      <aside class="bcls-aside bcls-aside--information">참고: 표준 수집 프로필의 이미지 크기도 문서에 기록되어 있습니다. 
+          <!-- <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a></li> -->
+          <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">동적 전달 및 컨텍스트 인식 인코딩을위한 표준 수집 프로필</a> .
       </aside>
     </div>
   </section>
@@ -945,12 +979,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="resize">자동 크기 조정</h2>
     <p>Studio 또는 Dynamic Ingest API를 통해 커스텀 포스터 및 / 또는 썸네일 이미지를 추가하면 기본적으로 Video Cloud는 계정의 기본 인제 스트 프로필에 정의 된 이미지 크기와 일치하도록 크기를 조정합니다.</p>
-    <h3>자동 크기 조정 무시</h3>
-    <aside class="bcls-aside bcls-aside--information">참고: 이 옵션은<strong>유산</strong>프로필 버전.</aside>
-    <p>이 동작을 재정의하고 Video Cloud가 실제 이미지 크기를 유지하도록하려면 다음 단계를 따르십시오.</p>
+    <!-- <h3>Override auto-resizing</h3>
+    <aside class="bcls-aside bcls-aside--information">Note: This option is only available when using a <strong>Legacy</strong> profile version.</aside>
+    <p>If you want to override this behavior and have Video Cloud retain actual image dimensions, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li><a href="/admin/managing-ingest-profiles.html">새 사용자 지정 수집 프로필 만들기</a>계정 (또는 기존 사용자 지정 프로필 수정)</li>
-      <li>다음이 포함 된 게시물 및 썸네일에 대한 이미지 변환 포함<strong>바로 그거죠</strong>이들<code translate="No">width</code>과<code translate="No">height</code>값 :
+      <li><a href="/admin/managing-ingest-profiles.html">Create a new custom ingest profile</a> for your account (or modify an existing custom profile)</li>
+      <li>Include image renditions for the post and thumbnail that have <strong>exactly</strong> these <code translate="No">width</code> and <code translate="No">height</code> values:
         <pre class="line-numbers">
 <code class="language-json" translate="No">{
 "media_type": "image",
@@ -967,9 +1001,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <span style="background-color:#FFFFC9;border:1px #ffcc33" solid="">"height": 9999</span>
 }</code></pre>
       </li>
-      <li><a href="/admin/managing-ingest-profiles.html#default">이것을 기본 프로필로 설정</a>계정.</li>
+      <li><a href="/admin/managing-ingest-profiles.html#default">Make this the default profile</a> for the account.</li>
     </ol>
-    <p>이제 Studio 또는 Dynamic Ingest를 통해 커스텀 이미지를 추가하면 소스 이미지의 원래 크기를 갖게됩니다.</p>
+    <p>Now when you add custom images via Studio or Dynamic Ingest, they will have the original dimensions of the source images.</p> -->
   </section>
   <section class="bcls-section">
     <h2 id="existing">내 기존 동영상은 어떻습니까?</h2>
@@ -1004,7 +1038,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  페이지 최종 업데이트 : 2021 년 2 월 1 일
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1066,7 +1107,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1077,8 +1118,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

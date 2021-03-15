@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">클라우드 플레이 아웃 채널 관리<strong> +</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">플레이어 관리<strong>+</strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">지금 트렌드 보고서 참조</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">레거시 인제스트 프로파일 생성</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">표준 인제스트 프로파일 (레거시)</a></li>
                   
                 
                   
@@ -922,6 +961,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>이름</strong> - 255자 이하여야 합니다.</li>
       <li><strong>ID</strong> - 시스템에 할당된 비디오 ID (모든 비디오 클라우드 계정에서 고유함)</li>
       <li><strong>간단한 설명</strong> - 250 자 이하. </li>
+      <li><strong>태그 </strong> - 쉼표로 구분된 하나 이상의 태그입니다. 태그를 사용하여 스마트 재생 목록에 비디오를 추가하거나 CMS API를 사용하여 비디오를 찾을 수 있습니다.
+        <ul>
+          <li>태그는 최대 128자까지 가능합니다. 128자를 초과하는 태그의 경우 변경 사항을 저장하려고 하면 오류가 표시됩니다.</li>
+          <li>태그에는 쉼표를 사용할 수 없습니다. 예를 들어, “지붕, 다락방+앞 마당”태그는 지원되지 않습니다.</li>
+          <li>동영상은 총 1200개 이상의 태그를 가질 수 없습니다.</li>
+          <li>대소문자 (소문자, 대문자) 만 다른 태그는 동일한 태그로 처리되며 대소문자는 원래 태그의 태그와 자동으로 일치합니다.</li>
+          <li>대소문자 구분 문제는 Video Cloud에서 외부에서 처리해야 합니다. 예를 들어 JavaScript 메서드를 사용하여 문자열을 수정할 수 있습니다.</li>
+          <li>태그를 입력한 후<strong>쉼표</strong>키를 누르거나<strong>Enter</strong>키를 누릅니다. 추가된 태그는 색상 상자에 표시됩니다.
+            <figure class="bcls-figure"></figure>
+          </li>
+        </ul>
+      </li>
       <li><strong>참조 ID</strong> - 게시자가 비디오 또는 재생 목록에 할당한 고유 ID입니다. 150자 이하로 제한됩니다. 참조 ID는 Video Cloud에 의해 생성되는 고유 ID인 비디오 ID 또는 재생 목록 ID와는 다릅니다. 참조 ID를 사용하면 게시자의 콘텐츠 관리 시스템 등 Video Cloud와 다른 서비스 간에 조정할 수 있습니다. 두 개의 비디오가 동일한 참조 ID를 가질 수 없으므로 참조 ID를 일괄적으로 수정할 수 없습니다. 참조 ID는 항상 고유값이어야 합니다. 비디오를 삭제하면 이전에 할당된 참조 ID를 다시 사용할 수 있습니다.</li>
       <li><strong>비디오 투사</strong> - 비디오가 기록되는 방법을 나타냅니다.
         <ul>
@@ -948,21 +999,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><strong>저장</strong>을 클릭하여 변경 사항을 저장합니다.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="categorization">범주화</h2>
-    <p>분류 섹션에는 비디오가 할당된<strong>태그</strong> , <strong>수동 재생 목록</strong>및 비디오가 있는<strong>폴더가</strong>표시됩니다. 등록 정보를 편집하려면 이 섹션에서 직접 변경합니다. Enter 키를 눌러 변경 사항을 저장합니다.</p>
+    <h2 id="categorization">분류</h2>
+    <p>범주화 섹션에는<strong>수동 재생 목록</strong>비디오가 할당되고<strong>폴더</strong>비디오가 있습니다. 등록 정보를 편집하려면 이 섹션에서 직접 변경합니다. Enter 키를 눌러 변경 사항을 저장합니다.</p>
     <ul>
-      <li><strong>태그 </strong> - 쉼표로 구분된 하나 이상의 태그입니다. 태그를 사용하여 스마트 재생 목록에 비디오를 추가하거나 CMS API를 사용하여 비디오를 찾을 수 있습니다.
-        <ul>
-          <li>태그는 최대 128자까지 가능합니다. 128자를 초과하는 태그의 경우 변경 사항을 저장하려고 하면 오류가 표시됩니다.</li>
-          <li>태그에는 쉼표를 사용할 수 없습니다. 예를 들어, “지붕, 다락방+앞 마당”태그는 지원되지 않습니다.</li>
-          <li>동영상은 총 1200개 이상의 태그를 가질 수 없습니다.</li>
-          <li>대소문자 (소문자, 대문자) 만 다른 태그는 동일한 태그로 처리되며 대소문자는 원래 태그의 태그와 자동으로 일치합니다.</li>
-          <li>대소문자 구분 문제는 Video Cloud에서 외부에서 처리해야 합니다. 예를 들어 JavaScript 메서드를 사용하여 문자열을 수정할 수 있습니다.</li>
-          <li>태그를 입력한 후<strong>쉼표</strong>키를 누르거나<strong>Enter</strong>키를 누릅니다. 추가된 태그는 색상 상자에 표시됩니다.
-            <figure class="bcls-figure"></figure>
-          </li>
-        </ul>
-      </li>
       <li><strong>수동 재생 목록</strong> -이 비디오가 속한 재생 목록입니다. X를 클릭하여 재생 목록에서 비디오를 제거합니다. 자세한 내용은 <a href="/media/creating-and-managing-playlists.html">재생 목록 생성 및 관리</a>를 참조하십시오.</li>
       <li><strong>폴더</strong> - 비디오가 할당된 폴더입니다. 자세한 내용은 <a href="/media/organizing-videos-using-folders.html">폴더를 사용하여 비디오 정리</a>를 참조하십시오.</li>
     </ul>
@@ -976,8 +1015,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="/media/replacing-video-source-file.html">비디오 소스 파일 바꾸기</a></li>
       <li><a href="/media/retranscoding-videos-using-media-module.html">비디오 다시 코드 변환</a></li>
     </ul>
-    <p>이 예에서는 레거시 트랜스코딩을 사용했습니다 (비디오를 업로드했을 때 레거시 인제스트 프로필이 사용됨). 다른 비디오 버전을 다운로드하려면 해당 버전의 형식 링크를 마우스 오른쪽 버튼으로 클릭하십시오.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files.png"/></figure>
     <p>이 예에서는<a href="/general/overview-dynamic-delivery.html">동적 전송</a>트랜스코딩을 사용했습니다 (비디오가 업로드될 때 동적 전송 또는 컨텍스트 인식 인코딩 인제스트 프로필이 사용됨).</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files-dd.png"/></figure>
     <aside class="bcls-aside bcls-aside--information">참고: 계정이 DRM에 대해 활성화된 경우 DRM 토글 스위치가 섹션에 나타날 수도 있습니다. DRM에 대한 자세한 내용은 DRM을<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">사용하여 콘텐츠 수집을</a>참조하십시오.</aside>
@@ -1035,7 +1072,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  페이지 최종 업데이트 : 2021 년 2 월 1 일
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1097,7 +1141,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1108,8 +1152,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({
