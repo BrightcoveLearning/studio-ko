@@ -1,0 +1,102 @@
+---
+title: 채널 에 미드롤 광고 추가
+description: 이 주제에서는 Cloud Playout 채널의 VOD 콘텐츠에 미드롤 광고를 추가하는 방법을 다룹니다.
+parent: Cloud Playout
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="introduction">소개</h2>
+		<p>이 주제를 읽기 전에 다음을 살펴보아야 합니다. <a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이아웃으로 수익 창출</a> , SSAI용 Cloud Playout 채널 활성화 및 프리롤 및 포스트롤 광고 삽입 설정을 다룹니다.</p>
+		<p>아래에서 볼 수 있듯이 미드롤 광고는 약간 다르게 작동합니다.</p>
+  </section>
+	<section class="bcls-section">
+		<h2 id="overview">개요</h2>
+		<p>미드롤 광고 삽입은 Studio 또는 CMS API를 통해 동영상용으로 생성된 큐포인트에 따라 달라집니다. Cloud Playout은 채널의 비디오에 대한 큐포인트 데이터를 가져오고 이를 기반으로 미드롤 광고 삽입 지점을 설정합니다. 큐포인트를 추가하는 방법에 대한 정보는<a href="/media/working-cue-points-media-module.html">미디어 모듈에서 큐 포인트 작업</a> </p>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Enabling_mid-roll_ad_cuepoints">미드롤 광고 큐포인트 활성화</h2>
+		<p>미드롤 광고에 대한 큐포인트 가져오기는 채널을 만들 때 또는 채널 상태에 관계없이 채널을 만들 때 또는 그 이후에 언제든지 활성화 또는 비활성화할 수 있습니다.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/cloud-playout/midroll-ads-enable-disable.png" alt="Enable Mid-Roll Ads">
+			<figcaption class="bcls-caption--image">미드롤 광고 활성화</figcaption>
+		</figure>
+	</section>
+	<section class="bcls-section">
+		<h2 id="How_mid-rolls_work_in_Cloud_Playout">Cloud Playout에서 미드롤 작동 방식</h2>
+		<ul>
+			<li>Cloud Playout은 광고 큐포인트를 기반으로 광고 위치만 설정합니다(코드 큐포인트는 무시됨).</li>
+			<li>Video Cloud에서 자동으로 생성된 프리롤 및 포스트롤 광고 큐포인트는 Cloud Playout에서 프리롤 및 포스트롤 광고가 다르게 관리되므로 무시됩니다. <a href="/cloud-playout/enabling-server-side-ads.html#ads">서버 측 광고 활성화</a> .</li>
+			<li>광고 큐포인트의 타임스탬프만 미드롤 광고 타이밍을 결정하는 데 사용됩니다. 큐포인트 메타데이터는 무시됩니다.</li>
+			<li>
+				미드롤의 기본 재생 시간은 30초입니다. 이것은 채널 설정에서 변경할 수 있습니다. 최소 지속 시간: 30 초; 최대 지속 시간: 10 분.
+				<p>미드롤 슬롯의 지속 시간은 채널 상태에 관계없이 언제든지 변경할 수 있습니다.</p>
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-cuepoints-running-state.png" alt="Edit Mid-Roll Slot Duration (RUNNING State)">
+					<figcaption class="bcls-caption--image">미드롤 슬롯 기간 편집(RUNNING 상태)</figcaption>
+				</figure>
+				<aside class="bcls-aside bcls-aside--information">메모:
+					<ul>
+						<li>수정된 기간은 현재 재생 중인 광고 슬롯에 적용되지 않습니다. 후속 광고 슬롯(동일 및 후속 동영상 내)은 수정된 광고 슬롯 지속 시간을 사용합니다.</li>
+						<li>Cloud Playout EPG는 최대한 현실에 가깝게 동적으로 생성됩니다. 미드롤 기간을 변경하면 EPG에 한동안 부정확한 일정이 표시될 수 있지만 잠시 후 자동으로 수정됩니다.</li>
+						<li>Cloud Playout이 현재 광고(미드롤 또는 포스트롤)를 재생 중이고 사용자가 사용을 시도하는 경우<strong>지금 플레이</strong>다른 자산으로 건너뛰는 옵션을 선택하더라도 광고는 프로그래밍된 광고 슬롯 기간까지 계속 재생됩니다. 이 시간 동안 사용자가 지금 재생을 시도한 동영상은 광고 슬롯의 나머지 기간 동안 광고로 덮어쓰여집니다. 사용하기 전에 광고가 완료될 때까지 기다리는 것이 좋습니다. <strong>지금 플레이</strong>스위치.</li>
+					</ul>
+					</aside>
+			</li>
+			<li>미드롤 광고는 VOD 콘텐츠에만 삽입할 수 있으며 광고 자리 표시자에는 삽입할 수 없습니다. <a href="/cloud-playout/adding-bumpers-to-vod.html">범퍼</a>또는<a href="/cloud-playout/enabling-server-side-ads.html">프리롤 및 포스트롤 광고</a> .</li>
+			<li>Cloud Playout UI 및 EPG에 있는 프로그램의 시작 및 종료 시간, 자산 기간은 미드롤 광고 콘텐츠를 반영합니다.</li>
+			<li>
+				미드롤 광고에 대한 큐포인트 데이터 가져오기는 채널의 현재 상태에 관계없이 언제든지 활성화 또는 비활성화할 수 있습니다.
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-cuepoints-running-state.png" alt="Enable/Disable Mid-Rolls while Running">
+					<figcaption class="bcls-caption--image">실행 중 미드롤 활성화/비활성화</figcaption>
+				</figure>
+				<p><strong>메모</strong></p>
+				<ol>
+					<li>
+						채널에 미드롤 가져오기 옵션이 비활성화되어 있고 자산 A가 현재 재생 중이고 미드롤 큐 포인트가 있고 채널 설정에서 지금 미드롤 가져오기 옵션이 켜져 있는 경우 - 현재 재생 자산의 광고 슬롯 현재 반복에 대해 적용되지 않습니다. 그러나 후속 자산에 대한 미드롤은 가져옵니다.
+					</li>
+					<li>
+						채널에 미드롤 가져오기 옵션이 활성화되어 있고 자산 A가 현재 재생 중이고 미드롤 큐 포인트가 있고 지금 미드롤 가져오기 옵션이 꺼져 있는 경우 - 현재 재생 중인 자산의 광고 슬롯이 적용됩니다. 최선을 다해. 현재 재생 자산의 재생 시간에 너무 가까운 일부 광고 슬롯은 여전히 광고를 재생할 수 있습니다.
+					</li>
+          <li>현재 재생 중인 자산에 큐 포인트를 추가/제거하는 것은 다양한 요인에 따라 처리됩니다. 현재 재생 시간 위치, 다른 미드롤 큐 포인트의 존재 등과 같은 요인은 Cloud Playout이 현재 재생 중인 자산의 큐 포인트의 동적 추가/제거를 처리하는 방식에 영향을 미칩니다.</li>
+				</ol>
+			</li>
+		</ul>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Identify assets with mid-rolls">미드롤로 자산 식별</h2>
+		<p>미드롤 큐포인트 가져오기가 활성화된 경우 유효한 미드롤 큐포인트가 있는 동영상은 프로그램의 동영상 제목 옆에 녹색 점선 아이콘이 표시됩니다.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-assets-with-midroll.png" alt="Videos with Mid-Roll Cuepoints">
+			<figcaption class="bcls-caption--image">미드롤 큐포인트가 있는 동영상</figcaption>
+		</figure>
+		<p>채널이<strong>초안</strong>상태에서 녹색 점선 아이콘 위로 마우스를 가져가면 미드롤 세부정보가 표시됩니다.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-draft-state.png" alt="Reveal Mid-Roll Details - DRAFT State">
+			<figcaption class="bcls-caption--image">미드롤 세부정보 공개 - 초안 상태</figcaption>
+		</figure>
+		<p>채널이<strong>달리기</strong>상태에서 녹색 점선 아이콘을 클릭하여 미드롤 세부정보를 표시할 수 있습니다.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-running-state.png" alt="Reveal Mid-Roll Details - RUNNING State">
+			<figcaption class="bcls-caption--image">미드롤 세부정보 공개 - 초안 상태</figcaption>
+		</figure>
+	</section>
+	<section class="bcls-section">
+    <h2 id="Related_topics">관련 주제</h2>
+    <ul>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a></li>
+      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a></li>
+      <li><a href="/cloud-playout/adding-bumpers-to-vod.html">클라우드 플레이 아웃에 범퍼 추가</a></li>
+      <li><a href="/cloud-playout/static-image-overlays.html">정적 이미지 오버레이</a></li>
+			<li><a href="/cloud-playout/using-channel-actions.html">채널 액션 사용</a></li>
+      <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a></li>
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">채널 임베드 코드 생성</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">개요: EPG API</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API 참조</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">채널 API 참조</a></li>
+    </ul>
+  </section>
+</article>

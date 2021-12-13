@@ -1,0 +1,115 @@
+---
+title: 캠페인 필드 및 데이터 정의
+description: 이 주제에서는 캠페인 모듈로 채울 수 있는 필드에 대한 개요를 제공합니다.
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Brightcove Campaign은 통합 플랫폼의 특정 필드에 일련의 비디오 시청 데이터를 제공합니다. 다음은 해당 필드의 예와 각 필드를 채울 데이터에 대한 설명입니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="standard">표준 필드</h2>
+    <p>이 필드는 항상 Brightcove Campaign에 의해 채워집니다.</p>
+    <table width="99%" class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="12%" style="width: 24%;">들</th>
+          <th width="88%" style="width: 33%;"><strong>기술</strong></th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>video_id</td>
+          <td valign="top"><p>시청 이벤트와 관련된 Brightcove 비디오의 ID</p></td>
+        </tr>
+        <tr>
+          <td>video_name</td>
+          <td valign="top"><p>Video Cloud의 비디오 이름</p></td>
+        </tr>
+        <tr>
+          <td>추적 ID</td>
+          <td valign="top">추가 할 수 있습니다. <a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html#trackingid">맞춤 추적 ID</a> URL에</td>
+        </tr>
+        <tr>
+          <td>external_id</td>
+          <td valign="top">사용자를 식별하는 데 사용되는 글로벌 사용자 ID (GUID)</td>
+        </tr>
+        <tr>
+          <td>player_id</td>
+          <td valign="top">보기 이벤트를 생성 한 Brightcove Player의 ID</td>
+        </tr>
+        <tr>
+          <td>page_url</td>
+          <td valign="top">동영상을 본 페이지의 URL</td>
+        </tr>
+        <tr>
+          <td>보았다</td>
+          <td valign="top">시청률-시청 한 타임 라인의 아래까지</td>
+        </tr>
+        <tr>
+          <td>time_watched</td>
+          <td valign="top">동영상을 시청 한 시간 (초)-해당 동영상에 실제로 보낸 총 시간</td>
+        </tr>
+        <tr>
+          <td>created_at</td>
+          <td valign="top">제작 일</td>
+        </tr>
+        <tr>
+          <td>updated_at</td>
+          <td valign="top">마지막 업데이트 날짜</td>
+        </tr>
+        <tr>
+          <td>is_synced</td>
+          <td valign="top">뷰 이벤트가 타사 플랫폼에 동기화되었는지 여부를 나타내는 부울입니다.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="additional">추가 필드</h2>
+    <p>이러한 필드는 자동으로 채워지지 않습니다. 추가 사용자 지정 데이터를<a href="/campaign/general/using-custom-metrics-and-events.html">추적하는 데 사용됩니다</a> . 기본적으로 Gallery <a href="https://gallery.support.brightcove.com/experiences/inpage/adding-interactions-page-experience.html"> In-Page에서 상호 작용을 캡처하도록 구성되어</a>있습니다. 대화 형 기능을 사용하지 않는 경우이 필드는 비어 있습니다.</p>
+    <table width="99%" class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="12%" style="width: 24%;">들</th>
+          <th width="88%" style="width: 33%;"><strong>기술</strong></th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>event_1, event_2, event_3</td>
+          <td valign="top"><p>맞춤 이벤트</p></td>
+        </tr>
+        <tr>
+          <td>metric_1, metric_2, metric_3</td>
+          <td valign="top"><p>맞춤 측정 항목</p></td>
+        </tr>
+        <tr>
+          <td><strong>UTM 필드</strong> -utmSource, utmMedium, utmCampaign, utmTerm 및 utmContent</td>
+          <td valign="top">UTM 필드 작업에 대한 정보는 다음을 참조하십시오. <a href="/campaign/general/working-utm-fields-campaign-module.html">캠페인 모듈에서 UTM 필드 작업</a> .</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="custom">사용자 정의 필드</h2>
+    <p>이러한 필드는 자동으로 채워지지 않습니다. 이러한 필드를 통해 참조 ID, 태그 또는 사용자 정의 필드를 MAP 또는 CRM에 동기화하는 옵션이 있습니다. 이것을 설정하려면<a href="https://supportportal.brightcove.com/s/login/?language=en_US/create">연락처 지원</a>예를 들어 다음과 같이 요청합니다. "내 Video Cloud 필드 "태그"를 캠페인 "custom_1" 필드에 매핑하십시오."</p>
+    <table width="99%" class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="12%" style="width: 24%;">들</th>
+          <th width="88%" style="width: 33%;"><strong>기술</strong></th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>custom_1, custom_2, custom_3</td>
+          <td valign="top"><p>맞춤 이벤트</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

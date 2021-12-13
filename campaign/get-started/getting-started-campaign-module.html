@@ -1,0 +1,189 @@
+---
+title: 캠페인 모듈  시작하기
+description: 이 항목에서는 비디오 참여를 추적하는 데 사용되는 캠페인 모듈에 대한 개요를 제공합니다.
+parent: Getting Started 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4582289844001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    <p>캠페인 모듈은 캠페인 지원 Brightcove 플레이어 내에서 본 비디오에 대한 비디오 참여 데이터를 추적하는 데 사용됩니다. 보기 데이터는 Video Cloud에 저장되며 Eloqua, Marketo, HubSpot 및 Salesforce와 같은 인기있는 마케팅 자동화 플랫폼에 선택적으로 동기화 할 수 있습니다.</p>
+    <p>캠페인 모듈에 액세스하려면 Video Cloud에 로그인하고<strong>운동</strong>탐색 헤더에서. 캠페인 홈페이지에는 동영상 시청 시간, 시청한 동영상 및 시청한 사람에 대한 통찰력을 제공하는 동영상 참여 데이터가 표시됩니다. 이를 통해 청중을 더 잘 참여시키고 전환 할 수 있습니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-campaign-ui.png" /></figure>
+    <p>홈페이지는 다음과 같은 기능을 제공합니다.</p>
+    <ul>
+      <li><a href="#performance">비디오 성능보기</a></li>
+      <li><a href="#leads">리드 성과보기</a></li>
+      <li><a href="#status">캠페인 모듈 상태 보기</a></li>
+    </ul>
+    <p>캠페인 모듈은 다음 기능을 제공합니다.</p>
+    <ul>
+      <li><a href="#connections">데이터 연결 설정</a></li>
+      <li><a href="#players">캠페인 플레이어 생성</a></li>
+      <li><a href="#leadforms">리드 양식 생성 및 관리</a></li>
+      <li><a href="#email">이메일에 게시</a></li>
+      <li><a href="#events">플레이어 이벤트보기</a></li>
+      <li><a href="#profiles">뷰어 프로필보기</a></li>
+      <li><a href="#jobs">동기화 활동보기</a></li>
+      <li><a href="#settings">캠페인 설정 구성</a></li>
+      <li><a href="#export">캠페인 데이터 내보내기</a></li>
+      <li><a href="#gallery_leads">갤러리 리드 내보내기</a></li>
+      <li><a href="#manage">뷰어 데이터 관리</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="performance">비디오 성능보기</h2>
+    <p>비디오 성능 섹션은 캠페인 지원 플레이어 내에서 재생된 비디오에 대한 높은 수준의 비디오 성능을 제공합니다.</p>
+    <aside class="bcls-aside bcls-aside--information">참고: 캠페인 분석 시스템은 일반 Video Cloud 분석 시스템과 별개이며 두 시스템은 데이터를 다르게 추적합니다. 따라서 두 가지를 비교하면 일부 메트릭에서 차이를 볼 수 있습니다. 예를 들어, Video Cloud 분석 시스템은 비디오가 시작되는 즉시 조회수를 계산하는 반면, Campaign 분석 시스템은 비디오 시작 10초 전까지 조회수를 계산하지 않습니다. 따라서 14명의 시청자가 동영상을 시작했지만 그 중 6명이 10초가 재생되기 전에 동영상을 중지하면 Video Cloud 분석에 14개의 조회수가 표시되고 캠페인 모듈에는 8개가 표시됩니다.</aside>
+    <p>차트의<strong></strong>기간을 선택하여 시작합니다. 다음 옵션을 사용할 수 있습니다.</p>
+    <ul>
+      <li>7 일</li>
+      <li>30 일</li>
+      <li>90 일</li>
+    </ul>
+    <p>다음 차트가 표시됩니다.</p>
+    <ul>
+      <li><a href="#viewed">가장 많이 본 동영상</a></li>
+      <li><a href="#engage">가장 매력적인 비디오</a></li>
+      <li><a href="#trends">시청자 동향</a></li>
+    </ul>
+    <div id="viewed" class="BCL-subsection">
+      <h3>가장 많이 본 동영상</h3>
+      <p>가장 많이 본 동영상 차트는 선택한 기간 동안 캠페인 지원 플레이어에서 가장 많이 본 동영상을 표시합니다.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-most-viewed.png" /></figure>
+    </div>
+    <div id="engage" class="BCL-subsection">
+      <h3>가장 매력적인 비디오</h3>
+      <p>가장 매력적인 동영상 차트는 선택한 기간 동안 캠페인 지원 플레이어에서 가장 관심을 끄는 동영상을 표시합니다. 참여는 평균 시청률입니다. 비디오 참여도를 계산하는 방법에 대한 자세한 내용은 비디오 참여 점수<a href="https://studio.support.brightcove.com/analytics/calculating-video-engagement-score.html">계산 교육 비디오를 참조하십시오</a> .</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-most-engaging.png" /></figure>
+    </div>
+    <div id="trends" class="BCL-subsection">
+      <h3>시청자 동향</h3>
+      <p>뷰어 추세 차트는 선택한 기간 동안 시간에 따른 비디오보기를 표시합니다. 알려진 뷰어와 익명 뷰어의 뷰가 모두 표시됩니다. 그래프 위로 마우스를 가져 가면 실제 데이터 포인트가 표시됩니다.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-viewer-trends.png" /></figure>
+      <aside class="bcls-aside bcls-aside--information">참고: Marketo Munchkin 연결을 사용할 때 뷰어 트렌드 그래프는 알 수없는 뷰어에 대한 데이터 만 표시합니다. Munchkin 연결을 사용할 때 사용자 세부 정보가 수집되지 않습니다. 더 자세한 사용자 정보를 보려면 Marketo REST 연결을 사용해야합니다. 자세한 내용은 REST API를 사용하여 Marketo 비디오 클라우드와<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">통합 단원을 참조하십시오</a> .</aside>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="leads">리드 성과보기</h2>
+    <p>가망 고객 정보를 보려면<strong>가망 고객</strong>탭을 클릭합니다. 리드 탭은 계정에 캠페인 리드 양식이 생성된 경우에만 나타납니다. 리드 실적 섹션은 캠페인 지원 플레이어 내에서 재생된 비디오에 대한 높은 수준의 리드 실적을 제공합니다. 차트의<strong></strong>기간을 선택하여 시작합니다. 다음 옵션을 사용할 수 있습니다.</p>
+    <ul>
+      <li>7 일</li>
+      <li>30 일</li>
+      <li>90 일</li>
+    </ul>
+    <p>다음 차트가 표시됩니다.</p>
+    <ul>
+      <li><a href="#funnel">캠페인 유입경로</a></li>
+      <li><a href="#top">최고 전환 동영상</a></li>
+      <li><a href="#leads">리드 차트</a></li>
+    </ul>
+    <div id="funnel" class="BCL-subsection">
+      <h3>캠페인 유입경로</h3>
+      <p>캠페인 유입경로는 선택한 기간 동안 캠페인 리드 양식이 있는 캠페인 지원 플레이어의 동영상에 대한 측정항목을 표시합니다.</p>
+      <ul>
+        <li><strong>비디오 노출</strong> -로드 된 동영상 수</li>
+        <li><strong>비디오 조회수</strong> -스트림이 시작될 때 녹화 된 비디오 재생 시작 횟수 (되감기 또는 다시 재생은 포함되지 않음) 개별 시청자의 척도가 아닙니다.</li>
+        <li><strong>리드 양식보기</strong> -총 리드 양식보기 수</li>
+        <li><strong>전환</strong> -제출 된 총 리드 양식 수</li>
+      </ul>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-funnel.png" /></figure>
+    </div>
+    <div id="top" class="BCL-subsection">
+      <h3>최고 전환 동영상</h3>
+      <p>최고 전환 동영상 차트는 전환율이 가장 높은 동영상을 표시합니다. 전환율은 제출 된 리드 양식의 수를 동영상 노출 수로 나눈 값입니다.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-top-conv.png" /></figure>
+    </div>
+    <div id="leads_chart" class="BCL-subsection">
+      <h3>리드 차트</h3>
+      <p>리드 차트는 선택한 기간 동안 제출 된 리드 양식의 수를 일별로 표시합니다. 그래프 위로 마우스를 가져 가면 실제 데이터 포인트가 표시됩니다.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-leads-chart.png" /></figure>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="status">캠페인 모듈 상태 보기</h2>
+    <p>캠페인 상태 섹션에는 캠페인 모듈의 현재 상태가 표시됩니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-campaign-status.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="connections">데이터 연결 설정</h2>
+    <p>NS <strong>데이터 연결</strong>옵션은 캠페인 통합을 구성하는 곳입니다. 캠페인은 인기 있는 마케팅 자동화 플랫폼("MAP &nbsp;통합") 또는 보기 데이터를 로컬로 저장한 다음 Audience API("비 MAP" 통합)를 사용하여 내보내거나 추출할 수 있습니다. 다음 표에는 지원되는 통합이 요약되어 있습니다.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="300">MAP 통합</th>
+          <th width="300">비 MAP 통합</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><ul>
+              <li><a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">Oracle Eloqua</a></li>
+              <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">Marketo (REST API)</a></li>
+              <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">Marketo (Munchkin)</a></li>
+              <li><a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">영업</a></li>
+              <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">HubSpot (REST API)</a></li>
+              <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">HubSpot (클라이언트 측 API)</a></li>
+            </ul></td>
+          <td><ul>
+              <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">맞춤형 통합</a></li>
+              <li><a href="/campaign/integrations/non-map/integrating-campaign-single-sign.html">싱글 사인온</a></li>
+              <li><a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">캠페인 추적</a></li>
+            </ul></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>캠페인 지원 플레이어를 게시할 때 고급 포함(인페이지) 게시 코드를 사용하십시오. 표준 삽입(iframe) 게시 코드는 캠페인 플러그인이 iframe 내에서 실행되므로 작동하지 않으므로 상위 페이지 URL 매개변수에 액세스할 수 없으며 올바른 쿠키를 얻지 못할 수 있습니다.</p>
+    <aside class="bcls-aside bcls-aside--information">참고: 구성할 수 있는 연결 수는 Video Cloud 구독을 기반으로 합니다.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="players">캠페인 플레이어 만들기</h2>
+    <p>NS <strong>캠페인 플레이어</strong>옵션을 사용하면 캠페인 지원 Brightcove 플레이어를 만들 수 있습니다. 비디오 참여 데이터는 캠페인 지원 비디오 플레이어 내에서 비디오 콘텐츠를 볼 때만 기록됩니다. 캠페인 지원 플레이어 생성에 대한 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/creating-campaign-enabled-player.html">캠페인 지원 플레이어 만들기</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="leadforms">리드 양식 생성 및 관리</h2>
+    <p><strong>가망 고객 양식</strong>옵션을 사용하면 데이터 수집을 위한 가망 고객 양식을 생성할 수 있습니다. 리드 양식이 생성되면 캠페인 지원 플레이어와 연결할 수 있습니다. 리드 양식 작성에 대한 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/creating-campaign-lead-form.html">캠페인 만들기&nbsp;리드 양식</a> . 타사 마케팅 자동화 플랫폼 내에서 생성 된 리드 양식을 생성하고 사용할 수도 있습니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="email">이메일에 비디오 게시</h2>
+    <p>이메일로<strong>게시</strong>옵션을 사용하면 플레이어, 비디오를 선택한 다음 비디오를 이메일로 보낼 HTML 임베드 코드를 생성할 수 있습니다. 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/publishing-video-email-using-campaign-module.html">캠페인 모듈을 사용하여 이메일에 비디오 게시</a> .</p>
+    <aside class="bcls-aside bcls-aside--information">참고: 미디어 모듈은 비디오를 이메일로 게시하는 기능도 제공합니다. 자세한 내용은 전자 메일에 비디오<a href="/publish/publishing-video-email.html">게시를 참조하십시오</a> .</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="events">플레이어 이벤트보기</h2>
+    <p>최근 활동<strong>모두</strong>옵션을 사용하면 지난 24시간 동안 기록된 플레이어 보기 이벤트를 볼 수 있습니다. 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/viewing-player-events-campaign-module.html">캠페인 모듈에서 플레이어 이벤트 보기</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="videoactivity">비디오 활동보기</h2>
+    <p><strong>비디오 (맵이 아닌)</strong>옵션을 사용하면 비디오의 보기 활동을 볼 수 있습니다. 자세한 내용은 비디오 활동<a href="/campaign/general/viewing-video-activity.html">보기를 참조하십시오</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="profiles">뷰어 프로필보기</h2>
+    <p><strong>뷰어 프로필 (맵이 아닌)</strong>옵션을 사용하면 뷰어별로 플레이어 보기 이벤트를 볼 수 있습니다. 이 옵션은 SSO 또는 사용자 정의 통합 또는 캠페인 추적을 사용할 때 활성화됩니다. 자세한 내용은 뷰어 프로필 정보<a href="/campaign/general/viewing-viewer-profile-information.html">보기를 참조하십시오</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="jobs">동기화 활동보기</h2>
+    <p>NS <strong>동기화 활동</strong>옵션은 Campaign에서 마케팅 자동화 플랫폼으로 동기화된 마지막 10개의 작업을 표시합니다. 동기화는 매시간 실행됩니다. 연결을 선택한 다음 동기화<strong>테스트</strong>단추를 클릭하여 동기화를 실행합니다. 이는 이벤트 데이터가 마케팅 자동화 플랫폼으로 전송되는지 확인하기 위해 기다릴 필요가 없도록 새로운 통합을 테스트 할 때 유용합니다. 테스트 동기화는 5 분에 한 번, 시간당 최대 10 번 실행할 수 있습니다.</p>
+    <aside class="bcls-aside bcls-aside--information">참고: 사용자 지정 통합을 사용하는 경우 동기화 작업이 생성되지 않습니다. 동기화 작업은 마케팅 자동화 플랫폼과의 통합을 사용하는 경우에만 생성됩니다.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/getting-started/node15634-jobs.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="settings">캠페인 설정 구성</h2>
+    <p><strong>설정</strong>옵션을 사용하면 계정에 대한 몇 가지 기본 설정을 구성할 수 있습니다. 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/configuring-campaign-settings.html">캠페인 설정 구성</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">캠페인 데이터 내보내기</h2>
+    <p>NS <strong>캠페인 데이터 내보내기</strong>옵션은 보기 이벤트 및 리드 양식 데이터를 내보내는 데 사용됩니다. 이 옵션은 계정 관리자에게만 표시됩니다. 캠페인 데이터 내보내기에 대한 정보는 다음을 참조하십시오. <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">캠페인 모듈에서 캠페인 데이터 내보내기</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="gallery_leads">갤러리 리드 내보내기</h2>
+    <p>갤러리 리드<strong>내보내기</strong>옵션은 갤러리 경험에서 캡처된 리드 양식 데이터를 내보내는 데 사용됩니다. 이 옵션은 계정 관리자에게만 표시됩니다. 갤러리 리드 데이터 내보내기에 대한 자세한 내용은 갤러리 리드 데이터<a href="https://gallery.support.brightcove.com/experiences/portal/exporting-gallery-lead-data.html">내보내기를 참조하십시오</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="manage">뷰어 데이터 관리</h2>
+    <p>뷰어 데이터<strong>관리</strong>옵션을 사용하면 사용자를 검색한 다음 해당 사용자를 제거하거나 해당 사용자의 데이터를 내보낼 수 있습니다. 이 옵션은 계정 관리자에게만 표시됩니다. 뷰어 데이터 관리에 대한 자세한 내용은 뷰어 데이터<a href="/campaign/admin/managing-viewer-data.html">관리를 참조하십시오</a> .</p>
+  </section>
+</article>

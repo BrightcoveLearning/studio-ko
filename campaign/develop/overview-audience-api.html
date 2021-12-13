@@ -1,0 +1,357 @@
+---
+title: '개요: 대상 API'
+description: 이 주제에서는 Audience API에 대해 학습합니다. Audience API를 사용하면 Brightcove Campaign에서 수집한 시청 이벤트 및 리드 데이터를 검색할 수 있습니다.
+parent: Developers 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="api-reference">API 참조</h2>
+    <p><a href="/develop/reference.html">API 레퍼런스도 참조하십시오</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Base_URL">기본 URL</h2>
+    <p>Audience API의 기본 URL은 다음과 같습니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Account_path">계정 경로</h2>
+    <p>모든 경우에 특정 Video Cloud 계정에 대한 요청이 이루어집니다. 항상 "계정"이라는 용어와 계정 ID를 기본 URL에 추가해야합니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1/accounts/{account_id} </code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Authentication">입증</h2>
+    <p>Audience API는 브라이트코브<a href="https://apis.support.brightcove.com/oauth/getting-started/overview-oauth-api-v4.html"> OAuth 서비스를</a>사용하여 호출을 인증합니다.</p>
+    <p>먼저 클라이언트 자격 증명 (a <code translate="No">client_id</code>및<code translate="No">client_secret</code> ) 을 가져와야 합니다. 이 작업은<a href="https://studio.support.brightcove.com/admin/managing-api-authentication-credentials.html"> OAuth 자격 증명 UI를 사용하여 수행할 수 있는 일회성</a>작업입니다. 대상 / 읽기 작업에 대한 권한이 필요합니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image" alt="Required Permissions" src="/assets/images/campaign/develop/operations.png" />
+      <figcaption class="bcls-caption--image">필요한 권한</figcaption>
+    </figure>
+    <p><a href="https://apis.support.brightcove.com/oauth/guides/oauth-create-client-credentials-using-curl.html">cURL</a>또는<a href="https://apis.support.brightcove.com/oauth/guides/oauth-create-client-credentials-using-postman.html"> Postman을 사용하여 브라이트코브 OAuth 서비스에서 직접 클라이언트 자격 증명을 얻을 수</a>있습니다.</p>
+    <p>또한 다음을 사용하여 얻은 가<code translate="No">access_token</code>필요합니다. <code translate="No">client_id</code><code translate="No">client_secret</code> API 요청과 함께 권한 부여 헤더에 전달됩니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">Authorization: Bearer <em>{access_token}</em></code></pre>
+    <p>이 (가) 5분 후에<code translate="No">access_token</code>만료되므로 각 요청에 대해 하나를 얻거나 토큰이 여전히 유효한지 확인해야 합니다. 코드 샘플을 포함하여 액세스 토큰을<a href="https://apis.support.brightcove.com/oauth/guides/getting-access-tokens.html"></a>얻는 방법에 대한 자세한 설명은 액세스 토큰 가져오기를 참조하십시오.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Error_handling">오류 처리</h2>
+    <p>오류가 발생하면 API는 다음 상태 코드 중 하나와 응답 본문에 해당 오류 코드로 응답합니다.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>상태 코드</th>
+          <th>에러 코드</th>
+          <th>기술</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>400</td>
+          <td>BAD_REQUEST_ERROR</td>
+          <td>검색어 매개 변수가 잘못되었습니다.</td>
+        </tr>
+        <tr>
+          <td>401</td>
+          <td>UNAUTHORIZED_ERROR</td>
+          <td>액세스 토큰이 없거나 만료되었거나 유효하지 않습니다.</td>
+        </tr>
+        <tr>
+          <td>404</td>
+          <td>RESOURCE_NOT_FOUND</td>
+          <td>URL이 존재하지 않습니다</td>
+        </tr>
+        <tr>
+          <td>429</td>
+          <td>REQUEST_THROTTLED_ERROR</td>
+          <td>사용자가 속도 제한 정책을 초과했습니다.</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>INTERNAL_ERROR</td>
+          <td>내부 오류가 발생했습니다.</td>
+        </tr>
+        <tr>
+          <td>504</td>
+          <td>GATEWAY_TIMEOUT_ERROR</td>
+          <td>요청을 처리하는 동안 서버 시간이 초과되었습니다.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>다음은 오류에 대한 샘플 응답 본문입니다.</p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">[
+   {
+    "error_code": "UNAUTHORIZED_ERROR",
+    "message": "Permission denied"
+   }
+]</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Parameters">매개 변수</h2>
+    <p>검색된 데이터를 제한하고 필터링하기 위해 요청에 추가 할 수있는 여러 매개 변수가 있습니다. 이는 다음 섹션에서 설명하는 모든 요청 유형에 적용됩니다.</p>
+    <h3 id="Filtering_results">결과 필터링</h3>
+    <p><code translate="No">where</code>매개 변수를 사용하여 결과를 필터링할 수 있습니다. 필터 구문은 다음과 같습니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">where=field1==value1;field2==value2</code></pre>
+    <p>예를 들면 다음과 같습니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">where=video_id==123456789;video_name==test</code></pre>
+    <p>쉼표는 논리 OR로, 세미콜론은 논리 AND로 처리됩니다. 예를 들어<code translate="No">where=video_id==1234,5678;video_name=test</code>는 “여기서 비디오_id = 1234 또는 5678, 그리고 비디오_이름 = 테스트”로 해석됩니다.</p>
+    <h3>반환 할 필드 선택</h3>
+    <p>요청에 필드 목록을 지정하여 결과를 해당 필드 하위 집합으로 제한 할 수 있습니다. 필드 구문은 다음과 같습니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">fields=field1,field4</code></pre>
+    <p>예를 들면 다음과 같습니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">fields=video_id,video_name</code></pre>
+    <p>필터링하고 정렬 할 수있는 필드는 다음 섹션의 각 요청 유형에 대해 자세히 설명되어 있습니다.</p>
+    <h3 id="Date_ranges">기간</h3>
+    <p>날짜 범위는<code translate="No">from</code>및<code translate="No">to</code>매개 변수에 지정할 수 있으며 뷰 이벤트가 마지막으로 업데이트된 날짜 (updated_at 필드) 에 적용됩니다. 날짜 범위는 다음 형식으로 표시 할 수 있습니다.</p>
+    <ul>
+      <li>현재 시간을<code translate="No">now</code>나타내는 텍스트 값</li>
+      <li>에포크 시간 값 (밀리초) (예: <code translate="No">1377047323000</code></li>
+      <li>ISO 8601 표준 국제 날짜 형식으로 표현되는 날짜: <code translate="No">YYYY-MM-DD</code>형식 (예<code translate="No">2013-09-12</code> : 이 형식으로 표현된 날짜의 경우:
+        <ul>
+          <li>지정된 모든 날짜 범위는 UTC로 해석됩니다.</li>
+          <li>주어진 날짜의 시간은 지정된 날짜에 자정 ( <code translate="No">00:00:00</code> ) 으로 해석됩니다.</li>
+        </ul>
+      </li>
+      <li>상대 날짜: <code translate="No">to</code>및<code translate="No">from</code>값 중 하나를 다른 값을 기준으로 표현할 수 있습니다. <code translate="No">d</code> (일), <code translate="No">h</code> (시간), <code translate="No">m</code> (분) 또는<code translate="No">s</code> (초). 예를 들면 다음과 같습니다.
+        <ul>
+          <li><code class="language-http" translate="No">from=2015-01-01&amp;to=31d</code></li>
+          <li><code class="language-http" translate="No">from=-48h&amp;to=now</code></li>
+          <li><code class="language-http" translate="No">from=-2d&amp;to=now</code> (이전 예제와 동일한 결과를 제공합니다)</li>
+          <li><code class="language-http" translate="No">from=-365d&amp;to=2015-12-31</code></li>
+          <li><code class="language-http" translate="No">from=-10m&amp;to=now</code></li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="Paging_results">페이징 결과</h3>
+    <p><code translate="No">limit</code>는 반환할 항목 수입니다 (기본값: 25, 최대: 100). <code translate="No">offset</code>는 건너뛸 항목 수입니다 (기본값: 0). <code translate="No">limit</code>및 를<code translate="No">offset</code>함께 사용하여 결과를 탐색하는 앱을 만들 수 있습니다. 각각 포함<code translate="No">limit</code> , <code translate="No">offset</code> , 그리고<code translate="No">count.</code> , 총 결과에 대한 반복을 설정하는 데 사용할 수 있습니다. 예를 들어, JavaScript에서 다음과 같이 필요한 총 반복을 얻을 수 있습니다.</p>
+    <pre class="line-numbers">
+<code class="language-javascript" translate="No">// response is the JSON-parsed response from the first request
+var totalRequests = Math.ceil(response.count / response.limit)</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Retrieving_view_events">보기 이벤트 검색</h2>
+    <p>계정에서 뷰 이벤트를 검색하려면 view_events 리소스에 대한<code translate="No">GET</code>요청을 수행합니다.</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1/accounts/{account_id}/view_events</code></pre>
+    <aside class="bcls-aside bcls-aside--warning">지난 이벤트만 보기 <em>처리</em> 가 응답에 나타납니다.</aside>
+    <p>다음은 cURL의 샘플 요청입니다.</p>
+    <pre class="line-numbers">
+<code class="language-bash" translate="No">curl -i https://audience.api.brightcove.com/v1/accounts/{account_id}/view_events?where=video_id==123&amp;from=-5d&amp;to=now&amp;sort=-created_at \
+  -H "Authorization: Bearer {token}"</code></pre>
+    <p>응답은 다음과 같습니다.</p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+    "count": 27,
+    "limit": 25,
+    "offset": 0,
+    "result": [
+        {
+            "created_at": "2016-04-25T18:30:21.651Z",
+            "page_url": "http://players.brightcove.net/1486906377/V1s6NOwRx_default/index.html?videoId=4842718056001",
+            "player_id": "V1s6NOwRx",
+            "time_watched": 2,
+            "updated_at": "2016-04-25T18:30:21.651Z",
+            "video_id": "4842718056001",
+            "video_name": "Horses Heading to the Track",
+            "watched": 19
+        },
+        {
+            "created_at": "2016-04-25T18:31:55.071Z",
+            "page_url": "http://players.brightcove.net/1486906377/BkgFuzyhg_default/index.html?videoId=4842718056001",
+            "player_id": "BkgFuzyhg",
+            "time_watched": 15,
+            "updated_at": "2016-04-25T18:32:00.879Z",
+            "video_id": "4842718056001",
+            "video_name": "Horses Heading to the Track",
+            "watched": 99
+        }, ...
+    }
+]</code></pre>
+    <h3 id="fieldsForViewEvents">필터링 및 선택을위한 필드</h3>
+    <p>모든<a href="#Parameters">매개변수</a>와 함께 사용할 수 있습니다<code translate="No">view_event</code>요청.</p>
+    <p>다음은 매개 변수를 사용하는 cURL의 샘플 요청입니다.</p>
+    <pre class="line-numbers">
+<code class="language-bash" translate="No">curl -i https://audience.api.brightcove.com/v1/accounts/{account_id}/view_events?where=video_id==123&amp;from=-5d&amp;to=now&amp;sort=-created_at \
+  -H "Authorization: Bearer {token}"</code></pre>
+    <p>다음 필드가 지원됩니다. <code translate="No">view_event</code>로 필터링할 때 요청<code translate="No">where</code>절 또는 중 선택할 때<code translate="No">fields</code>절:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>들</th>
+          <th>기술</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>video_id</td>
+          <td>Brightcove 비디오 ID</td>
+        </tr>
+        <tr>
+          <td>video_name</td>
+          <td>Brightcove 비디오 이름</td>
+        </tr>
+        <tr>
+          <td>추적 ID</td>
+          <td>맞춤 추적 ID</td>
+        </tr>
+        <tr>
+          <td>external_id</td>
+          <td>Marketo, Eloqua 또는 사용자 지정 GUID</td>
+        </tr>
+        <tr>
+          <td>player_id</td>
+          <td>보기 이벤트를 생성 한 Brightcove 플레이어의 ID</td>
+        </tr>
+        <tr>
+          <td>page_url</td>
+          <td>보기 이벤트가 생성 된 페이지의 URL</td>
+        </tr>
+        <tr>
+          <td>보았다</td>
+          <td>시청률</td>
+        </tr>
+        <tr>
+          <td>time_watched</td>
+          <td>비디오 시청 시간</td>
+        </tr>
+        <tr>
+          <td>created_at</td>
+          <td>제작 일</td>
+        </tr>
+        <tr>
+          <td>updated_at</td>
+          <td>마지막 업데이트 날짜</td>
+        </tr>
+        <tr>
+          <td>is_synced</td>
+          <td>보기 이벤트가 동기화되었는지 여부를 나타내는 부울</td>
+        </tr>
+        <tr>
+          <td>event_1</td>
+          <td rowspan="3">맞춤 이벤트</td>
+        </tr>
+        <tr>
+          <td>event_2</td>
+        </tr>
+        <tr>
+          <td>event_3</td>
+        </tr>
+        <tr>
+          <td>metric_1</td>
+          <td rowspan="3">맞춤 측정 항목</td>
+        </tr>
+        <tr>
+          <td>metric_2</td>
+        </tr>
+        <tr>
+          <td>metric_3</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Retrieving_Leads">리드 검색</h2>
+    <p>계정에서 보기 이벤트를 검색하려면 다음을 수행하십시오. <code translate="No">GET</code>에 요청<code translate="No">view_events</code>자원:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1/accounts/{account_id}/leads</code></pre>
+    <p>샘플 응답:</p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+    "count": 2,
+    "limit": 25,
+    "offset": 0,
+    "result": [
+        {
+            "created_at": "2016-06-30T12:57:11.283Z",
+            "email_address": "bbailey@brightcove.com",
+            "first_name": "Bob",
+            "last_name": "Bailey",
+            "page_url": "http://players.brightcove.net/1486906377/Hk4TBqzL_default/index.html?videoId=4997275041001",
+            "player_id": "Hk4TBqzL",
+            "video_id": "4997275041001"
+        },
+        {
+            "created_at": "2016-06-30T12:57:33.301Z",
+            "email_address": "rcrooks@brightcove.com",
+            "first_name": "Robert",
+            "last_name": "Crooks",
+            "page_url": "http://players.brightcove.net/1486906377/Hk4TBqzL_default/index.html?videoId=4997275041001",
+            "player_id": "Hk4TBqzL",
+            "video_id": "4997275041001"
+        }
+    ]
+}</code></pre>
+    <h3 id="fieldsForLeads">필터링 및 선택을위한 필드</h3>
+    <p>모든<a href="#Parameters">매개변수</a>와 함께 사용할 수 있습니다<code translate="No">leads</code>요청.</p>
+    <p>다음은 매개 변수를 사용하는 cURL의 샘플 요청입니다.</p>
+    <pre class="line-numbers">
+<code class="language-bash" translate="No">curl -i https://audience.api.brightcove.com/v1/accounts/{account_id}/leads?where=video_id==123&amp;from=-5d&amp;to=now&amp;sort=-created_at \
+  -H "Authorization: Bearer {token}"</code></pre>
+    <p>다음 필드가 지원됩니다. <code translate="No">leads</code>로 필터링할 때 요청<code translate="No">where</code>절 또는 중 선택할 때<code translate="No">fields</code>절:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>들</th>
+          <th>기술</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>video_id</td>
+          <td>Brightcove 비디오 ID</td>
+        </tr>
+        <tr>
+          <td>external_id</td>
+          <td>Marketo, Eloqua 또는 사용자 지정 GUID</td>
+        </tr>
+        <tr>
+          <td>player_id</td>
+          <td>보기 이벤트를 생성 한 Brightcove 플레이어의 ID</td>
+        </tr>
+        <tr>
+          <td>page_url</td>
+          <td>보기 이벤트가 생성 된 페이지의 URL</td>
+        </tr>
+        <tr>
+          <td>created_at</td>
+          <td>제작 일</td>
+        </tr>
+        <tr>
+          <td>이메일 주소</td>
+          <td>리드의 이메일 주소</td>
+        </tr>
+        <tr>
+          <td>이름</td>
+          <td>제공되는 경우 리드의 이름</td>
+        </tr>
+        <tr>
+          <td>성</td>
+          <td>제공되는 경우 리드의 성</td>
+        </tr>
+        <tr>
+          <td>업무 폰</td>
+          <td>제공되는 경우 리드의 전화 번호</td>
+        </tr>
+        <tr>
+          <td>country</td>
+          <td>제공되는 경우 리드의 국가</td>
+        </tr>
+        <tr>
+          <td>회사 이름</td>
+          <td>제공된 경우 리드의 회사</td>
+        </tr>
+        <tr>
+          <td>산업</td>
+          <td>제공되는 경우 리드가 속한 산업</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

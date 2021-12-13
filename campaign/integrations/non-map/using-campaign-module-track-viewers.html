@@ -1,0 +1,67 @@
+---
+title: 캠페인 모듈을 사용하여 시청자 추적
+description: 이 주제에서는 캠페인 모듈을 사용하여 시청자 활동을 추적하는 방법을 배웁니다.
+parent: Non-MAP 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>캠페인 모듈은 시청 활동을 추적하는 기능을 제공합니다. 이 시나리오에서 데이터보기는 마케팅 자동화 플랫폼으로 전송되지 않습니다. 이에 대한 일반적인 사용 사례 중 하나는 내부 교육 비디오입니다. 캠페인 추적을 사용하여 내부 직원의 시청 활동을 추적할 수 있습니다. 캠페인 추적을 사용하려면 다음 단계가 필요합니다.</p>
+    <ol>
+      <li><a href="#enable">캠페인 추적 설정 구성</a></li>
+      <li><a href="#configure">캠페인 추적을 위한 플레이어 및 리드 양식 구성</a></li>
+      <li><a href="#viewdata">비디오 데이터보기</a></li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="enable">캠페인 추적 설정 구성</h2>
+    <p>캠페인 추적 설정을 구성하려면 다음 단계를 따르세요.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>캠페인 모듈을 연 다음<strong>데이터 연결</strong>왼쪽 탐색에서</li>
+      <li>찾기<strong>캠페인 추적</strong>섹션을 클릭하고<strong>보여 주다</strong> .</li>
+      <li>기본적으로 캠페인 추적은 모든 계정에 대해 활성화되어 있습니다. 필요에 따라 설정을 편집합니다.
+        <ul>
+          <li><strong>연결 이름</strong> -연결 식별</li>
+          <li><strong>연결 상태</strong> - Video Cloud 비디오 참여 데이터가 캠페인 모듈에 의해 저장되는지 여부를 결정합니다.
+            <ul>
+              <li><strong>활성화 됨</strong> -데이터 수집</li>
+              <li><strong>장애인</strong> -데이터가 수집되지 않음 (연결 불가)</li>
+            </ul>
+          </li>
+          <li><strong>알 수없는 시청자에 대한 데이터 추적</strong> -알 수없는 시청자에 대한 추적 데이터가 기록되는지 확인합니다. 캠페인 추적을 사용할 때 시청자를 식별하려면<a href="/campaign/general/creating-campaign-lead-form.html">캠페인 리드 양식</a>사용할 수 있습니다. <aside class="bcls-aside bcls-aside--information">참고: 캠페인 추적을 사용하면 24시간 당 최대 1,000명의 시청자가 추적됩니다.</aside>
+          </li>
+          <li><strong>Brightcove는 데이터를 얼마나 오래 보관해야 합니까?</strong> - 데이터 보존 정책은 시청 데이터 및 리드 양식 데이터(캠페인 리드 양식을 사용하는 경우)가 Video Cloud 계정에 보존되는 기간을 결정합니다. 개인 정보 보호 정책에 따라 보관 설정을 조정해야합니다. Video Cloud에 사용자 데이터를 보관할 필요는 없습니다.</li>
+        </ul>
+      </li>
+    </ol>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="enable tracking" src="/assets/images/campaign/general/node18347-campaign-tracking.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">캠페인 추적을 위한 플레이어 및 리드 양식 구성</h2>
+    <p>시청 활동은 캠페인 지원 동영상 플레이어 내에서 동영상을 본 경우에만 추적할 수 있습니다. 캠페인 추적을 사용할 때는 캠페인 지원 플레이어를 사용해야 합니다. 시청자 정보를 캡처하기 위해 비디오 재생 중에 리드 양식을 표시 할 수 있습니다. 캠페인 추적을 사용할 때는 리드 양식이 필요하지 않습니다.</p>
+    <p>캠페인 지원 플레이어 및 리드 양식으로 캠페인 추적을 구성하려면 다음 단계를 따르세요.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>딸깍 하는 소리<strong>캠페인 플레이어</strong>왼쪽 탐색에서</li>
+      <li>사용할 캠페인 지원 플레이어를 결정합니다. 캠페인 지원 플레이어가 없으면<strong>플레이어 생성</strong>하나를 생성합니다. 캠페인 지원 플레이어 생성에 대한 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/creating-campaign-enabled-player.html">캠페인 지원 플레이어 만들기</a> .</li>
+      <li>리드 양식이 필수는 아니지만 리드 양식을 사용하여 뷰어에 대한 정보를 수집하고 익명 뷰어를 알려진 뷰어로 전환 할 수 있습니다. <strong>가망 고객 양식을</strong>클릭하고 가망 고객 양식을 생성합니다. 리드 양식 작성에 대한 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/creating-campaign-lead-form.html">캠페인 리드 양식 만들기</a> .</li>
+      <li>딸깍 하는 소리<strong>캠페인 플레이어</strong> .</li>
+      <li>사용할 캠페인 지원 플레이어를 찾습니다. 설정<strong>연결 대상</strong>플레이어의 가치<strong>캠페인 추적</strong> .</li>
+      <li>리드 양식을 사용 중인 경우 다음에서 리드 양식을 선택합니다. <strong>리드 양식</strong>드롭 다운 목록.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="new player" src="/assets/images/campaign/general/node18347-player-lead-form.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewdata">비디오 데이터보기</h2>
+    <p>캠페인 추적을 사용할 때 비디오 데이터를 보는 데 사용할 수 있는 몇 가지 옵션이 있습니다.</p>
+    <ul>
+      <li><strong>시청자 활동(이벤트)</strong> - 캠페인 모듈의 일부로 제공되는 이 옵션은 캠페인 모듈 내부의 비디오 데이터를 보는 데 사용할 수 있습니다. 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/viewing-player-events-campaign-module.html">캠페인 모듈에서 플레이어 이벤트 보기</a> .</li>
+      <li><strong>뷰어 프로필</strong> - 캠페인 모듈의 일부로 제공되는 이 옵션은 캠페인 모듈 내부의 사용자 프로필 값을 기반으로 비디오 데이터를 보는 데 사용할 수 있습니다. 자세한 내용은 뷰어 프로필 정보<a href="/campaign/general/viewing-viewer-profile-information.html">보기를 참조하십시오</a> .</li>
+      <li><strong>데이터 내보내기</strong> - 캠페인 모듈의 일부로 제공되는 이 옵션은 비디오 보기 및 리드 데이터를 내보내는 데 사용할 수 있습니다. 자세한 내용은 다음을 참조하십시오. <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">캠페인 모듈에서 캠페인 데이터 내보내기</a> .</li>
+      <li><strong>Audience API</strong> -Audience API를 사용하여 비디오보기 및 리드 데이터를 프로그래밍 방식으로 검색 할 수 있습니다. 자세한 내용은<a href="/campaign/develop/overview-audience-api.html">개요를 참조하십시오. 오디언스 API</a> .</li>
+    </ul>
+  </section>
+</article>

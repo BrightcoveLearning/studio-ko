@@ -1,0 +1,116 @@
+---
+title: Oracle Eloqua 을 위한 사용자 정의 리드 양식 생성
+description: 이 주제에서는 Oracle Eloqua 양식을 사용하여 Brightcove Player 내부의 리드 데이터를 캡처하는 방법을 배웁니다.
+parent: Eloqua 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>캠페인 모듈은 Brightcove 플레이어 내에서 비디오가 재생될 때 시청자 정보를 캡처할 수 있는 리드 양식을 생성하는 기능을 제공합니다. 이를 통해 필요한 모든 필드 (표시 또는 숨김)를 포함 할 수 있으며 점진적 프로파일 링 (사용 가능한 경우)과 같은 기능을 활용할 수있는 기능도 제공합니다. 리드 데이터는 Eloqua로 전송되고 처리됩니다.</p>
+    <p>사용자 지정 리드 양식을 만들려면 다음 단계를 수행해야합니다.</p>
+    <ol>
+      <li><a href="#form">Eloqua에서 양식 만들기</a></li>
+      <li><a href="#edit">양식 HTML 복사</a></li>
+      <li><a href="#styleform">양식 스타일 지정</a></li>
+      <li><a href="#leadform">캠페인 모듈에서 맞춤 리드 양식 만들기</a></li>
+      <li><a href="#player">플레이어에게 리드 양식 할당</a></li>
+      <li><a href="#formdata">Eloqua에서 양식 데이터 유효성 검사</a></li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">참고: 뷰어 정보를 캡처하고 Video Cloud에 데이터를 저장하는 표준 리드 양식에 대한 자세한 내용은 캠페인 리드 양식<a href="/campaign/general/creating-campaign-lead-form.html">생성을 참조하십시오</a> .</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="form">Eloqua에서 양식 만들기</h2>
+    <p>Eloqua는 뷰어 정보를 캡처하는 양식을 생성하는 기능을 제공합니다. 이러한 양식은 Brightcove 플레이어 내부에 표시 될 수 있습니다. 캡처 된 데이터는 향후 통신을 사용자 정의하는 데 사용할 수 있습니다. 아래 단계에서는 이름, 성 및 이메일 주소를 캡처하는 간단한 양식을 만듭니다. Eloqua 양식에 대한 자세한 내용은<a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/Forms/Forms.htm"> Eloqua 문서를 참조하십시오</a> .</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Eloqua 계정에 로그인하십시오.</li>
+      <li><strong>에셋</strong> &gt; <strong>양식으로</strong>이동한 다음 양식<strong>만들기를 클릭합니다</strong> . 양식 템플릿 선택기가 열립니다.</li>
+      <li><strong>빈 양식을</strong>클릭한 다음<strong>선택을 클릭합니다</strong> .</li>
+      <li>왼쪽 탐색에서<strong>필드 그룹</strong>패널을 확장합니다.</li>
+      <li><strong>필드 그룹</strong>패널에서<strong>기본 연락처 정보를</strong>클릭하고 양식 템플릿으로 드래그합니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16109-add-fields.png" /></figure>
+      </li>
+      <li>필드가 양식에 추가되었는지 확인하십시오.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16109-fields-on-form.png" /></figure>
+      </li>
+      <li>기본적으로 필드는 필드 병합을 사용하여 추가됩니다. 캠페인에서 사용할 때 필드에 이상한 텍스트가 나타납니다. 필드 병합을 제거하려면<strong>이름</strong>필드를 클릭하여 선택합니다.</li>
+      <li>왼쪽 탐색 패널에서<strong>일반 속성</strong>섹션을 찾아 필드 데이터<strong>미리 채우기</strong>속성을<strong>없음으로 설정합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16109-pre-pop.png" /></figure>
+      </li>
+      <li>에 대한 과정을 반복합니다. <strong>성</strong>그리고<strong>이메일 주소</strong>필드.</li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+      <li>양식에 이름을 지정한 다음<strong>저장을 클릭합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16109-save-form.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">양식 HTML 복사</h2>
+    <p>캠페인 모듈 내에서 양식을 사용하려면 양식 HTML을 복사해야 합니다. 양식 HTML을 복사하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li><strong>작업 &gt; 양식 HTML 보기... 를 클릭합니다.</strong> 양식 HTML이 표시됩니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16109-form-details.png" /></figure>
+      </li>
+      <li>전체 HTML을 클립 보드에 복사합니다. <strong>닫기를 클릭합니다</strong> .</li>
+      <li>선택한 HTML 편집기에 양식 HTML을 붙여 넣습니다. 편집기의 코드 서식 기능을 사용하여 코드를 읽기 쉽도록 서식을 지정할 수 있습니다.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="styleform">양식 스타일링</h2>
+    <p>기본적으로 양식이 Brightcove Player 내부에 표시되면 양식이 플레이어 위에 투명한 배경에 표시됩니다. CSS를 사용하여 양식에 기본 스타일을 지정하고 싶을 것입니다. 아래 섹션에서는 양식에 스타일을 지정할 수있는 방법에 대한 두 가지 예를 제공합니다. 관련 CSS도 제공됩니다. 표준 색상을 따르거나 추가 필드의 스타일을 처리하기 위해 CSS를 조정해야 할 수 있습니다.</p>
+    <div class="BCL-subsection">
+      <h3>간단한 양식 스타일링 예</h3>
+      <p>이 예에서는 CSS를 사용하여 양식의 배경색을 회색으로 변경하면 양식이 다음과 같이 나타납니다.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16109-simple-styling.png" /></figure>
+      <p>이 스타일을 지정하려면 양식 HTML <code translate="No">style</code>태그의 맨 위에 다음 CSS를 추가합니다.</p>
+      <pre>
+신체{ background-color: rgba(204,204,204,0.9); margin: 0; padding: 20px; height: 100%; }
+  </pre>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="leadform">캠페인 모듈에서 맞춤 리드 양식 만들기</h2>
+    <p>양식 HTML이 Eloqua에서 생성되고 필요에 따라 스타일이 지정되면 캠페인 모듈에서 사용자 정의 리드 양식을 만들고 리드 양식을 캠페인 지원 플레이어와 연결합니다.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>캠페인 모듈을 엽니다.</li>
+      <li>딸깍 하는 소리<strong>리드 양식</strong>왼쪽 탐색에서 리드 양식이 생성 된 경우 표시됩니다.</li>
+      <li>가망 고객 양식<strong>생성을 클릭합니다</strong> .</li>
+      <li>리드 양식에 설명이 포함된<strong>이름을 지정합니다</strong> .</li>
+      <li><strong>양식 언어를 선택합니다</strong> .</li>
+      <li><strong>양식 타이밍을 선택합니다</strong> . 양식 타이밍에 따라 리드 양식이 표시되는시기가 결정됩니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="lead form settings" src="/assets/images/campaign/integrations/eloqua/node16109-edit-lead-form-1.png" /></figure>
+      </li>
+      <li>양식 유형을<strong>사용자 지정 리드 양식으로 설정합니다</strong> .</li>
+      <li><strong>양식 HTML에 붙여넣습니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="lead form html" src="/assets/images/campaign/integrations/eloqua/node16109-edit-lead-form-2.png" /></figure>
+      </li>
+      <li><strong>(선택 과목)</strong>붙여넣기<strong>확인 HTML</strong> . 확인보기가 5 초 동안 표시된 다음 비디오 재생이 다시 시작됩니다. 확인 HTML이 포함되지 않은 경우 양식 제출 후 비디오 재생이 다시 시작됩니다.</li>
+      <li><strong>(선택 과목)</strong>딸깍 하는 소리<strong>양식 미리보기</strong>양식 미리보기를 엽니다.</li>
+      <li><strong>저장을</strong>클릭하여 리드 양식을 저장합니다.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">플레이어에게 리드 양식 할당</h2>
+    <p>리드 양식이 생성되면 플레이어에게 할당해야합니다. 플레이어에게 리드 양식을 할당하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>딸깍 하는 소리<strong>캠페인 플레이어</strong>왼쪽 탐색에서</li>
+      <li>플레이어를 찾아<strong> Lead Form</strong>드롭다운 목록을 사용하여 리드 양식을 선택합니다.</li>
+    </ol>
+    <p>이제 설정이 완료되었으며 리드 정보를 캡처 할 준비가되었습니다. 캠페인 지원 플레이어를 사용하여 동영상을 게시하면 양식 타이밍 설정에 따라 리드 양식이 나타납니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="formdata">Eloqua에서 양식 데이터 유효성 검사</h2>
+    <p>양식 데이터가 Eloqua에 전달되었는지 확인하는 방법에는 여러 가지가 있습니다. Eloqua에서 양식 데이터를 보려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Eloqua 계정에 로그인하십시오.</li>
+      <li><strong>에셋</strong> &gt; <strong>양식으로 이동합니다</strong> .</li>
+      <li>왼쪽 탐색에서<strong>모든 파일</strong>링크를 클릭하여 모든 양식을 표시합니다.</li>
+      <li>양식 이름을 두 번 클릭하여 엽니 다.</li>
+      <li><strong>작업 &gt; 제출 데이터 보기... 를 클릭합니다.</strong> 양식 데이터가 표시됩니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="lead form data" src="/assets/images/campaign/integrations/eloqua/node16109-form-data.png" /></figure>
+      </li>
+    </ol>
+  </section>
+</article>

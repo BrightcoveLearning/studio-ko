@@ -1,0 +1,97 @@
+  name: 얻기시작
+  url: /get-started/index.html
+  docs:
+    - name: 청중 시작하기
+      url: /get-started/getting-started-audience-module.html
+    - name: 청중 교육 비디오
+      url: /get-started/audience-training-videos.html
+  name: 일반 정보
+  url: /general/index.html
+  docs:
+    - name: 대상 필드 및 데이터 정의
+      url: /general/audience-fields-and-data-definitions.html
+    - name: 대상 설정 구성
+      url: /general/configuring-audience-settings.html
+    - name: 청중이 가능한 플레이어 만들기
+      url: /general/creating-audience-enabled-player.html
+    - name: 잠재 고객 리드 양식 만들기
+      url: /general/creating-audience-lead-form.html
+    - name: 청중이 시청자를 식별하는 방법
+      url: /general/how-audience-module-identifies-viewers.html
+    - name: 이메일에 비디오 게시
+      url: /general/publishing-video-email-using-audience-module.html
+    - name: 사용자 지정 지표 및 이벤트 사용
+      url: /general/using-custom-metrics-and-events.html
+    - name: 플레이어 이벤트 보기
+      url: /general/viewing-player-events-audience-module.html
+    - name: 비디오 활동보기
+      url: /general/viewing-video-activity.html
+    - name: 뷰어 프로필 정보보기
+      url: /general/viewing-viewer-profile-information.html
+    - name: UTM 필드 작업
+      url: /general/working-utm-fields-audience-module.html
+  name: 통합
+  url: /integrations/index.html
+  docs:
+    - name: Eloqua
+      url: /integrations/eloqua/index.html
+      docs:
+        - name: 사용자 정의 리드 양식 만들기
+          url: /integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
+        - name: Eloqua 통합 테스트 가이드
+          url: /integrations/eloqua/eloqua-integration-testing-guide.html
+        - name: 방문 페이지에 비디오 포함
+          url: /integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html
+        - name: Oracle Eloqua와 통합
+          url: /integrations/eloqua/integrating-video-cloud-oracle-eloqua.html
+    - name: HubSpot
+      url: /integrations/hubspot/index.html
+      docs:
+        - name: 사용자 정의 리드 양식 만들기
+          url: /integrations/hubspot/creating-custom-lead-forms-hubspot.html
+        - name: HubSpot REST API 테스트 가이드
+          url: /integrations/hubspot/hubspot-rest-api-integration-testing-guide.html
+        - name: 'HubSpot과 통합(클라이언트 측 API)'
+          url: /integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html
+        - name: 'HubSpot과 통합(REST API)'
+          url: /integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html
+    - name: Marketo
+      url: /integrations/marketo/index.html
+      docs:
+        - name: 사용자 정의 리드 양식 만들기
+          url: /integrations/marketo/creating-custom-lead-forms-marketo.html
+        - name: 'Marketo(Munchkin)와 통합'
+          url: /integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html
+        - name: 'Marketo와 통합(REST API)'
+          url: /integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html
+        - name: Marketo REST 통합 테스트 가이드
+          url: /integrations/marketo/marketo-rest-integration-testing-guide.html
+    - name: 비 MAP
+      url: /integrations/non-map/index.html
+      docs:
+        - name: 사용자 정의 통합 생성
+          url: /integrations/non-map/creating-custom-integrations-audience-module.html
+        - name: 싱글 사인온과 통합
+          url: /integrations/non-map/integrating-audience-single-sign.html
+        - name: 시청자를 사용하여 시청자 추적
+          url: /integrations/non-map/using-audience-module-track-viewers.html
+    - name: 영업
+      url: /integrations/salesforce/index.html
+      docs:
+        - name: 사용자 정의 리드 양식 만들기
+          url: /integrations/salesforce/creating-custom-lead-forms-salesforce.html
+        - name: Pardot용 Salesforce 개체 만들기
+          url: /integrations/salesforce/creating-custom-lead-forms-salesforce.html
+        - name: Salesforce와 통합
+          url: /integrations/salesforce/integrating-video-cloud-salesforce.html
+  name: 청중 관리
+  url: /admin/index.html
+  docs:
+    - name: 청중에서 데이터 내보내기
+      url: /admin/exporting-audience-data-audience-module.html
+    - name: 갤러리 리드 데이터 내보내기
+      url: /admin/exporting-gallery-lead-data.html
+    - name: 뷰어 데이터 관리
+      url: /admin/managing-viewer-data.html
+    - name: 청중 문제 해결
+      url: /admin/troubleshooting-audience-issues.html

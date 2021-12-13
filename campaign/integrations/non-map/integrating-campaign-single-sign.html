@@ -1,0 +1,115 @@
+---
+title: Single Sign-On 과 캠페인 통합
+description: 이 주제에서는 싱글 사인온과 함께 사용하도록 캠페인 모듈을 구성하는 방법에 대해 설명합니다.
+parent: Non-MAP 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>캠페인 모듈은 시청자가 SSO(Single Sign-On)를 사용하여 시스템에 로그인했을 때 보기 활동을 추적하는 기능을 제공합니다. 이 시나리오에서 데이터보기는 마케팅 자동화 플랫폼으로 전송되지 않습니다. Campaign SSO 구성을 사용하면 뷰어를 식별하기 위해 SAML 속성이 Campaign에 전달됩니다. 이에 대한 일반적인 사용 사례 중 하나는 내부 교육 비디오입니다. 직원은 비디오를 시청하기 위해 로그인해야 할 수 있으며 시청 활동을 추적한 다음 캠페인 모듈 내에서 볼 수 있습니다. SSO와 함께 사용하도록 Campaign을 활성화하려면 다음 단계가 필요합니다.</p>
+    <ol>
+      <li><a href="#sso">Single Sign-On 소프트웨어 구성</a></li>
+      <li><a href="#attributes">SSO 속성에 액세스하도록 애플리케이션 구성</a></li>
+      <li><a href="#setupConnection">캠페인 SSO 연결 설정</a></li>
+      <li><a href="#configure">통합 구성</a></li>
+      <li><a href="#player">캠페인 지원 플레이어 만들기</a></li>
+      <li><a href="#viewdata">비디오 데이터보기</a></li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sso">SSO 소프트웨어 구성</h2>
+    <p>SSO 소프트웨어를 설치하고 구성하는 단계는이 항목의 범위를 벗어납니다. 사용자가 Video Cloud 비디오를보기 전에 자신을 인증해야하도록 SSO 소프트웨어를 구성해야합니다. SSO 소프트웨어는 외부 애플리케이션에서 액세스 할 수 있도록 일부 사용자 속성을 노출하도록 구성되어야합니다. 예를 들어, 이 Okta SSO 구성은 세 가지 속성<code translate="No">FirstName</code> , <code translate="No">LastName</code>및<code translate="No">Email</code> .</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="okta setup" src="/assets/images/campaign/general/node18363-okta.png" /></figure>
+    <p>이 주제에서는<code translate="No">Email</code>속성은 캠페인 모듈에 대한 뷰어를 식별하는 데 사용됩니다.</p>
+    <aside class="bcls-aside bcls-aside--information">참고: SSO 소프트웨어가 여러 속성을 노출하도록 구성할 수 있지만 Campaign은 단일 속성만 사용하여 최종 사용자를 추적합니다.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="attributes">SSO 속성에 액세스하도록 애플리케이션 구성</h2>
+    <p>Video Cloud 비디오를 보는 데 사용할 애플리케이션 또는 웹사이트는 JavaScript를 사용하여 Campaign에서 SSO 속성을 사용할 수 있도록 구성해야 합니다. 이 구성은 사용중인 응용 프로그램 또는 웹 사이트에 따라 다릅니다. 다음 예에서는 갤러리에 SSO 액세스 제어 프로필이 생성되었습니다. 구성의 일부로<code translate="No">Email</code> SSO 속성이 노출되고 있으며 갤러리 사이트 내에서 사용할 수 있습니다. 캠페인 모듈에 대한 뷰어를 식별하는 데 사용되는 값입니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="okta setup" src="/assets/images/campaign/general/node18363-gallery-config.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">참고: Gallery에서 액세스 제어 프로파일을 구성하는 방법에 대한 자세한 내용은 액세스 제어 프로파일<a href="https://gallery.support.brightcove.com/settings/configuring-access-control-profiles.html">구성을 참조하십시오</a> .</aside> <aside class="bcls-aside bcls-aside--information">참고: 갤러리는 여러 속성을 노출하도록 구성할 수 있지만 Campaign은 단일 속성만 사용하여 시청자를 추적합니다.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setupConnection">연결 설정</h2>
+    <p>다음 단계에 따라 Video Cloud와 SSO 공급자 간의 연결을 설정하십시오.</p>
+    <h3 id="establishConnection2">Video Cloud와 SSO 간의 연결 설정</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>캠페인 모듈을 열고<strong>데이터 연결</strong>왼쪽 탐색에서</li>
+      <li>새 연결<strong>추가를 클릭합니다</strong> .</li>
+      <li>선택하다<strong> SSO</strong>통합으로. <aside class="bcls-aside bcls-aside--information">참고: 사용 가능한 통합은 Video Cloud 구독을 기반으로 합니다.</aside>
+      </li>
+      <li>(선택 사항) <strong>연결 이름을 입력합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign setup" src="/assets/images/campaign/general/node18363-setup-section.png" /></figure>
+      </li>
+      <li><strong>연결 을 클릭합니다</strong> .</li>
+    </ol>
+    <p>이제 SSO 연결이 설정되어 사용할 준비가되었습니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">통합 구성</h2>
+    <p>SSO 연결이 설정되면 통합을 구성 할 수 있습니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/campaign/general/node18363-connected-options.png" /></figure>
+    <ol class="bcls-tasklist-restart">
+      <li>클릭<code translate="No">empty</code>링크<strong> SSO 속성</strong>부분. 페이지에서 찾을 JavaScript 값의 이름을 입력하십시오. 이 예에서 Gallery는<code translate="No">Email</code> SSO 속성을 노출하도록 구성되었으므로 여기에서 사용되고 있습니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="email attribute" src="/assets/images/campaign/general/node18363-email-attribute.png" /></figure>
+        <p>이 주제에서는 캠페인 SSO 통합을 사용하여 보기 활동을 추적합니다. <strong>저장을 클릭합니다</strong> .</p>
+        <aside class="bcls-aside bcls-aside--information">참고: <strong>SSO 속성을</strong>비워 둔 다음<a href="#identify">추가 옵션 중 하나를 사용하여 뷰어를</a>식별할 수도 있습니다.</aside>
+      </li>
+      <li>기본적으로<strong>연결 상태는</strong><strong>활성화됩니다</strong> . <strong>연결 상태에</strong>따라 Video Cloud 비디오 참여 데이터가 저장되는지 여부가 결정됩니다.
+        <ul>
+          <li><strong>활성화 됨</strong> -데이터 수집</li>
+          <li><strong>장애인</strong> -데이터가 수집되지 않음 (통합이 비활성화 됨)</li>
+        </ul>
+      </li>
+      <li>데이터 보존 정책을 선택하십시오. 데이터 보존 정책은 보기 데이터 및 리드 양식 데이터(캠페인 리드 양식을 사용하는 경우)가 Video Cloud 계정에 보존되는 기간을 결정합니다. <strong>개인 정보 보호 정책에 따라 보존 설정을 조정해야</strong>합니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/general/node18363-data-retention-options.png" /></figure>
+      </li>
+    </ol>
+    <p>통합을 제거하려면<strong>연결 끊기를 클릭합니다</strong> . 페이지 하단에는 모든 캠페인 지원 플레이어, 연결된 연결 및 연결된 리드 양식이 나열됩니다.</p>
+    <p>캠페인 모듈은 마케팅 플랫폼에 대한 다중 연결을 지원합니다. <strong>추가 통합을</strong>구성하려면 새 연결 추가를 클릭합니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="identify">시청자 식별을위한 추가 옵션</h2>
+    <p>값을 지정하지 않으면<strong> SSO 속성</strong>통합이 구성되면 뷰어를 식별할 책임이 있습니다. 캠페인 모듈에는 다음 정보가 필요합니다.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>기술</th>
+          <th>URL 매개 변수</th>
+          <th>매개 변수 포함</th>
+          <th>값</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>GUID 란 무엇입니까 (보기 이벤트 추적에 필요)</td>
+          <td><code translate="No">bcssoguid</code></td>
+          <td><code translate="No">data-bc-sso-guid</code></td>
+          <td><code translate="No">string</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>이 매개 변수는 URL 매개 변수 또는 플레이어 소스 코드를 통해 전달 될 수 있습니다. 시청자 추적이 발생하려면이 매개 변수가 동영상을 표시하는 페이지에서 URL 매개 변수로 전달되어야합니다.</p>
+    <aside class="bcls-aside bcls-aside--information">참고: 플레이어 / 플러그인이 URL 매개 변수를 읽으려면 고급 (인 페이지) 소스 코드를 사용해야합니다. 플러그인이 iframe 내부에서 실행되므로 표준 (iframe) 포함 코드가 작동하지 않으므로 매개 변수가 있는 상위 페이지 URL에 액세스할 수 없습니다.</aside>
+    <p>페이지에서 사용할 수 있는 JavaScript 값을 사용하여 캠페인 플레이어에 GUID를 전달할 수도 있습니다. 플레이어 구성을 사용하면 JavaScript 변수의 이름이 무엇인지 Campaign에 알릴 수 있으며 Campaign은 이를 사용자 정의 GUID로 사용하여 해당 변수를 읽으려고 시도합니다. 이렇게 하려면 캠페인 플레이어를 편집하고 캠페인 플러그인에 대한 플러그인 옵션을 구성합니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin params" src="/assets/images/campaign/general/node18363-plugin-params.png" /></figure>
+    <p>위의 예에서 플레이어 구성은 페이지에 JavaScript 개체가 있음을 Campaign에 알립니다. <code translate="No">samlAttributes</code>라는 속성이 있습니다. <code translate="No">nameID</code> . Campaign은 이를 읽고 사용자 지정 GUID에 해당 값을 사용하려고 시도합니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">캠페인 지원 플레이어 만들기</h2>
+    <p>동영상 참여 데이터는 캠페인 지원 동영상 플레이어를 사용할 때만 추적됩니다. 캠페인 지원 Brightcove 플레이어 생성에 대한 정보는 다음을 참조하십시오. <a href="/campaign/general/creating-campaign-enabled-player.html">캠페인 지원 플레이어 만들기</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewdata">비디오 데이터보기</h2>
+    <p>SSO 통합을 사용할 때 비디오 데이터를 보는 데 사용할 수있는 몇 가지 옵션이 있습니다.</p>
+    <ul>
+      <li><strong>시청자 활동(이벤트)</strong> - 캠페인 모듈의 일부로 제공되는 이 옵션은 캠페인 모듈 내부의 비디오 데이터를 보는 데 사용할 수 있습니다. 자세한 내용은 다음을 참조하십시오. <a href="/campaign/general/viewing-player-events-campaign-module.html">캠페인 모듈에서 플레이어 이벤트 보기</a> .</li>
+      <li><strong>뷰어 프로필</strong> - 캠페인 모듈의 일부로 제공되는 이 옵션은 캠페인 모듈 내부의 사용자 프로필 값을 기반으로 비디오 데이터를 보는 데 사용할 수 있습니다. 자세한 내용은 뷰어 프로필 정보<a href="/campaign/general/viewing-viewer-profile-information.html">보기를 참조하십시오</a> .</li>
+      <li><strong>데이터 내보내기</strong> - 캠페인 모듈의 일부로 제공되는 이 옵션은 비디오 보기 및 리드 데이터를 내보내는 데 사용할 수 있습니다. 자세한 내용은 다음을 참조하십시오. <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">캠페인 모듈에서 캠페인 데이터 내보내기</a> .</li>
+      <li><strong>Audience API</strong> -Audience API를 사용하여 비디오보기 및 리드 데이터를 프로그래밍 방식으로 검색 할 수 있습니다. 자세한 내용은<a href="/campaign/develop/overview-audience-api.html">개요를 참조하십시오. 오디언스 API</a> .</li>
+    </ul>
+  </section>
+</article>

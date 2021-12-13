@@ -1,0 +1,173 @@
+---
+title: 재생 권한 관리
+parent: Administering Accounts
+description: In this topic you will learn how to create playback rights. 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>재생 권한은 비디오 재생을 제한하는 데 사용됩니다. 재생 권한이 생성 된 후 미디어 모듈을 사용하여 비디오에 할당 할 수 있습니다.</p>
+    <p>재생 권한 관리 페이지에 액세스하려면<strong> ADMIN</strong>링크를 클릭한 다음<strong>재생 권한을 클릭합니다</strong> . 재생 권한 목록이 나타납니다.</p>
+    <p>
+      <aside class="bcls-aside bcls-aside--information">참고: 재생 권한 페이지에 액세스하려면 관리자 역할을 가진 Video Cloud Studio 사용자여야 합니다.</aside>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-list.png" /></figure>
+      재생 권한은 미디어 모듈의 비디오 속성 페이지의<strong>재생 제한</strong>섹션에 있는 비디오에 할당됩니다. </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-assign.png" /></figure>
+    <p>재생 권한<strong>상태</strong> NS <strong>비활성</strong>미디어 모듈의 비디오에 할당할 수 없습니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="create">재생 권한 생성</h2>
+    <p>재생 권한을 생성하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Video Cloud Studio에 관리자로 로그인하십시오.</li>
+      <li>탐색 헤더에서<strong> ADMIN 을</strong>클릭한 다음<strong>재생 권한을 클릭합니다</strong> . ADMIN 메뉴에 액세스하려면 계정 관리자 여야합니다.</li>
+      <li><strong>새 재생 권한을 클릭합니다</strong> .</li>
+      <li><strong>재생 권한 이름을 입력합니다</strong> .</li>
+      <li>확인 중<strong>토큰 없이 재생 권한 허용</strong> JSON 웹 토큰(JWT) 없이 재생 요청을 할 수 있습니다. <aside class="bcls-aside bcls-aside--information">참고: 이 옵션의 선택을 취소해도 해당 재생 권한에 설정된 제한 사항에는 영향을주지 않지만 재생 요청에는 플레이어 수준에서 프로그래밍 방식으로 설정된 유효한 JWT가 필요합니다. 자세한 내용은 브라이트코브 플레이어에서 재생 권한 부여 DRM <a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html">사용 개발자 문서를 참조하십시오</a> .</aside>
+      </li>
+      <li>기본값으로<strong>사용을</strong>선택하여 기본 재생 권한으로 설정합니다. 이렇게하면 업로드 된 동영상에 구성된 재생 권한 제한이 적용됩니다. <aside class="bcls-aside bcls-aside--information">참고: 비디오가 다시 코드 변환된 경우 기본 재생 권한이 할당되지 않습니다.</aside>
+      </li>
+      <li><strong>저장을 클릭합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-create.png" /></figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">참고: 한 계정에서 가질 수있는 최대 재생 권한 수는 100 개입니다. 한도를 늘려야 하는 경우<a href="https://supportportal.brightcove.com">브라이트코브 지원팀에 문의하십시오</a> .</aside>
+    <p>왼쪽 탐색에서 제한 링크를 클릭하여 재생 오른쪽에 제한을 추가합니다.</p>
+    <ul>
+      <li><a href="#geo">지리적</a></li>
+      <li><a href="#domain">도메인</a></li>
+      <li><a href="#proxy">대리</a></li>
+      <li><a href="#date">시간</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">재생 권한 편집</h2>
+    <p>재생 권한을 편집하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>재생 오른쪽을 클릭하십시오.</li>
+      <li>필요한 사항을 변경하고<strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="duplicate">재생 권한 복제</h2>
+    <p>재생 권한을 복제하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>재생 오른쪽을 클릭하십시오.</li>
+      <li><strong>복제를 클릭합니다</strong> .</li>
+      <li>필요한 사항을 변경하고<strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="activate">재생 권한 활성화 / 비활성화</h2>
+    <p>재생 권한은 삭제할 수 없지만 비활성화 할 수 있으므로 미디어 모듈의 비디오에 할당 할 수 없습니다. 재생 권한을 활성화 / 비활성화하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>재생 오른쪽을 클릭하십시오.</li>
+      <li><strong>활성화</strong>를 클릭하여 재생 권한을 활성화하거나<strong>비활성화를</strong>클릭하여 재생 권한을 비활성화합니다. 비활성화 된 재생 권한은 미디어 모듈의 비디오에 할당 할 수 없습니다.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="geo">지리적 제한 할당</h2>
+    <p>지리적 제한을 통해 국가, 우편번호, IP 및 지정된 시장 지역을 기반으로 비디오 재생을 제한할 수 있습니다. 재생 권한에 지리적 제한을 할당하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>재생 오른쪽을 클릭하십시오.</li>
+      <li>왼쪽 탐색에서<strong>지리적 제한을 클릭합니다</strong> .</li>
+    </ol>
+    <p>NS <strong>전역 규칙</strong>로 설정할 수 있습니다<strong>모두 허용</strong>또는<strong>모두 차단</strong> .</p>
+    <ul>
+      <li><strong>모두 허용</strong>
+        <ul>
+          <li>액세스 권한이 없는 소수의 그룹을 블랙리스트에 추가하려는 경우 사용</li>
+          <li>모든 사람이 볼 수 있도록 선택한 다음 볼 수 없는 블랙리스트 국가, 우편 번호, IP 및 DMA 목록을 추가합니다.</li>
+        </ul>
+      </li>
+      <li><strong>모두 차단</strong>
+        <ul>
+          <li>액세스 권한이 있는 소수의 그룹을 화이트리스트에 추가하려는 경우 사용</li>
+          <li>모두 보기를 차단하도록 선택한 다음 보기가 허용된 화이트리스트 국가, 우편번호, IP 또는 DMA 목록을 추가합니다.</li>
+        </ul>
+      </li>
+    </ul>
+    <p>다음을 기반으로 보기를 허용/방지하기 위해 지리적 제한을 추가할 수 있습니다.</p>
+    <ul>
+      <li><a href="#countries">국가</a></li>
+      <li><a href="#zip">우편 번호</a></li>
+      <li><a href="#ip">IP 제한</a></li>
+      <li><a href="#dma">지정 시장 지역 (DMA)</a></li>
+    </ul>
+    <h3 id="countries">국가에 대한 액세스 제한</h3>
+    <p>국가 재생 권한을 사용하여 특정 국가로 보기를 제한할 수 있습니다.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>보기를 금지(블랙리스트) 또는 허용(화이트리스트)할 국가를 선택합니다. 입력 할 때 선택 목록이 필터링됩니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-countries.png" /></figure>
+      </li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+    <h3 id="zip">우편번호에 대한 액세스 제한</h3>
+    <p>우편번호 재생 권한을 사용하여 특정 우편번호로 보기를 제한할 수 있습니다.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>차단(블랙리스트) 또는 허용(화이트리스트)되는 우편번호 목록을 입력하십시오. 우편 번호에는 대문자, 두 글자 국가 코드 및 하이픈 (예: <strong> US-90045) 이 붙어야</strong>합니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-zip.png" /></figure>
+      </li>
+    </ol>
+    <p>우편번호가 포함된 .csv 파일을 업로드할 수도 있습니다. CSV <strong></strong>업로드를 클릭하여 업로드할 파일을 찾아보고 선택합니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-upload-csv.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">참고: .csv 파일을 업로드하면<strong>우편 번호</strong>필드의 내용이 대체됩니다.</aside>
+    <h3 id="ip">IP에 대한 액세스 제한</h3>
+    <p>IP 재생 권한을 사용하여 보기를 IP 주소 범위로 제한할 수 있습니다.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>볼 수 없도록 차단(블랙리스트) 또는 허용(화이트리스트)할 IP 주소 범위를 입력합니다. <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR 블록 표기법</a>도 지원됩니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-ip.png" /></figure>
+      </li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+    <h3 id="dma">DMA에 대한 액세스 제한</h3>
+    <p>미디어 시장이라고도 하는 지정 시장 지역(DMA)은 텔레비전 및 라디오 시장을 정의하는 데 사용되는 미국 지역입니다. 재생 권한을 사용하여 DMA를 기반으로 보기를 제한할 수 있습니다.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>보기를 금지(블랙리스트) 또는 허용(화이트리스트)할 DMA 목록을 입력하십시오.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-dma.png" /></figure>
+      </li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="domain">도메인 제한 할당</h2>
+    <p>도메인 제한을 통해 도메인에 따라 비디오 재생을 제한 할 수 있습니다. 재생 권한에 도메인 제한을 할당하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>재생 오른쪽을 클릭하십시오.</li>
+      <li>왼쪽 탐색에서<strong>도메인 제한을 클릭합니다</strong> .</li>
+      <li><strong>블랙리스트에 등록된 도메인</strong>필드에 표시되지 않을 도메인을 입력합니다. </li>
+      <li><strong>허용 목록에 있는 도메인</strong>필드에 볼 수 있는 도메인을 입력합니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-domain.png" /></figure>
+      </li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="proxy">프록시 제한 할당</h2>
+    <p>프록시 제한을 통해 특정 연결 유형에 따라 비디오 재생을 제한 할 수 있습니다. 재생 권한에 프록시 제한을 할당하려면 다음 단계를 따르십시오.</p>
+    <aside class="bcls-aside bcls-aside--information">참고: VPN 공급자가 서비스를 계속 개선함에 따라 IP 주소 확인은 차단된 IP 주소에 대해 정의한 것과 다를 수 있습니다. 이 때문에 프록시 차단은 100% 보장되지 않습니다.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>재생 오른쪽을 클릭하십시오.</li>
+      <li>왼쪽 탐색에서<strong>프록시 제한을 클릭합니다</strong> .</li>
+      <li>차단할 프록시 유형을 선택합니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-proxy.png" /></figure>
+      </li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="date">시간 제한 할당</h2>
+    <p>시간 제한을 사용하면 지정된 시작 날짜를 기준으로 비디오 재생을 제한할 수 있습니다. 재생 권한에 시간 제한을 할당하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>재생 오른쪽을 클릭하십시오.</li>
+      <li>왼쪽 탐색에서<strong>시간 제한</strong> .</li>
+      <li>캘린더 컨트롤을 클릭하여 선택<strong>시작일</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-date.png" /></figure>
+      </li>
+      <li>(선택사항) 클릭<strong>종료 날짜 추가</strong>종료 날짜를 선택합니다.</li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+  </section>
+</article>

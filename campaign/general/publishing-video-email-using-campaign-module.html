@@ -1,0 +1,44 @@
+---
+title: 캠페인 모듈 을 사용하여 이메일에 비디오 게시
+description: 이 항목에서는 캠페인 모듈을 사용하여 이메일에 비디오를 게시하는 방법에 대한 개요를 제공합니다.
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>대부분의 플랫폼에서 비디오를 이메일에 직접 포함하는 것은 불가능합니다. 이것은 Brightcove 제한이 아니며 거의 모든 최신 이메일 시스템이 보안상의 이유로 비디오 플레이어 내장 코드를 제거합니다. 그러나 티저 텍스트와 포스터 이미지가 포함 된 이메일을 작성하여 콘텐츠에 대한 인지도 및 트래픽을 유도 할 수 있습니다. 캠페인 모듈은 비디오, 플레이어를 선택한 다음 이메일 메시지에 포함할 HTML을 생성하는 기능을 제공합니다.</p>
+    <aside class="bcls-aside bcls-aside--information">참고: 비디오를 이메일로 게시하는 것은 미디어 모듈에서도 가능합니다. 자세한 내용은 전자 메일에 비디오<a href="/publish/publishing-video-email.html">게시를 참조하십시오</a> .</aside>
+  </section>
+  <section class="bcls-section">
+    <p>이메일 랜딩 페이지에 비디오를 게시하려면 다음 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>캠페인 모듈을 엽니다.</li>
+      <li>딸깍 하는 소리<strong>이메일에 게시</strong>왼쪽 탐색에서</li>
+      <li><strong>랜딩 페이지를 선택합니다</strong> . 드롭다운 목록에는<strong>간단한 방문 페이지</strong>시스템에서 제공하는 스타일 없는 샘플 랜딩 페이지입니다. 목록에는 캠페인 지원 플레이어를 사용하는 갤러리 모듈을 사용하여 생성된 게시된 랜딩 페이지 환경도 포함됩니다. 갤러리 랜딩 페이지를 사용하면 랜딩 페이지의 모양과 스타일에 더 많은 유연성을 제공합니다. 리드 양식을 사용하여 뷰어 정보를 캡처 할 수도 있습니다. 갤러리 랜딩 페이지 만들기에 대한 자세한 내용은 랜딩 페이지 환경<a href="https://gallery.support.brightcove.com/experiences/landing/creating-landing-page-experience.html">만들기를 참조하십시오</a> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select landing page" src="/assets/images/campaign/general/node16418-landing-page-video.png" /></figure>
+      </li>
+      <li>[비디오<strong>자동 재생] 을 선택합니다</strong> . 이 옵션은<strong>단순 랜딩 페이지를 선택할 때만 사용할 수</strong>있습니다.</li>
+      <li><strong>비디오 플레이어를 선택합니다</strong> . 이 옵션은<strong>단순 랜딩 페이지를 선택할 때만 사용할 수</strong>있습니다. 갤러리 랜딩 페이지의 경우 플레이어가<a href="https://gallery.support.brightcove.com/experiences/landing/creating-landing-page-experience.html">경험 속성의 일부로 할당됩니다</a> .</li>
+      <li><strong>비디오를 선택합니다</strong> . 검색어를 사용하여 계정의 동영상을 검색 할 수 있습니다.</li>
+      <li><strong>이미지 크기를 설정합니다</strong> . 이메일 본문에 표시되는 이미지입니다. [ <strong>폭]</strong>및 [ <strong>높이]</strong>필드에 값을 입력하여 이미지의 크기를 조정할 수 있습니다. 플레이어 URL은 포스터 이미지 아래에 표시됩니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="preview image" src="/assets/images/campaign/general/node16418-preview-image.png" /></figure>
+      </li>
+      <li>이메일을 보내는 데 사용할 애플리케이션을 선택하십시오. 다음 옵션을 사용할 수 있습니다.
+        <ul>
+          <li>다른</li>
+          <li>Eloqua</li>
+          <li>영업</li>
+          <li>HubSpot</li>
+          <li>Pardot</li>
+          <li>Marketo</li>
+          <li>MailChimp</li>
+        </ul>
+        <p>포함 할 HTML은 선택한 응용 프로그램에 따라 변경됩니다.</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="embed code" src="/assets/images/campaign/general/node16418-embed-code.png" /></figure>
+      </li>
+    </ol>
+    <p>마케팅 자동화 플랫폼에서 이메일 메시지를 보내는 프로세스는이 항목의 범위를 벗어납니다. 자세한 내용은<a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/index.html#Help/EmailEditing/Tasks/EditingUploadedEmailsUsingTheHTMLEditor.htm?TocPath=Emails%7CEmail%20authoring%7C_____11"> Eloqua</a> , <a href="https://docs.marketo.com/display/public/DOCS/Edit+an+Email's+HTML"> Marketo, </a><a href="https://knowledge.hubspot.com/email-user-guide-v2/how-to-create-and-send-emails">HubSpot</a>또는<a href="https://help.salesforce.com/HTViewHelpDoc?id=creating_html_email_templates.htm">세일즈포스</a>문서를 참조하십시오.</p>
+  </section>
+</article>

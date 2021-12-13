@@ -1,0 +1,38 @@
+---
+title: 레거시 트랜스코딩을 위한 표준 수집 프로필
+description: '이 항목에서는 레거시 트랜스코딩을 사용할 때 제공되는 표준 수집 프로필의 속성에 대해 알아봅니다.'
+parent: Administering Accounts
+layout: staging 
+---
+
+<!-- 
+  This content appears on:
+  
+  https://apis.support.brightcove.com/ingest-profiles-legacy/references/standard-ingest-profiles-legacy-transcoding.html
+
+  https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html
+
+  If you update in one place, you MUST update it in all!
+ -->
+
+ <h1>{{ page.title }}</h1>
+ <article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>업로드 모듈을 사용하여 비디오를 업로드하거나 DI API를 사용하여 Dynamic Ingest 요청을 생성 할 때 Video Cloud 수집 프로세스에서 생성 된 변환의 수와 유형을 결정하는 수집 프로필을 제공해야합니다. 이 항목에서는 각 레거시 수집 프로필에 대한 자세한 정보를 제공합니다. 동적 전달 프로필에 대한 자세한 내용은 동적 전달에 대한<a href="https://apis.support.brightcove.com/ingest-profiles/references/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 수집 프로필을 참조하십시오</a> .</p>
+    <aside class="bcls-aside bcls-aside--information">참고: 품질이 낮은 (낮은 비트 전송률) 소스 콘텐츠가 업로드되고 표준 프로파일 중 하나가 선택되면 Video Cloud는 소스보다 품질이 낮거나 낮은 변환만 생성합니다.</aside>
+    <p>고유 한 사용자 정의 수집 프로파일을 생성 할 수도 있습니다. 자세한 내용은 인제스트 프로파일<a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html">관리를 참조하십시오</a> .</p>
+  </section>
+  <section class="bcls-section" id="Document_data">
+    <h2>문서 데이터</h2>
+    <aside class="bcls-aside bcls-aside--information">메모:
+      <ul>
+        <li>이 페이지는 API의 라이브 데이터를 사용하여 작성됩니다. 완전히 로드하는 데 1분 정도 걸릴 수 있습니다.</li>
+        <li>표준 프로파일은<strong> ~ 아니다</strong>편집 가능 - 수정된 버전을 원하면 사용자 정의 프로필을 생성해야 합니다.</li>
+      </ul>
+    </aside>
+  </section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/ingest-profiles-api/assets/BCLSprofilesArray.js"></script>
+<script src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/ingest-profiles-api/guides/standard-profiles/standard-profiles-drupal.js"></script>
+</article>

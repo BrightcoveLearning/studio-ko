@@ -1,0 +1,76 @@
+---
+title: 레거시 수집 프로필 생성
+parent: Administering Accounts
+description: This topic provides an overview of how to create custom ingest profiles for use with Legacy transcoding.
+layout: staging 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Ingest Profiles 관리 페이지를 사용하여 새로운 레거시 수집 프로필을 생성 할 수 있습니다. 수집 프로필은 JSON을 사용하여 정의됩니다. 새 레거시 프로파일을 만들 때 레거시 트랜스코딩용<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">표준 수집 프로파일</a>문서를 검토하고 필요한 것과 유사한 프로파일을 찾는 것이 좋습니다. 그런 다음 Studio에서 프로필을 쉽게 복제 한 다음 변경 사항으로 편집 할 수 있습니다.</p>
+    <p >참고: DRM을 사용하는 수집 프로파일을 만드는 방법에 대한 자세한 내용은<a href="https://general.support.brightcove.com/general/mpeg-dash-video.html"> MPEG-DASH 비디오</a>개발자 문서를 참조하십시오.</p>
+    <p >참고: 각 프로필은 최대 25 개의 변환을 만들 수 있습니다. &nbsp;포스터 및 썸네일 이미지는 최대 25개까지 계산됩니다. &nbsp;</p>
+    <p>새 레거시 인제스트 프로파일을 만들려면 다음과 같이 하십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Studio 헤더에서<strong> ADMIN</strong>링크를 클릭합니다.</li>
+      <li><strong>인제스트 프로파일</strong>링크를 클릭합니다.</li>
+      <li>복제 할 기존 프로필을 찾습니다. 프로필 이름을 클릭하여 프로필 편집기를 엽니 다.</li>
+      <li>프로파일<strong>복제를 클릭합니다</strong> . 프로필 편집기가 새 프로필과 함께 열립니다.</li>
+      <li>프로필 상단으로 스크롤합니다. <code translate="No"><strong>name</strong></code>요소를 편집하여 프로필에 의미 있는 이름을 지정합니다. 이 이름은 Video Cloud Studio에 표시됩니다.</li>
+      <li><code translate="No"><strong>description</strong></code>요소를 편집하여 프로필에 의미 있는 설명을 제공합니다.
+        <figure class="bcls-figure"><img alt="" src="/assets/images/admin/node18503-edit-profile-name.png" /></figure>
+      </li>
+      <li>필요에 따라 변환 정보를 편집합니다. 포스터 및 축소판 이미지의 기본 크기는 프로필 끝에 있습니다.</li>
+      <li><strong>저장을 클릭합니다</strong> .</li>
+    </ol>
+    <div class="BCL-subsection">
+      <h3>프로필에 워터 마크 추가</h3>
+      <p>각<code translate="No">watermarks</code>요소에 요소를 추가하여 각 변환에 워터마크를 추가할 수<code translate="No">rendition</code>있습니다.</p>
+      <pre>
+       워터마크": [ { "y": -20, "x": -10, "width": "20%", "url": "http://www.mysite.com/companylogo.png" } ]
+       </pre>
+      <p><code translate="No">watermarks</code>요소에는 다음과 같은 매개 변수가 있습니다.</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="13%">매개 변수</th>
+            <th width="14%">유형</th>
+            <th width="73%">기술</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td ><code translate="No">url</code></td>
+            <td >끈</td>
+            <td >워터 마크 이미지의 URL</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">width</code></td>
+            <td >끈</td>
+            <td >폭 (픽셀) 또는 프레임 너비의 퍼센트 (예: 20 또는 10%)</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">height</code></td>
+            <td >끈</td>
+            <td >높이 (픽셀) 또는 프레임 너비의 퍼센트 (예: 20 또는 10%)</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">x</code></td>
+            <td >끈</td>
+            <td >왼쪽 가장자리에서 이미지 중심까지의 거리 (픽셀 또는 프레임 너비의 백분율). 예: 20 또는 10% (오른쪽 가장자리를 기준으로 워터마크를 배치하려면 -10과 같은 음수 값을 사용하십시오)</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">y</code></td>
+            <td >끈</td>
+            <td >이미지가 픽셀 또는 프레임 높이의 백분율인 경우 위쪽 가장자리에서 중심까지의 거리 (예: 20 또는 10%) (아래쪽 가장자리를 기준으로 워터마크를 배치하려면 -10과 같은 음수 값을 사용하십시오)</td>
+          </tr>
+        </tbody>
+      </table>
+      &nbsp;
+      <p>워터 마크가있는 샘플 프로필은 다음과 같습니다.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18503-watermark.png" /></figure>
+    </div>
+  </section>
+</article>

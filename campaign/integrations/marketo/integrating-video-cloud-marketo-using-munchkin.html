@@ -1,0 +1,124 @@
+---
+title: Munchkin 을 사용하여 Video Cloud와 Marketo 통합
+description: 이 주제에서는 Marketo Munchkin과 함께 사용할 캠페인 모듈을 구성하는 방법에 대해 설명합니다.
+parent: Marketo 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>캠페인 모듈을 사용하면 Video Cloud에서 Brightcove Player의 시청 데이터를 Marketo로 동기화할 수 있습니다. Marketo에서이 데이터는 세분화, 캠페인 로직, 보고서, 리드 스코어링 및 개인화 커뮤니케이션에 사용될 수 있습니다.</p>
+    <p>REST API를 사용하여 Marketo와 함께 사용하도록 Campaign 모듈을 구성하는 방법에 대한 정보는 다음을 참조하십시오. <a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html"> REST API를 사용하여 Video Cloud와 Marketo 통합</a> .</p>
+    <p>Marketo와 캠페인 모듈 통합은 두 가지 주요 구성 요소로 구성됩니다.</p>
+    <ul>
+      <li>비디오보기 데이터를 추적 할 수있는 Brightcove Player 플러그인</li>
+      <li>Video Cloud에서 Marketo로 추적 데이터를 전송하는 동기화 프로세스</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">요구 사항</h2>
+    <p>Marketo에서 캠페인 모듈을 사용하려면 다음을 수행해야 합니다.</p>
+    <ul>
+      <li>Munchkin API가 활성화된 Marketo 계정이 있어야 합니다. Munchkin 계정 ID가 필요합니다(참조<a href="#marketo"> Marketo 먼치킨에 액세스</a>아래에); Munchkin 사용자 역할이 있는 사용자는 이 값에 액세스할 수 있어야 합니다.</li>
+      <li>Professional 또는 Enterprise Video Cloud 계정 보유</li>
+      <li>캠페인 모듈을 열 때 나타나는 초기 시작 화면에서 필수 정보를 제출하여 계정에 대해 캠페인 모듈을 활성화하십시오.</li>
+      <li>모듈을 처음 사용할 때 서비스 계약을 클릭하십시오.</li>
+      <li>플레이어를 게시 할 때 고급 포함 (페이지 내) 게시 코드를 사용하십시오. 플러그인이 iframe 내에서 실행되므로 표준 삽입 (iframe) 게시 코드가 작동하지 않으므로 상위 페이지 URL 매개 변수에 액세스 할 수없고 올바른 쿠키를 얻지 못할 수 있습니다.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="features">풍모</h2>
+    <p>Video Cloud-Marketo 통합의 주요 기능은 다음과 같습니다.</p>
+    <ul>
+      <li><strong>리드 양식</strong> -시청자가 동영상을 볼 때 자동으로 표시되는 Marketo 양식을 만듭니다. 자세한 내용은 Marketo 사용자 지정 리드 양식<a href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">생성을 참조하십시오</a> .</li>
+      <li><strong>데이터 형식</strong> -비디오 클라우드보기 데이터는 페이지보기 또는 가상 웹 방문으로 Marketo에 전달됩니다. 웹 페이지 방문 이벤트에는 시청자의 참여 수준을 나타내는 쿼리 매개 변수가 포함됩니다. Marketo에 복제되는 데이터는 다음과 같습니다.
+        <ul>
+          <li>비디오 이름</li>
+          <li>비디오 ID</li>
+          <li>계정 ID (비디오 클라우드)</li>
+          <li>페이지 URL (참조 페이지의 URL)</li>
+          <li>플레이어 ID (비디오 클라우드 플레이어)</li>
+          <li>시청률 (25 %, 50 %, 75 %, 95 %)</li>
+        </ul>
+      </li>
+      <li><strong>데이터 전송</strong> - 보기 데이터는 Campaign 지원 Brightcove 플레이어가 생성할 때 즉시 Marketo로 전송되지만 Marketo 플랫폼의 일부 보고서를 새로 고치는 데 시간이 걸릴 수 있습니다. Marketo Munchkin 통합은 보기 데이터를 Campaign으로 보내지 않습니다. 조회 데이터는 브라우저에서 Marketo 클라이언트 측으로 직접 전송됩니다.</li>
+      <li><strong>데이터 보존</strong> -수집 된 데이터는 선택적으로 최대 6 개월 동안 Video Cloud에 보관할 수 있습니다.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="marketo">Marketo munchkin에 액세스</h2>
+    <p>Video Cloud와의 통합을 구성 할 때 Marketo munchkin을 입력하라는 메시지가 표시됩니다. 이 값에 액세스하려면 아래 단계를 따르십시오.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Marketo 계정에 로그인하십시오.</li>
+      <li>딸깍 하는 소리<strong>관리자</strong>상단 탐색에서.</li>
+      <li>왼쪽 탐색에서<strong>관리</strong> &gt; <strong>통합</strong> &gt; <strong> Munchkin으로 이동합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="marketo account settings" src="/assets/images/campaign/integrations/marketo/node15636-marketo-account.png" /></figure>
+      </li>
+      <li><strong>Munchkin 계정 ID를</strong>복사하여 안전한 장소에 저장합니다. 캠페인 모듈을 구성할 때 필요합니다.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="marketo-account-id" src="/assets/images/campaign/integrations/marketo/node15636-marketo-account-id.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setupConnection">연결 설정</h2>
+    <p>다음 단계에 따라 Video Cloud와 Marketo 간의 연결을 설정하십시오.</p>
+    <h3 id="establishConnection">Video Cloud와 Marketo 간의 연결 설정</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>캠페인 모듈을 열고<strong>데이터 연결</strong>왼쪽 탐색에서</li>
+      <li>새 연결<strong>추가를 클릭합니다</strong> .</li>
+      <li>선택하다<strong>마케토</strong>통합으로. <aside class="bcls-aside bcls-aside--information">참고: 사용 가능한 통합은 Video Cloud 구독을 기반으로 합니다.</aside>
+      </li>
+      <li>(선택 사항) <strong>연결 이름을 입력합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign setup" src="/assets/images/campaign/integrations/marketo/node15636-setup-section.png" /></figure>
+      </li>
+      <li><strong>연결 을 클릭합니다</strong> .</li>
+      <li><strong>대용량 (Munchkin)</strong>을 선택한 다음<strong>저장을 클릭합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="marketo integration type" src="/assets/images/campaign/integrations/marketo/node15636-munchkin-rest.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">참고: REST 통합 사용에 대한 자세한 내용은 REST API를 사용하여 Marketo 비디오 클라우드와<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">통합 단원을 참조하십시오</a> .</aside>
+      </li>
+      <li><strong>Marketo 계정 ID</strong>섹션에서<strong>빈</strong>링크를 클릭합니다. <strong>Munchkin 계정</strong> ID에 붙여넣고<strong>저장을 클릭합니다</strong> .
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Marketo splash screen" src="/assets/images/campaign/integrations/marketo/node15636-marketo-acct-id.png" /></figure>
+      </li>
+    </ol>
+    <p>이제 Marketo에 대한 Video Cloud 연결이 설정되어 사용할 준비가되었습니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">통합 구성</h2>
+    <p>Video Cloud와 Marketo 연결이 설정되면 통합을 구성 할 수 있습니다.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/campaign/integrations/marketo/node15636-connected-options.png" /></figure>
+    <ol class="bcls-tasklist-restart">
+      <li>기본적으로<strong>연결 상태는</strong><strong>활성화됩니다</strong> . <strong>연결 상태에</strong>따라 비디오 클라우드 비디오 참여 데이터가 Marketo 로 전송되는지 여부가 결정됩니다.
+        <ul>
+          <li><strong>활성화 됨</strong> -데이터가 수집되어 Marketo로 전송됩니다.</li>
+          <li><strong>장애인</strong> -데이터가 수집되지 않음 (통합이 비활성화 됨)</li>
+        </ul>
+      </li>
+    </ol>
+    <p>Marketo 와의 통합을 제거하려면<strong>연결 끊기를 클릭합니다</strong> . 캠페인 모듈은 마케팅 플랫폼에 대한 다중 연결을 지원합니다. <strong>추가 통합을</strong>구성하려면 새 연결 추가를 클릭합니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">캠페인 지원 플레이어 만들기</h2>
+    <p>동영상 참여 데이터는 캠페인 지원 동영상 플레이어를 사용하는 경우에만 Marketo로 전송됩니다. 캠페인 지원 Brightcove 플레이어 생성에 대한 정보는 다음을 참조하십시오. <a href="/campaign/general/creating-campaign-enabled-player.html">캠페인 지원 플레이어 만들기</a> .</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="trackingid">추적 ID 전달</h2>
+    <p>캠페인 모듈은 추적 ID 값을 Marketo에 전달하는 기능을 지원합니다. 예를 들어 추적 ID는 캠페인 ID를 추적하는 데 사용될 수 있습니다. 추적 ID는 캠페인 지원 플레이어를 표시하는 URL에 추가하거나 플레이어 내장 코드에 추가할 수 있습니다.</p>
+    <ul>
+      <li>예: URL에 추가됨</li>
+    </ul>
+    <pre>
+  http://www.myurl.com/video.html? <strong></strong></pre>
+    <ul>
+      <li>예: 플레이어 소스 코드에 추가됨</li>
+    </ul>
+    <pre>
+  &lt;video data-video-id="6033402539001" data-account="1486906377" data-player="default" data-embed="default" data-application-id class="video-js" <strong> data-bc-trackingid="12345"</strong>통제 수단&gt;&lt; /동영상&gt;&lt; 스크립트 src="//players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt; /스크립트&gt;</pre>
+    <p>그런 다음 Campaign은 동기화되는 다른 필드로 Marketo에 값을 전달합니다.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="identify">시청자 식별</h2>
+    <p>Marketo 통합이 있는 캠페인 지원 플레이어는 사용자의 브라우저에서 생성되는 Munchkin 쿠키(_mkto_trk)를 참조합니다. 이 값은 캠페인 모듈의 보기 데이터에서 캡처되며 보기 데이터를 Marketo와 동기화하는 데 사용됩니다.  </p>
+  </section>
+</article>

@@ -1,0 +1,144 @@
+---
+title: Brightcove 캠페인 FAQ
+description: 이 주제에는 Brightcove 캠페인에 대해 묻는 몇 가지 일반적인 질문이 포함되어 있습니다.
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section" id="why-how">
+    <h2>캠페인의 이유 및 작동 방식</h2>
+    <dl>
+      <dt class="bcls-question">마케팅 자동화 솔루션에서 비디오를 추적해야하는 이유는 무엇입니까?</dt>
+      <dd class="bcls-answer">마케팅 자동화 솔루션은 오늘날 비디오를 추적하지 않습니다. 강력한 콘텐츠로 비디오에 투자하는 경우 효과를 추적하고 콘텐츠를 보는 리드 / 사용자와의 커뮤니케이션을 자동화해야합니다. </dd>
+      <dt class="bcls-question">Brightcove와 캠페인 모듈은 쿠키를 사용합니까?</dt>
+      <dd class="bcls-answer">캠페인 모듈은 제3자 쿠키를 생성하고 사용하여 통합이 이루어지면 사용자를 식별합니다. 이렇게하면 시청자가 리드 양식을 다시 작성하라는 요청을받지 않습니다. 이 모듈은 또한 자체적으로 쿠키를 사용하여 뷰어를 추적하는 Marketo, HubSpot 및 Eloqua API를 사용합니다. 캠페인 프로필을 사용할 때 Brightcove 쿠키가 사용됩니다.</dd>
+      <dt class="bcls-question">모든 고객이 Brightcove 캠페인을 사용할 수 있습니까?</dt>
+      <dd class="bcls-answer">아니요. Campaign은 Video Marketing Suite(VMS)에 추가로 구매할 수 있습니다. 그러나 캠페인 프로필은 모든 Brightcove 고객이 무료로 사용할 수 있습니다. "캠페인 라이트"라고 생각할 수 있습니다.</dd>
+      <dt class="bcls-question">캠페인 프로필 자격이 있는 사람</dt>
+      <dd class="bcls-answer">2017년 4분기부터 모든 VMS 고객은 캠페인 프로필에 무료로 액세스할 수 있습니다. <a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">고객은 데이터 추적을 시작하려면 이를 활성화해야</a>합니다. EVS(Enterprise Video Suite) 고객은 Campaign SSO 추적도 사용할 수 있습니다.</dd>
+    </dl>
+  </section>
+  <section class="bcls-section" id="tracking-limitations">
+    <h2>시청자 추적 및 제한</h2>
+    <dl>
+      <dt class="bcls-question">모든 기능을 갖춘 캠페인 모듈과 비교할 때 캠페인 프로필에는 어떤 제한이 있습니까?</dt>
+      <dd class="bcls-answer">
+        <ul>
+          <li>타사 시스템과의 통합 없음</li>
+          <li>API 액세스 없음</li>
+          <li>맞춤 리드 양식 없음(캠페인 리드 양식만 해당)</li>
+          <li>1000보기 / 24 시간 캡처 최대</li>
+        </ul>
+        여전히 수동으로 캠페인 데이터를 CSV 또는 XLS 파일로 내보낼 수 있습니다.</dd>
+      <dt class="bcls-question">Campaign이 마케팅 자동화 플랫폼에 연결될 때 어떤 제한/요구사항이 있습니까?</dt>
+      <dd class="bcls-answer">제한 사항 및 요구 사항은 각 플랫폼에 대한 설명서에 설명되어 있습니다.
+        <ul>
+          <li><a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">Oracle Eloqua</a></li>
+          <li>허브스팟 ( <a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">클라이언트 측 API</a>또는<a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html"> REST API</a> )</li>
+          <li>마르케토 ( <a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">먼치킨</a>또는<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html"> REST API</a> )</li>
+          <li><a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">영업</a></li>
+        </ul>
+      </dd>
+      <dt class="bcls-question">Audience API를 폴링 할 수있는 빈도에 제한이 있습니까? 비디오 검색 결과에 1000 개의 제한이 있다는 것을 알고 있지만 해당 API 엔드 포인트에 다른 게재 빈도 관련 제한이 있습니까? </dt>
+      <dd class="bcls-answer">API 호출 당 최대보기 이벤트 수는 실제로 100 개입니다. 속도 제한은 없지만 너무 많이 부르면 아마도 약간 느려질 것입니다.</dd>
+      <dt class="bcls-question">현재 존재하는 3시간 지연보다 더 빠르게 캠페인 데이터를 가져올 수 있는 방법이 있습니까? "실시간에 가까운"메트릭을 얻고 싶습니다.</dt>
+      <dd class="bcls-answer">아니요. 실시간 측정 항목을 원하면 자체 플러그인을 작성하고 자체 시스템에 데이터를 전송해야합니다.</dd>
+      <dt class="bcls-question">이벤트 보기가 Campaign으로 전송되는 트리거는 무엇입니까? 비디오가 완료 될 때, 플레이어 창이 닫힐 때 또는 다른 것입니까? 사용자가 동영상을 완료하지 않고 플레이어 창을 닫지 않으면 어떻게 되나요?</dt>
+      <dd class="bcls-answer">다양하지만 기본적으로 Campaign 플러그인은 10초마다 하트비트를 서버로 다시 보냅니다.</dd>
+      <dt class="bcls-question">Campaign은 언제 보기에 대한 추적을 "완료"로 간주합니까? 플레이어 창이 닫히거나 비디오가 완료되는 경우입니까? 중간에 시청하고 동영상을 일시 중지하고 플레이어 창을 닫지 않으면 어떻게 되나요?</dt>
+      <dd class="bcls-answer">마지막으로 심장 박동을 본 지 15 분이 지났을 때, 기본적으로 활동이 부족합니다.</dd>
+      <dt class="bcls-question">캠페인 보기 데이터에서 사용할 수 있게 되면 시청자 데이터를 변경할 수 있습니까? 이벤트 데이터는 일종의 로그 통합을 통해 향후 업데이트 될 예정입니까? </dt>
+      <dd class="bcls-answer">UI 또는 API를 통해 Campaign에서 데이터를 사용할 수 있게 되면 "설정된" 것으로 간주되며 변경되지 않습니다.</dd>
+    </dl>
+  </section>
+  <section class="bcls-section" id="data-protection">
+    <h2>데이터 보호 및 기록 보존</h2>
+    <dl>
+      <dt class="bcls-question">캠페인은 GDPR을 준수합니까?</dt>
+      <dd class="bcls-answer">
+        <p>예, Campaign은 고객이 Campaign을 통해 수집한 모든 데이터를 조회하고 제거하여 사용자를 대신하여 행동할 수 있는 기능을 제공합니다. </p>
+        <p><a href="/campaign/admin/managing-viewer-data.html">https://studio.support.brightcove.com/campaign/admin/managing-viewer-data.html</a></p>
+      </dd>
+      <dt class="bcls-question">캠페인에서 데이터를 얼마 동안 유지할 수 있습니까?</dt>
+      <dd class="bcls-answer">MAP 통합은 최대 6 개월로 설정할 수 있으며 비 MAP 통합은 3 년으로 설정할 수 있습니다. </dd>
+      <dt class="bcls-question">GUID 조회는 얼마나 오래 캐시됩니까?</dt>
+      <dd class="bcls-answer">알려진 경우 30 일, 알 수없는 경우 7 일 (MAP 통합에만 적용되며 비 MAP 통합에는 조회가 필요하지 않음)</dd>
+    </dl>
+  </section>
+  <section id="marketing-automation" class="bcls-section">
+    <h2>마케팅 자동화 및 뷰어 분석</h2>
+    <dl>
+      <dt class="bcls-question">내 마케팅 자동화 플랫폼에서 다른 미디어의 비디오를 추적하는 것과 다른 점은 무엇입니까?</dt>
+      <dd class="bcls-answer">웹 페이지 또는 다운로드 가능한 백서와는 달리 비디오를 사용하면 시청자가 비디오를 시청 한 양을 정확히 파악할 수 있으므로 정확히 어떤 콘텐츠에 노출되었는지 확인할 수 있습니다. </dd>
+      <dt class="bcls-question">내 Eloqua / Marketo / HubSpot 계정에 어떻게 연결합니까?</dt>
+      <dd class="bcls-answer">캠페인 모듈의 Video Marketing Suite를 통해 Eloqua/Marketo/HubSpot 계정에 직접 로그인할 수 있습니다. 여기에서 MAP 추적 기능이 내장 된 플레이어와 리드 양식을 만들 수 있으므로 즉시 비디오 분석 추적을 시작할 수 있습니다.</dd>
+      <dt class="bcls-question">내 Eloqua / Marketo / HubSpot 페이지와 비 Eloqua / Marketo / HubSpot 랜딩 페이지 (Sitecore / WordPress / Gallery 등)의 조회수를 추적 할 수 있습니까? </dt>
+      <dd class="bcls-answer">예, 사용 중인 플레이어가 "캠페인 활성화" 상태(캠페인 플러그인 설치)인 경우 플레이어가 MAP 랜딩 페이지에 있는지 또는 다른 랜딩 페이지에 있는지 여부에 관계없이 모든 보기가 추적됩니다.</dd>
+      <dt class="bcls-question">이 통합으로 무엇을 추적 할 수 있습니까?</dt>
+      <dd class="bcls-answer">통합을 통해 데이터베이스에 이미 알려진 연락처에 대한 비디오보기 분석 (비디오, 비디오 ID, 시청률, 시청 시간)을 추적 할 수 있습니다.</dd>
+      <dt class="bcls-question">알 수없는 연락처는 어떻습니까? 나도 추적 할 수 있습니까?</dt>
+      <dd class="bcls-answer">Brightcove Campaign을 사용하면 알 수 없는 연락처를 추적할 수 있으며, 그들이 Eloqua/HubSpot 양식을 제출하면(알려짐) Campaign은 그들의 시청률 정보를 해당 새 연락처와 소급적으로 연결할 수 있습니다. Campaign은 알 수 없는 연락처의 보기 데이터를 Oracle Eloqua/HubSpot 인스턴스에 다시 일치시키기 위해 매일 시청률 정보를 다시 제출합니다. </dd>
+      <dt class="bcls-question">내 동영상 조회 데이터는 내 MAP에서 어디에 표시 되나요?</dt>
+      <dd class="bcls-answer">이것은 사용중인 MAP에 따라 다릅니다. <a href="/campaign/integrations/eloqua/eloqua-integration-testing-guide.html">오라클 엘로쿠아</a> , <a href="/camapign/integrations/marketo/marketo-rest-integration-testing-guide.html">마르케토</a>및<a href="/campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html">허브스팟에 대한 다음 문서를 참조하십시오</a> .</dd>
+      <dt class="bcls-question">내 비디오보기 데이터는 Salesforce에서 어디에 표시됩니까?</dt>
+      <dd class="bcls-answer">비디오보기는 활동 섹션에서 뷰어의 연락처 아래에 작업으로 Salesforce에 전달됩니다. 보다<a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html#sfdata"> Salesforce에서 비디오 데이터 보기</a>이것의 예를 들어. </dd>
+      <dt class="bcls-question">내 연락처 중 한 명이 비디오를 시청했을 때 Salesforce에 알림을받을 수 있습니까?</dt>
+      <dd class="bcls-answer">직접적으로는 아닙니다. 그러나 연락처의 활동을 알리는 보고서를 실행할 수 있습니다.</dd>
+      <dt class="bcls-question">Salesforce와 Oracle Eloqua / Marketo를 사용한 추적간에 차이가 있습니까?</dt>
+      <dd class="bcls-answer">가장 큰 차이점은 Salesforce가 사용자를 추적하는 데 쿠키를 사용하지 않는다는 것입니다. 따라서 뷰어를 식별하려면 고유 한 식별자를 전달해야합니다. 자세한 내용은<a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html#identify">이 문서를</a>참조하십시오. 또한 CRM 인 Salesforce는 자동화 된 후속 조치 또는 리드 점수를 제공하지 않습니다. 그러나 Salesforce에서 작업을 만든 다음 실제 후속 작업을 위해 영업 팀에 할당 할 수 있습니다.</dd>
+      <dt class="bcls-question">Campaign에는 "사용자 정의" 통합 옵션이 있습니다. Campaign이 이를 사용하여 어떤 다른 플랫폼과 통합할 수 있습니까?</dt>
+      <dd class="bcls-answer">
+        <p>Campaign은 다음과 같은 모든 데이터 플랫폼과 "통합"할 수 있습니다.</p>
+        <ol>
+          <li>각 연락처 레코드에 고유 식별자를 사용합니다.</li>
+          <li>타사 플랫폼(예: 캠페인)에서 추가 데이터를 수신할 수 있는 API가 있습니다.</li>
+        </ol>
+      </dd>
+    </dl>
+  </section>
+  <section id="lead-forms" class="bcls-section">
+    <h2>플레이어 리드 양식</h2>
+    <dl>
+      <dt class="bcls-question">캠페인은 언제 리드 양식을 표시합니까?</dt>
+      <dd class="bcls-answer">기본 설정은 MAP 데이터베이스 (알려진 사용자로 변환하려는 사용자)의 알 수없는 사용자에게만 리드 양식을 표시합니다. 리드 양식을 항상 표시하도록 선택한 경우 설정에서이를 재정의 할 수 있습니다. 이것은 테스트에 가장 유용합니다. 알려진 사용자는 자동으로 추적되며 해당 데이터는 양식을 표시 할 필요없이 MAP의 연락처와 연결됩니다.</dd>
+      <dt class="bcls-question">리드 양식을 사용자 정의 할 수 있습니까?</dt>
+      <dd class="bcls-answer">UI를 사용하여 표시되는 텍스트와 필드를 조정할 수 있습니다. UI에서 사용 가능한 것 이상으로 수정할 수 없습니다 (갤러리는 양식이 사이트와 일치하도록 일부 스타일을 업데이트 할 수 있음). </dd>
+    </dl>
+  </section>
+  <section id="general" class="bcls-section">
+    <h2>일반 주제</h2>
+    <dl>
+      <dt class="bcls-question">어떤 소스 코드를 사용해야합니까? Iframe 또는 인 페이지?</dt>
+      <dd class="bcls-answer">Campaign이 작동하려면 고급 내장 코드를 사용해야 합니다. 표준(iframe) 내장 코드를 사용하는 경우 플레이어가 페이지에서 격리됩니다. 즉, 캠페인 플러그인이 고유 식별자를 볼 수 없으므로 모든 사용자가 "알 수 없음"으로 표시됩니다.</dd>
+      <dt class="bcls-question">마케팅 자동화 란 무엇입니까?</dt>
+      <dd class="bcls-answer">마케팅 자동화는 다양한 온라인 마케팅 채널 (이메일, 웹, 양식, 콘텐츠, 비디오, 소셜 등)과의 리드 / 사용자 상호 작용을 추적하는 기술입니다. 마케팅 자동화를 통해 마케터는 이러한 채널에서 보다 효과적으로 마케팅할 수 있으며 반복적인 마케팅 작업 (예: 이메일 통신) 을 자동화할 수 있습니다. 마케팅 자동화를 통해 마케팅 담당자는 사전 정의 된 변수를 기반으로 자동화되고 개인화 된 작업을 설정할 수 있습니다. 예를 들어 사용자가 특정 동영상의 75 %를 시청하는 경우 해당 주제에 대한 이메일을 보내지 만 12 % 만 시청하는 경우 다른 동영상을 보냅니다. </dd>
+      <dt class="bcls-question">Brightcove는 마케팅 자동화 회사입니까?</dt>
+      <dd class="bcls-answer">아니요, Brightcove는 비디오 마케팅을위한 완벽한 솔루션을 제공합니다. 당사의 솔루션을 사용하면 비디오를 온라인으로 가져오고, 콘텐츠를 구성하고, 플레이어를 만들고, 비디오 포털을 만들고, 분석을 추적하고, 기존 마케팅 자동화 플랫폼과 통합 할 수 있습니다. Brightcove는 비디오 분석을 마케팅 자동화 플랫폼에 통합합니다.</dd>
+      <dt class="bcls-question">Marketo 사용자 지정 활동이 올바르게 설정되었는지 어떻게 확인할 수 있습니까?</dt>
+      <dd class="bcls-answer">Campaign에는 특정 종류의 통합을 위한 일부 디버깅 도구를 제공하는 숨겨진 URL이 있으며 Marketo REST가 그 중 하나입니다. <a href="https://studio.brightcove.com/products/videocloud/campaign/debug"> https://studio.brightcove.com/products/videocloud/campaign/debug</a>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign settings " src="/assets/images/campaign/general/faq-debug.png" /></figure>
+      </dd>
+      <dt class="bcls-question">사용자 지정 통합을 구성하려면 어떻게해야합니까?</dt>
+      <dd class="bcls-answer">다음 세 가지를 수행해야합니다.
+        <ol>
+          <li>Campaign이 캡처할 수 있는 페이지의 URL 또는 코드에 고유 식별자를 노출해야 합니다.</li>
+          <li> Audience API를 사용하여 데이터를 JSON 파일로 검색하는 스크립트를 만듭니다 (Brightcove Global Services가이를 지원할 수 있음).</li>
+          <li> 데이터를 대상 데이터베이스의 필드에 매핑합니다 (스프레드 시트 병합을 생각해보십시오).</li>
+        </ol>
+        다음 지원 문서는 이러한 작업을 다룹니다.
+        <ul>
+          <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">캠페인 모듈로 사용자 정의 통합 생성</a> - Campaign이 캡처할 수 있는 고유 식별자를 제공하는 방법을 다룹니다.</li>
+          <li> <a href="/campaign/develop/overview-audience-api.html">Audience API</a> -프로그래밍 방식으로 모든 데이터를 JSON 파일로 검색 한 다음 선택한 데이터 처리 시스템으로 가져올 수있는 방법을 다룹니다.</li>
+        </ul>
+      </dd>
+      <dt class="bcls-question">Campaign은 CDO 데이터를 Eloqua에 어떻게 푸시합니까?</dt>
+      <dd class="bcls-answer">사용자 지정 객체 대량 API를 사용합니다. <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html</a></dd>
+      <dt class="bcls-question">Campaign은 외부 자산 활동을 어떻게 푸시합니까? 사용 된 캠페인, 외부 자산 및 활동 유형을 어떻게 제어 할 수 있습니까?</dt>
+      <dd class="bcls-answer">외부 활동 API ( <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html</a> ) 를 사용하고 있습니다. 캠페인 이름, 자산 이름 또는 유형은 제어 할 수 없습니다. 우리는 단순히 자체적으로 캠페인 (BrightcoveVideoPlay)을 생성 한 다음 BrightcoveVideoPlay라고도하는 활동 생성을 진행합니다. </dd>
+      <dt class="bcls-question">Campaign이 서비스 X와 통신할 수 있도록 허용할 수 있는 IP 주소는 무엇입니까?</dt>
+      <dd class="bcls-answer">Campaign은 IP 화이트리스트에 사용해야 하는 IP 주소 세트를 설정했습니다. 목록을 보려면 Eloqua 연결을 편집하고<a ng-click="showInfo()" ng-if="::!ctrl.hideWhitelistInfo &amp;&amp; ctrl.isEloqua(ctrl.integration)" context="troubleSeeing"><strong> Eloqua에서 캠페인 데이터를 볼 수 없습니까?</strong></a>링크를 클릭하면 IP 주소 목록을 볼 수 있습니다.</dd>
+    </dl>
+  </section>
+</article>
