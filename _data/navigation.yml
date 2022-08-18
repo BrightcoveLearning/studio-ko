@@ -9,6 +9,45 @@
       url: /get-started/getting-started-video-cloud-studio.html
     - name: Video Cloud 평가판 시작하기
       url: /get-started/getting-started-your-video-cloud-trial.html
+    - name: 기본 사항 알아보기
+      url: /get-started/basics/index.html
+      docs:
+        - name: 비디오 활성화 및 비활성화
+          url: /get-started/basics/video-cloud-basics-activating-and-deactivating-video.html
+        - name: 비디오 클라우드 계정에 사용자 추가
+          url: /get-started/basics/video-cloud-basics-adding-user-video-cloud-account.html
+        - name: 비디오 포스터 및 썸네일 이미지 캡처
+          url: /get-started/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
+        - name: 수동 재생 목록 만들기
+          url: /get-started/basics/video-cloud-basics-creating-manual-playlist.html
+        - name: 플레이어 생성
+          url: /get-started/basics/video-cloud-basics-creating-player.html
+        - name: 재생 목록 플레이어 만들기
+          url: /get-started/basics/video-cloud-basics-creating-playlist-player.html
+        - name: 스마트 재생 목록 만들기
+          url: /get-started/basics/video-cloud-basics-creating-smart-playlist.html
+        - name: 얼마나 많은 비디오를 시청했는지 결정하기
+          url: /get-started/basics/video-cloud-basics-determining-how-much-video-being-watched.html
+        - name: 조회수가 가장 많은 동영상 확인
+          url: /get-started/basics/video-cloud-basics-determining-which-videos-have-most-views.html
+        - name: 기본 비디오 속성 편집
+          url: /get-started/basics/video-cloud-basics-editing-basic-video-properties.html
+        - name: 여러 비디오에 대한 비디오 속성 편집
+          url: /get-started/basics/video-cloud-basics-editing-video-properties-multiple-videos.html
+        - name: 폴더를 사용하여 비디오 구성
+          url: /get-started/basics/video-cloud-basics-organizing-videos-using-folders.html
+        - name: 웹에 재생 목록 게시
+          url: /get-started/basics/video-cloud-basics-publishing-playlist-web.html
+        - name: 웹에 단일 비디오 게시
+          url: /get-started/basics/video-cloud-basics-publishing-single-video-web.html
+        - name: 선수 스타일링
+          url: /get-started/basics/video-cloud-basics-styling-player.html
+        - name: 비디오 포스터 및 썸네일 이미지 업로드
+          url: /get-started/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
+        - name: 비디오 업로드
+          url: /get-started/basics/video-cloud-basics-uploading-videos.html
+        - name: Brightcove 시스템 상태 페이지보기
+          url: /get-started/basics/video-cloud-basics-viewing-brightcove-system-status-page.html
     - name: Brightcove 지원 사이트 탐색
       url: /get-started/navigating-brightcove-support-site.html
     - name: 비디오 클라우드로 빠른 시작
@@ -26,45 +65,6 @@
     - name: Video Cloud Studio 교육 비디오
       url: /training/video-cloud-studio-training-videos.html
 - section:
-  name: 기본 사항 알아보기
-  url: /basics/index.html
-  docs:
-    - name: 비디오 활성화 및 비활성화
-      url: /basics/video-cloud-basics-activating-and-deactivating-video.html
-    - name: 비디오 클라우드 계정에 사용자 추가
-      url: /basics/video-cloud-basics-adding-user-video-cloud-account.html
-    - name: 비디오 포스터 및 썸네일 이미지 캡처
-      url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
-    - name: 수동 재생 목록 만들기
-      url: /basics/video-cloud-basics-creating-manual-playlist.html
-    - name: 플레이어 생성
-      url: /basics/video-cloud-basics-creating-player.html
-    - name: 재생 목록 플레이어 만들기
-      url: /basics/video-cloud-basics-creating-playlist-player.html
-    - name: 스마트 재생 목록 만들기
-      url: /basics/video-cloud-basics-creating-smart-playlist.html
-    - name: 얼마나 많은 비디오를 시청했는지 결정하기
-      url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
-    - name: 조회수가 가장 많은 동영상 확인
-      url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
-    - name: 기본 비디오 속성 편집
-      url: /basics/video-cloud-basics-editing-basic-video-properties.html
-    - name: 여러 비디오에 대한 비디오 속성 편집
-      url: /basics/video-cloud-basics-editing-video-properties-multiple-videos.html
-    - name: 폴더를 사용하여 비디오 구성
-      url: /basics/video-cloud-basics-organizing-videos-using-folders.html
-    - name: 웹에 재생 목록 게시
-      url: /basics/video-cloud-basics-publishing-playlist-web.html
-    - name: 웹에 단일 비디오 게시
-      url: /basics/video-cloud-basics-publishing-single-video-web.html
-    - name: 선수 스타일링
-      url: /basics/video-cloud-basics-styling-player.html
-    - name: 비디오 포스터 및 썸네일 이미지 업로드
-      url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
-    - name: 비디오 업로드
-      url: /basics/video-cloud-basics-uploading-videos.html
-    - name: Brightcove 시스템 상태 페이지보기
-      url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
 - section:
   name: 일반 정보
   url: /general/index.html
