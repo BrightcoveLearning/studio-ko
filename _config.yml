@@ -27,7 +27,7 @@ description: |- # this means to ignore newlines until "baseurl:"
 # baseurl: "" # the subpath of your site, e.g. /blog
 site_url: "https://ko.studio.support.brightcove.com"
 site_domain: "ko.studio.support.brightcove.com"
-
+language: ko
 # Build settings
 # theme: minima
 
