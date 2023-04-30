@@ -1,0 +1,212 @@
+﻿<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>자동 동기화</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  <!-- <link rel="stylesheet" href="assets/css/site/styles.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="assets/css/site/tabs.css"> -->
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/help.css">
+  <!-- <link rel="stylesheet" href="/assets/css/details.css"> -->
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <!-- <script src="/assets/s-site-assets-scripts/sajari-head.js"></script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="body">
+
+<h1>자동 동기화</h1>
+<article class="bcls-article">
+    <section class="bcls-section">
+        <p>비디오와 관련된 태그를 기반으로 비디오를 소셜 미디어 채널에 자동으로 동기화합니다.</p>
+        <p>비디오를 게시하려면 먼저 소셜 계정의 대상을 만들어야 합니다. 왼쪽 탐색에서 <strong>목적지 를</strong> 클릭합니다.</p>
+        <aside class="bcls-aside bcls-aside--information">비디오를 수동으로 게시하는 것은 자동 동기화와 별개입니다. 비디오가 자동 동기화로 게시되도록 태그가 지정된 경우 비디오를 수동으로 게시한 경우에도 자동 동기화됩니다.</aside> 
+   
+        <details class="details-item">
+          <summary>자동 동기화 구성</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li><span class="button-blue">자동 동기화 설정을</span>클릭합니다.</li>
+              <li>동기화의<strong>이름을</strong>입력합니다.</li>
+              <li><strong>배포할 동영상 선택</strong>
+                <ul>
+                  <li><strong>이 모든 태그가 포함된 동영상</strong> - 나열된모든태그가 있는 동영상은 동기화되어야 합니다.</li>
+                  <li><strong>이러한 태그가 포함된 동영상 - 나열된 태그가</strong>포함된 동영상은 동기화되어야 합니다.</li>
+                  <li><strong>이 계정의 모든 동영상 - 계정의</strong>모든 동영상이 동기화되어야 합니다.</li>
+                </ul>
+              </li>
+              <li><strong>이 계정의 모든 동영상을</strong>선택하지 않은 경우 쉼표로 구분된 태그 목록을 입력합니다.</li>
+              <li><strong>다음 동영상 제외</strong>
+                <ul>
+                  <li><strong>비활성</strong> - 비활성 동영상이 동기화되지 않음 (기본값)</li>
+                  <li><strong>일정 제한</strong> - 예약된 동영상이 동기화되지 않음</li>
+                  <li><strong>지리적 제한</strong> - 지리적 제한이 있는 동영상은 동기화되지 않습니다.</li>
+                </ul>
+              </li>
+              <li><span class="button-blue">다음</span>을 클릭합니다.</li>
+              <li>비디오를 동기화할 게시 대상을 선택합니다.</li>
+              <li>새 목적지를 생성하거나 기존 목적지를 편집하려면 <strong>목적지 관리 를</strong> 클릭하십시오.</li>
+              <li>대상 기본값을 표시하려면 대상을 클릭합니다.</li>
+              <li><span class="button-blue">다음</span>을 클릭합니다.</li>
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>YouTube 규칙 정의</summary>
+          <section class="bcls-section">
+            <p>비디오가 Video Cloud에서 삭제될 때, 태그가 변경될 때 또는 비디오 메타데이터가 변경될 때 수행할 작업을 처리하도록 규칙을 정의할 수 있습니다.</p>
+            <p>규칙은 소셜 미디어 플랫폼을 기반으로 합니다.</p>
+
+            <ol class="bcls-tasklist-restart">
+              <li>비디오에 태그가 지정되지 않았거나 비디오 클라우드에서 삭제된 경우 어떻게 되는지 선택하십시오.
+                <ul>
+                  <li><strong>YouTube에서 배포 된 동영상 삭제</strong> - 동영상이 YouTube에서 제거됩니다</li>
+                  <li><strong>배포된 동영상</strong>만들기 - YouTube 동영상을<strong>비공개</strong>또는<strong>미등록 상태로</strong>만들기</li>
+                  <li><strong>액션 없음</strong> - YouTube 동영상에 아무 일도 일어나지 않음</li>
+                </ul>
+              </li>
+              <li>비디오 메타데이터가 변경될 때 수행할 작업을 선택합니다.
+                <ul>
+                  <li><strong>YouTube에서 비디오 메타데이터 업데이트</strong> - Video Cloud의 비디오 메타데이터 변경 사항이 YouTube에 동기화됩니다.</li>
+                  <li><strong>작업 없음</strong> - 수행된 작업이 없습니다.</li>
+                </ul>
+              </li>
+              <li><span class="button-blue">다음</span>을 클릭합니다.</li>
+              <li>자동 동기화 설정을 확인하고 <span class="button-blue">완료를</span> 클릭합니다.</li>
+              
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Facebook 규칙 정의</summary>
+          <section class="bcls-section">
+            <p>비디오가 Video Cloud에서 삭제될 때, 태그가 변경될 때 또는 비디오 메타데이터가 변경될 때 수행할 작업을 처리하도록 규칙을 정의할 수 있습니다.</p>
+            <p>규칙은 소셜 미디어 플랫폼을 기반으로 합니다.</p>
+
+            <ol class="bcls-tasklist-restart">
+              <li>비디오에 태그가 지정되지 않았거나 비디오 클라우드에서 삭제된 경우 어떻게 되는지 선택하십시오.
+                <ul>
+                  <li><strong>페이스 북에서 배포 된 비디오 삭제</strong> - 동영상이 페이스 북에서 삭제됩니다</li>
+                  <li><strong>Facebook에서 배포된 동영상 만료 - 동영상이 Facebook에서</strong>만료됩니다.</li>
+                  <li><strong>액션 없음</strong> - 페이스 북 비디오에는 아무 일도 일어나지 않습니다</li>
+                </ul>
+              </li>
+              <li>비디오 메타데이터가 변경될 때 수행할 작업을 선택합니다.
+                <ul>
+                  <li><strong>Facebook에서 비디오 메타데이터 업데이트</strong> - Video Cloud의 비디오 메타데이터에 대한 변경 사항은 Facebook과 동기화됩니다.</li>
+                  <li><strong>작업 없음</strong> - 수행된 작업이 없습니다.</li>
+                </ul>
+              </li>
+              <li><span class="button-blue">다음</span>을 클릭합니다.</li>
+              <li>자동 동기화 설정을 확인하고 <span class="button-blue">완료를</span> 클릭합니다.</li>
+              
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Twitter 규칙 정의</summary>
+          <section class="bcls-section">
+            <p>비디오가 Video Cloud에서 삭제될 때, 태그가 변경될 때 또는 비디오 메타데이터가 변경될 때 수행할 작업을 처리하도록 규칙을 정의할 수 있습니다.</p>
+            <p>규칙은 소셜 미디어 플랫폼을 기반으로 합니다.</p>
+
+            <ol class="bcls-tasklist-restart">
+              <li>비디오에 태그가 지정되지 않았거나 비디오 클라우드에서 삭제된 경우 어떻게 되는지 선택하십시오.
+                <ul>
+                  <li><strong>트위터에서 배포된 동영상 삭제</strong> - 동영상이 트위터에서 삭제됩니다.</li>
+                  <li><strong>동작 없음</strong> - 트위터 동영상에 아무 일도 일어나지 않음</li>
+                </ul>
+              </li>
+              <li><span class="button-blue">다음</span>을 클릭합니다.</li>
+              <li>자동 동기화 설정을 확인하고 <span class="button-blue">완료를</span> 클릭합니다.</li>
+              
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>자동 동기화 작업 보기/편집</summary>
+          <section class="bcls-section">
+            <p>생성한 자동 동기화 작업을 보고 편집할 수 있습니다.</p>
+            <ul>
+              <li><strong>자동 동기화 이름 &amp; ID</strong> - 동기화 속성을 열려면 이 열의 링크를 클릭합니다.</li>
+              <li><strong>태그</strong> - 태그가 있는 비디오 목록이 있는 미디어 모듈을 열려면 이 열의 링크를 클릭하십시오.</li>
+              <li><strong>목적지</strong> - 목적지 세부 정보를 보려면 이 열의 링크를 클릭하십시오.</li>
+              <li><strong>삭제</strong> - 연결된 동기화 작업을 삭제합니다.</li>
+            </ul>
+
+            <p><strong>동기화 속성</strong></p>
+            <ul>
+              <li><strong>상태</strong>
+                <ul>
+                  <li><strong>활성</strong> - 비디오가 동기화됩니다.</li>
+                  <li><strong>일시 중지됨</strong> - 비디오가 동기화되지 않습니다.</li>
+                </ul>
+              </li>
+              <li><strong>표시</strong> - 표시 목록 필터링</li>
+              <li><strong>설정</strong> - 동기화 설정을 편집합니다. 변경 사항을 저장하려면 <strong>업데이트를</strong> 클릭하십시오.</li>
+              <li><strong>삭제</strong> - 동기화 작업 삭제</li> 
+            </ul>
+          </section>
+        </details>
+
+        
+  </section>
+  <section class="bcls-section">
+    <h3><a href="/social/general/using-auto-sync-synchronize-videos-social-media-accounts.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></h3>
+  </section>
+</article>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitehttps-fix.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/js/details.js"></script>
+  <!-- <script src="/assets/js/expand-dl.js"></script> -->
+
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetabs.js"></script> -->
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetoc.js"></script> -->
+  <!-- <script src="/assets/js/sites_nav.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitelocal-link-fix.js"></script> -->
+  <!-- <script src="/assets/js/feedback.js"></script> -->
+  <!-- <script src="/assets/js/local.js"></script> -->
+  <script translate="no">
+    feather.replace()
+  </script>
+</body>
+
+</html>

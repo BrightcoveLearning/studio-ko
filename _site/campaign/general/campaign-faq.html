@@ -1,0 +1,3072 @@
+﻿<!DOCTYPE html>
+<html lang="ko"> 
+    <head>
+        <title>Brightcove 캠페인 FAQ</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="이 항목에는 Brightcove 캠페인에 대한 몇 가지 일반적인 질문이 포함되어 있습니다.">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        
+        <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+        
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span> <span></span> <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand" href="https://support.brightcove.com/" style="margin-left: 15px;"> <img class="logo-icon me-2" src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png" alt="로고" style="margin-bottom: 9px;"/>
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://interactivity.support.brightcove.com/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+          
+          <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+          
+          
+        </select>
+
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <!-- <option value="">Select Language</option> -->
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsche</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
+  </div>
+</header><!--//header-->
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/index.html">홈</a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/get-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;시작하기</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/getting-started-video-cloud-studio.html">비디오 클라우드 스튜디오 시작하기</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/getting-started-your-video-cloud-trial.html">비디오 클라우드 평가판 시작하기</a></li>
+              
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/get-started/basics/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;기본 사항 알아보기</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/activating-and-deactivating-video.html">비디오 활성화 및 비활성화</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/adding-user-video-cloud-account.html">비디오 클라우드 계정에 사용자 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/capturing-video-poster-thumbnail-images.html">비디오 포스터 및 축소판 이미지 캡처</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-manual-playlist.html">수동 재생 목록 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-player.html">플레이어 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-playlist-player.html">재생 목록 플레이어 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-smart-playlist.html">스마트 재생 목록 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/determining-how-much-video-being-watched.html">시청되는 비디오의 양을 확인</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/determining-which-videos-have-most-views.html">조회수를 가장 많이 사용하는 동영상 결정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/editing-basic-video-properties.html">기본 비디오 속성 편집</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/editing-video-properties-multiple-videos.html">여러 비디오의 비디오 속성 편집</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/organizing-videos-using-folders.html">폴더를 사용하여 비디오 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/publishing-playlist-web.html">웹에 재생 목록 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/publishing-single-video-web.html">웹에 단일 비디오 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/styling-player.html">플레이어 스타일 지정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/uploading-video-poster-thumbnail-images.html">비디오 포스터 및 축소판 이미지 업로드</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/get-started/basics/uploading-videos.html">동영상 업로드</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/navigating-brightcove-support-site.html">브라이트코브 지원 사이트 탐색</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/quick-start-video-cloud.html">비디오 클라우드로 빠른 시작</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">단계별: 비디오 클라우드 게시 워크플로우</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/video-cloud-glossary.html">비디오 클라우드 용어집</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/training/index.html">교육</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/media/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;동영상 관리</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/media/module/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;미디어 모듈 사용</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/module/getting-started-media-module.html">미디어 모듈 시작하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/module/how-search-videos-and-playlists-media-module.html">동영상 및 재생목록을 검색하는 방법</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/media/manage/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;비디오 파일 관리</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/uploading-videos-using-upload-module.html">동영상 업로드</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/replacing-video-source-file.html">비디오 소스 파일 바꾸기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/retranscoding-videos-using-media-module.html">비디오 다시 코드 변환</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/downloading-videos-video-cloud.html">비디오 클라우드에서 비디오 다운로드</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/uploading-videos-remote-urls.html">동영상 업로드 원격 URL</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/working-remote-asset-videos.html">원격 자산 비디오 작업</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/exporting-video-data.html">비디오 데이터 내보내기</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/media/properties/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;비디오 속성</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/editing-video-properties-using-media-module.html">비디오 속성 편집</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/editing-video-properties-using-quick-edit.html">빠른 편집을 사용하여 특성 편집</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/capturing-poster-and-thumbnail-images.html">포스터 및 축소판 이미지 캡처</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/uploading-poster-and-thumbnail-images.html">포스터 및 썸네일 이미지 업로드</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/configuring-video-availability.html">비디오 가용성 구성</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/media/organize/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;동영상 정리하기</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/organize/introduction-playlists.html">재생 목록 소개</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/organize/creating-and-managing-playlists.html">재생 목록 만들기 및 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/organize/organizing-videos-using-folders.html">폴더를 사용하여 비디오 구성</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/media/captions/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;캡션 및 오디오 파일</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/overview-adding-captions-video.html">개요: 비디오에 캡션 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-captions-videos-using-media-module.html">비디오에 캡션 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-audio-tracks-videos-using-media-module.html">비디오에 오디오 트랙 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-chapters-video.html">비디오에 장 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/generating-captions-videos.html">비디오용 캡션 생성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/styling-captions.html">캡션 스타일 지정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/using-the-caption-editor.html">캡션 편집기 사용</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/media/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/general/increasing-quality-poster-and-thumbnail-images.html">포스터 이미지의 품질 향상</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/general/media-sharing-using-media-module.html">미디어 공유</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/general/setting-required-fields-videos.html">필수 필드 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/general/working-cue-points-media-module.html">큐 포인트 작업</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/general/working-multi-lingual-metadata.html">다국어 메타데이터 작업</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/players/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;플레이어 관리</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/players/module/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;플레이어 모듈 사용</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/module/getting-started-players-module.html">플레이어 모듈 시작하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/step-step-using-players-module-create-and-publish-player.html">단계별: 플레이어 만들기 및 게시</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/players/properties/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;플레이어 속성</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-properties.html">플레이어 속성 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-information-properties.html">플레이어 정보 등록 정보 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/configuring-player-content-restrictions.html">플레이어 콘텐츠 제한 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/configuring-player-playback-properties.html">플레이어 재생 속성 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-update-mode-and-version.html">플레이어 업데이트 모드 설정</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/players/appearance/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;외관 및 제어</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/appearance/adding-thumbnail-seeking-player.html">썸네일 찾기 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-overlay-using-overlay-plugin.html">플레이어 오버레이 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-playlist-endscreen-using-plugin.html">재생 목록 종료 화면 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-controls.html">플레이어 컨트롤 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-endscreen.html">플레이어 종료 화면 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-localization.html">플레이어 현지화 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item">-<a class="nav-link" href="/players/appearance/configuring-social-properties-player.html">소셜 속성 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/appearance/styling-players.html">플레이어 스타일링</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/players/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/general/configuring-adobe-analytics-event-tracking.html">Adobe 애널리틱스 이벤트 추적 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/general/configuring-google-analytics-event-tracking.html">Google 애널리틱스 이벤트 추적 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/general/configuring-player-advertising-using-players-module.html">플레이어 광고 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/general/configuring-player-plugins.html">플레이어 플러그인 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/general/generating-player-embed-code.html">플레이어 임베드 코드 생성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/players/general/v5-players-support.html">Brightcove Player 5 지원</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/publish/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;비디오 및 플레이어 게시</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publish/publishing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;퍼블리싱</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing/adding-application-id-player-embed-code.html">임베드 코드에 응용 프로그램 ID 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing/changing-video-player-without-changing-embed-code.html">플레이어에서 비디오 변경</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing/choosing-correct-embed-code.html">올바른 임베드 코드 선택</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing/publishing-video-email.html">전자 메일에 비디오 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing/publishing-videos-and-playlists-media-module.html">비디오 및 재생목록 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing/publishing-videos-page-experience.html">페이지 내 환경에 비디오 게시</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publish/third-party/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;타사 앱에 게시</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/third-party/adding-brightcove-player-facebook-fan-page.html">Facebook 팬 페이지에 플레이어 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/third-party/embedding-brightcove-player-google-sites-page.html">Google 사이트 페이지에 플레이어 삽입</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/third-party/publishing-brightcove-player-wordpress-page.html">워드 프레스 페이지에 플레이어 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/third-party/publishing-brightcove-players-facebook-instant-articles.html">페이스북 인스턴트 아티클에 플레이어 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/third-party/publishing-brightcove-players-joomla.html">줌라에서 플레이어 게시</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publish/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/adding-3play-media-interactive-transcript-video.html">3Play 미디어 대화형 성적 기록 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/deep-linking.html">딥 링크</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/driving-video-views-through-email.html">전자 메일을 통한 비디오 보기 유도</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/dynamically-assigning-videos-player.html">플레이어에 동적으로 비디오 할당</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/step-step-using-players-module-create-and-publish-player.html">단계별: 플레이어 만들기 및 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/creating-and-publishing-high-quality-screencasts.html">고품질 스크린캐스트 제작 및 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/using-multiple-players-one-page.html">한 페이지에서 여러 플레이어 사용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publish/general/using-reference-ids.html">참조 ID 사용</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/analytics/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;애널리틱스 검토</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/analytics/module/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;애널리틱스 모듈 사용</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/module/getting-started-analytics-module.html">분석 모듈 시작하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/module/analytics-module-ui-glossary.html">분석 모듈 UI 용어집</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/module/how-search-videos-analytics-module.html">동영상 검색 방법</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/module/faq-analytics-module.html">자주 묻는 질문: 분석 모듈</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/module/insights-glossary.html">인사이트 용어집</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/analytics/reports/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;애널리틱스 보고서</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/analytics-report-reference.html">분석 보고서 참조</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/creating-custom-analytics-reports.html">사용자 정의 분석 보고서 생성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/engagement-report-reference.html">서비스 보고서 참조</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/insights.html">인사이트 참조</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">예약된 보고서 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/performance-report-reference.html">성과 보고서 참조</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/analytics/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/general/calculating-video-engagement-score.html">비디오 참여 점수 계산</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/general/exporting-data-analytics-module.html">데이터 내보내기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/general/reviewing-player-event-data-google-analytics.html">Google 애널리틱스에서 플레이어 이벤트 검토</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/general/ssai-performance-data.html">SSAI 성능 분석</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/social/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;소셜 공유</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/social/module/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;시작하기</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/module/getting-started-brightcove-social.html">소셜 시작하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/module/creating-social-media-publishing-destinations.html">게시 대상 작성</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/social/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/adding-facebook-button-brightcove-player.html">플레이어에 Facebook 좋아요 버튼 추가하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/creating-video-clip-using-brightcove-social.html">비디오 클립 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/enabling-longer-videos-youtube.html">YouTube에서 더 긴 동영상 사용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/publishing-videos-social-media-platforms.html">소셜 미디어에 비디오 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/publishing-live-event-facebook.html">페이스북에 라이브 이벤트 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/publishing-live-event-youtube.html">YouTube에 실시간 이벤트 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/setting-privacy-status-video.html">비디오의 개인 정보 보호 상태 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/sharing-videos-twitter-player-cards.html">트위터 플레이어 카드에 동영상 공유</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/using-auto-sync-synchronize-videos-social-media-accounts.html">자동 동기화 사용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/general/viewing-videos-published-social-media.html">게시된 비디오 보기</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/social/analytics/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;애널리틱스 검토</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/analytics/reviewing-social-analytics.html">소셜 분석 검토</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/analytics/reviewing-social-engagement-analytics.html">소셜 인게이지먼트 분석 검토</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/social/analytics/reviewing-social-views-analytics.html">소셜 뷰 분석 검토</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/social/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;개발자</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/social/getting-started/quick-start-social-api.html">빠른 시작: 소셜 API</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/social/references/reference.html">소셜 API 참조</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/social/references/social-api-error-reference.html">소셜 API: 오류 참조</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/live/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;라이브 스트리밍</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live/get-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;시작하기</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/get-started/delivering-live-streams.html">라이브 스트림 전송</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/get-started/live-module-guidelines-and-best-practices.html">브라이트코브 라이브: 모범 사례</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/get-started/step-step-live-srt.html">단계별: SRT 라이브 이벤트</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">단계별: OBS와 함께 라이브 모듈 사용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/get-started/step-step-using-live-module-telestream-wirecast.html">단계별: 와이어캐스트와 함께 라이브 모듈 사용</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live/live-module/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;라이브 모듈 사용</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/client-side-preroll-with-live-ssai.html">라이브 SSAI를 통한 클라이언트측 프리롤 광고</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/creating-and-managing-live-events-using-live-module.html">라이브 이벤트 생성 및 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/creating-video-clip-using-live-module.html">비디오 클립 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/implementing-server-side-ads-live-module.html">서버 측 광고 구현</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/live-redundancy.html">라이브 이중화</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/multi-language-audio.html">다국어 오디오</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/playback-restrictions-live-module.html">라이브 이벤트의 재생 제한</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/reviewing-live-analytics.html">라이브 분석 검토</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/scheduling-clips.html">클립 예약</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/scheduling-live-event.html">라이브 이벤트 예약</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Facebook 및 YouTube로 스트리밍</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/live-module/zoom-live-integration.html">Brightcove Live - Zoom 통합</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/general/captions-with-live-streams.html">라이브 스트림 캡션</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/general/live-drm.html">라이브 DRM</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/general/live-video-glossary.html">라이브 비디오 용어집</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/general/reducing-latency-live-streams.html">라이브 스트림에 대한 지연 시간 감소</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/general/supported-encoders-live-events.html">라이브 이벤트에 대해 지원되는 인코더</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/live/web-conferencing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;웹 컨퍼런싱</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-avaya-conference-brightcove-live.html">Avaya 회의 주최</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Cisco Webex 회의 호스트하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-inxpo-live.html">INXPO 이벤트 주최</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-zoom-conference-brightcove-live.html">줌 컨퍼런스 주최</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/interactivity/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;상호작용</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/interactivity/platform/getting-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;시작하기</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/getting-started/configuring-player-plugin.html">HapYak 플러그인으로 플레이어 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/getting-started/getting-started-interactivity.html">상호 작용 시작하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/getting-started/interactive-video-types.html">인터랙티브 비디오 유형</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/getting-started/terminology.html">술어</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/interactivity/platform/annotations/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;어노테이션</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/adding-chapters-video.html">비디오에 대화형 챕터 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/adding-quiz-annotation.html">퀴즈 주석 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/adding-image-overlay.html">이미지 오버레이 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/adding-text-overlay.html">텍스트 오버레이 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/adding-time-triggered-action.html">시간 트리거 작업 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/adding-transparent-overlay.html">투명 오버레이 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/annotation-options.html">주석 옵션</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/bulk-annotation-edit.html">대량 편집 주석</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/configuring-annotation-links.html">주석 링크 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/looping-back-in-a-video.html">비디오에서 반복 재생</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/reviewing-annotations.html">주석 검토</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/annotations/using-custom-transitions-with-animate-css.html">Animate.css에서 사용자 정의 전환 사용</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/interactivity/platform/custom-annotations/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;사용자 지정 주석</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/custom-annotations/adding-display-rule.html">비디오에 표시 규칙 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/custom-annotations/adding-poll-video.html">비디오에 투표 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/custom-annotations/adding-sign-in-video.html">비디오에 로그인 양식 추가</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/custom-annotations/adding-sentiment-video.html">동영상에 사용자 감성 더하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/custom-annotations/embedding-form-video.html">비디오에 양식 포함</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/custom-annotations/using-custom-widget-library.html">사용자 정의 위젯 라이브러리 사용</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/interactivity/platform/projects/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;프로젝트</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/projects/branching-overview.html">분기 개요</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/projects/configuring-project-settings.html">프로젝트 설정 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/projects/in-video-branching.html">비디오 내 분기 프로젝트 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/projects/creating-and-managing-projects.html">프로젝트 생성 및 관리</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/interactivity/platform/templates/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;템플리트</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/templates/applying-templates-projects.html">프로젝트에 템플릿 적용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/templates/creating-and-managing-templates.html">템플릿 생성 및 관리</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/interactivity/platform/experiences/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;경험담</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/experiences/creating-branching-experience.html">분기 경험 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/experiences/creating-slide-sync-experience.html">슬라이드 동기화 환경 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/interactivity/platform/experiences/experiences-overview.html">경험 개요</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/channels/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;채널 관리</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/channels/cloud-playout/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;클라우드 플레이아웃 채널 관리</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/channels/cloud-playout/getting-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;시작하기</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/getting-started/cloud-playout-overview.html">개요: 클라우드 플레이 아웃</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/getting-started/cloud-playout-stream-vod.html">클라우드 플레이 아웃 채널 생성</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/channels/cloud-playout/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;일반 정보</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/general/configuring-s3-buckets.html">S3 버킷 구성</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/general/managing-slates.html">슬레이트 관리</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/general/searching-for-channels.html">채널 검색</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/general/channel-live-redundancy.html">채널에 라이브 중복성 사용</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/channels/cloud-playout/managing-content/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;채널 콘텐츠 관리</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/managing-content/cloud-playout-add-content.html">채널 프로그램 관리</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/managing-content/managing-programs.html">프로그램 관리</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/managing-content/static-image-overlays.html">정적 이미지 오버레이 추가</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/managing-content/dynamic-overlays.html">동적 오버레이 추가</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/managing-content/import-captions.html">캡션 가져오기</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/managing-content/adding-bumpers-to-vod.html">Cloud Playout에 범퍼 추가</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/channels/cloud-playout/monetization/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;수익 창출 채널</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/monetization/enabling-server-side-ads.html">클라우드 플레이 아웃 수익 화</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/monetization/mid-roll-ad-insertion.html">채널에 미드롤 광고 추가</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/channels/cloud-playout/publishing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;퍼블리싱 채널</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/publishing/using-channel-actions.html">채널 액션 사용</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/publishing/hard-start.html">채널에 대한 하드 시작 설정</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/publishing/generating-channel-embed-code.html">채널 임베드 코드 생성</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/publishing/viewing-channel-output-and-analytics.html">채널 출력 및 분석보기</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/campaign/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;마케팅 자동화</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/campaign/get-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;시작하기</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/get-started/getting-started-campaign-module.html">캠페인 시작하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/creating-campaign-enabled-player.html">캠페인 가능 플레이어 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/get-started/overview-video-content-types.html">비디오 콘텐츠 유형 개요</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/get-started/using-hud.html">Chrome 확장 프로그램 사용</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/campaign/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item section-doc"><a class="nav-link" href="/campaign/general/campaign-faq.html" aria-current="page">캠페인 FAQ</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/campaign-fields-and-data-definitions.html">캠페인 필드 및 데이터 정의</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/campaign-plugin-faq.html">캠페인 플러그인 FAQ</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/configuring-campaign-settings.html">캠페인 설정 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/creating-campaign-enabled-player.html">캠페인 가능 플레이어 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/creating-campaign-lead-form.html">캠페인 리드 양식 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/how-campaign-module-identifies-viewers.html">캠페인이 시청자를 식별하는 방법</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/how-vbs-calculated.html">비디오 벤치마크 점수 계산 방법</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/publishing-video-email-using-campaign-module.html">전자 메일에 비디오 게시</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/using-custom-metrics-and-events.html">사용자 지정 지표 및 이벤트 사용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/viewing-player-events-campaign-module.html">플레이어 이벤트 보기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/viewing-video-activity.html">비디오 활동 보기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/viewing-viewer-profile-information.html">뷰어 프로파일 정보 보기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/general/working-utm-fields-campaign-module.html">UTM 필드 작업</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/campaign/integrations/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;통합</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/campaign/integrations/eloqua/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;엘로쿠아</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html">사용자 정의 잠재 고객 양식 생성</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/eloqua/eloqua-integration-testing-guide.html">Eloqua 통합 테스트 가이드</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html">랜딩 페이지에 비디오 포함</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">오라클 엘로쿠아와의 통합</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/campaign/integrations/hubspot/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;허브스팟</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html">사용자 정의 잠재 고객 양식 생성</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html">허브스팟 REST API 테스트 가이드</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">HubSpot과 통합 (클라이언트 측 API)</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">허브스팟과 통합 (REST API)</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/campaign/integrations/marketo/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;마르케토</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">사용자 정의 잠재 고객 양식 생성</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">마르케토 (먼치킨) 와의 통합</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">마케토 (REST API) 와 통합</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/marketo/marketo-rest-integration-testing-guide.html">마케토 REST 통합 테스트 가이드</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/campaign/integrations/non-map/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;비지도</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">사용자 정의 통합 생성</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/non-map/integrating-campaign-single-sign.html">단일 사인온과 통합</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">캠페인을 사용하여 시청자 추적</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/campaign/integrations/salesforce/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;세일즈 포스</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html">사용자 정의 잠재 고객 양식 생성</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html">파도트에 대한 세일즈 포스 객체 만들기</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">세일즈포스와 통합</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/campaign/admin/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;캠페인 관리</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/admin/exporting-campaign-data-campaign-module.html">캠페인에서 데이터 내보내기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/admin/exporting-gallery-lead-data.html">갤러리 잠재 고객 데이터 익스포트</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/admin/managing-viewer-data.html">뷰어 데이터 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/campaign/admin/troubleshooting-campaign-issues.html">캠페인 문제 해결</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/audience/index.html">개발자(대상 API)</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/admin/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;계정 관리</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/admin/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 정보</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/authenticating-studio-users-using-single-sign.html">SSO를 사용하여 스튜디오 사용자 인증</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/configuring-language-settings.html">언어 설정 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/configuring-server-side-ad-settings.html">서버 측 광고 설정 구성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/creating-custom-metadata-fields.html">사용자 정의 메타데이터 필드 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-account-information.html">계정 정보 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-account-settings.html">계정 설정 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-api-authentication-credentials.html">API 인증 자격 증명 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-media-sharing-settings.html">미디어 공유 설정 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-live-settings.html">라이브 설정 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-playback-rights.html">재생 권한 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-profile-information.html">프로파일 정보 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-users.html">사용자 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/using-directed-migration-tool-migrate-brightcove-smart-players.html">지정 마이그레이션 도구 사용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/general/viewing-billing-information.html">청구 정보 조회</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/admin/ingest-profiles/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;인제스트 프로필 관리</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-custom-live-ingest-profiles.html">사용자 정의 라이브 인제 스트 프로파일 생성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-ingest-profiles-context-aware-encoding.html">컨텍스트 인식 인코딩을 위한 인제스트 프로파일 생성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-ingest-profiles-dynamic-delivery.html">동적 전달을 위한 인제스트 프로파일 생성</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/fields-custom-live-ingest-profiles.html">라이브 인제스트 프로필 필드</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/ingest-profiles-best-practices.html">프로파일 인제스트 모범 사례</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/managing-ingest-profiles.html">인제스트 프로파일 관리</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">표준 인제스트 프로파일 (DD 및 CAE)</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/standard-live-ingest-profiles.html">표준 라이브 인제스트 프로파일</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;일반 정보</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/general/content-protection/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;콘텐츠 보호</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/content-protection/drm-output-protection-settings.html">DRM 출력 보호 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/content-protection/overview-digital-rights-management-drm-video-cloud.html">개요: DRM (디지털 권한 관리)</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/content-protection/protecting-videos-hls-encryption.html">HLS 암호화로 비디오 보호</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/content-protection/tls-media-player-and-api-urls.html">미디어, 플레이어 및 API URL에 대한 TLS</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/general/references/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;참고 문헌</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html">모범 사례: 트랜스코딩 및 업로드</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/china-delivery-overview.html">중국 배송 개요</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/creating-audio-only-renditions-low-bandwidth-delivery.html">오디오 전용 변환 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/making-your-video-content-indexable.html">비디오 콘텐츠를 인덱싱할 수 있도록 만들기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/optimal-video-dimensions.html">최적의 비디오 크기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/resetting-your-studio-password.html">스튜디오 암호 재설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/studio-system-requirements.html">스튜디오 시스템 요구 사항</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/supported-video-and-audio-formats-codecs-and-containers.html">지원되는 비디오 및 오디오 형식</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/video-source-file-specifications-and-recommendations.html">비디오 소스 파일 사양 및 권장 사항</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/working-360deg-videos.html">360° 비디오 작업하기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/working-audio-content.html">오디오 전용 콘텐츠 작업</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/references/working-multiple-video-cloud-accounts.html">여러 계정 작업</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/general/architecture/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;아키텍처</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/architecture/content-delivery-options.html">콘텐츠 전송 옵션</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html">액세스할 수 있어야 하는 도메인 및 포트</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/architecture/overview-context-aware-encoding.html">컨텍스트 인식 인코딩 개요</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/architecture/overview-dynamic-delivery.html">동적 딜리버리 개요</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/architecture/migration-dynamic-delivery.html">정적 비디오를 Dynamic Delivery로 마이그레이션</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/architecture/video-cloud-architecture-overview.html">비디오 클라우드 아키텍처 개요</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/general/architecture/video-cloud-studio-cookies.html">비디오 클라우드 스튜디오 쿠키</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/release-notes/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;릴리즈 노트</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="https://support.brightcove.com/product-updates.html#video_cloud">비디오 클라우드 스튜디오 릴리스 정보</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;서포트</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">영업팀에 문의</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">브라이트코브 시스템 상태 페이지 보기</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/known-issues-studio-brightcove-player-and-apis.html">알려진 문제</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">지원 사례 열기</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">지원 포털 비밀번호 재설정</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div><!--//docs-sidebar-->
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">홈</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/campaign/">운동</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/campaign/general/">일반</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Brightcove 캠페인 FAQ</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br/>
+      
+      
+<article class="bcls-article">
+  <h1>Brightcove 캠페인 FAQ</h1>
+  <summary>이 항목에는 Brightcove 캠페인에 대한 몇 가지 일반적인 질문이 포함되어 있습니다.</summary>
+  <section class="bcls-section">
+    <h2 id="why-how">Why 캠페인 &amp; 작동 방식</h2>
+    <details><summary>마케팅 자동화 솔루션에서 비디오를 추적해야 하는 이유는 무엇입니까?</summary>
+     마케팅 자동화 솔루션은 현재 비디오를 추적하지 않습니다. 강력한 콘텐츠로 동영상에 투자하는 경우 동영상의 효과를 추적하고 콘텐츠를 보는 잠재 고객/사용자와의 통신을 자동화해야 합니다.</details>
+     <details><summary>Brightcove와 캠페인 모듈은 쿠키를 사용합니까?</summary>
+     캠페인 모듈은 타사 쿠키를 생성하고 사용하여 통합이 있을 때 사용자를 식별합니다. 이렇게 하면 시청자에게 리드 양식을 다시 작성하라는 메시지가 표시되지 않습니다. 또한 이 모듈은 쿠키를 사용하여 뷰어를 추적하는 Marketo, HubSpot 및 Eloqua API를 사용합니다. 캠페인 프로필을 사용할 때 Brightcove 쿠키가 사용됩니다.</details>
+     <details><summary>모든 고객이 Brightcove 캠페인을 사용할 수 있습니까?</summary>
+      아니요. Campaign은 Video Marketing Suite(VMS)에 대한 구매 가능한 추가 기능으로 사용할 수 있습니다. 그러나 캠페인 프로필은 모든 Brightcove 고객이 무료로 사용할 수 있습니다. "Campaign-lite"라고 생각하시면 됩니다.</details>
+     <details><summary>캠페인 프로필을 사용할 수 있는 사람.</summary>
+      2017년 4분기부터 모든 VMS 고객은 캠페인 프로필에 무료로 액세스할 수 있습니다. <a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">고객은 데이터 추적을 시작하려면 이 기능을 활성화해야</a>합니다. Enterprise Video Suite(EVS) 고객은 캠페인 SSO 추적도 사용할 수 있습니다.</details>
+  </section>
+  <section class="bcls-section">
+    <h2 id="tracking-limitations">시청자 추적 및 제한 사항</h2>
+    <details><summary>전체 기능을 갖춘 캠페인 모듈과 비교할 때 캠페인 프로필에는 어떤 제한이 있습니까?</summary>
+        <ul>
+          <li>타사 시스템과의 통합 불필요</li>
+          <li>API 액세스 권한 없음</li>
+          <li>맞춤 리드 양식 없음(캠페인 리드 양식만 해당)</li>
+          <li>최대 1000개의 뷰/24시간 기간 캡처</li>
+        </ul>
+        여전히 캠페인 데이터를 CSV 또는 XLS 파일로 수동으로 내보낼 수 있습니다.</details>
+     <details><summary>캠페인이 마케팅 자동화 플랫폼에 연결될 때 어떤 제한/요구 사항이 있습니까?</summary>
+      제한 사항 및 요구 사항은 각 플랫폼의 설명서에 설명되어 있습니다.
+        <ul>
+          <li>Oracle Eloqua<a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html"></a></li>
+          <li>허브스팟 ( <a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">클라이언트 측 API</a>또는<a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">REST API</a> )</li>
+          <li>마케토 ( <a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">먼치킨</a>또는<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">REST API</a> )</li>
+          <li><a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">세일즈포스</a></li>
+        </ul>
+      </details>
+      <details><summary>오디언스 API를 폴링 할 수있는 빈도에 제한이 있습니까? 비디오 검색 결과에 1000 캡이 있지만 해당 API 엔드 포인트에 다른 주파수 관련 캡이 있습니까? </summary>
+      API 호출 당 최대 뷰 이벤트 수는 실제로 100개입니다. 속도 제한은 없지만 너무 많이 호출하려고하면 조금 느려질 것입니다.</details>
+      <details><summary>현재 존재하는 3시간 지연보다 더 빠르게 캠페인 데이터를 얻을 수 있는 방법이 있습니까? “실시간에 가까운”메트릭을 얻고 싶습니다.</summary>
+      안 돼실시간 메트릭을 원한다면 자신의 플러그인을 작성하고 자신의 시스템에 데이터를 보내야합니다.</details>
+      <details><summary>캠페인으로 전송되는 이벤트 보기의 트리거입니까? 비디오가 완료 될 때, 플레이어 창이 닫힐 때 또는 다른 것입니까? 사용자가 비디오를 완성하지 않고 플레이어 창을 닫지 않으면 어떻게 되나요?</summary>
+      다양하지만 기본적으로 Campaign 플러그인은 10초마다 하트비트를 서버로 다시 보냅니다.</details>
+      <details><summary>Campaign은 언제 조회에 대한 추적을 "완료"로 간주합니까? 플레이어 창이 닫히거나 비디오를 완료 할 때입니까? 그들이 중간에 시청하고, 비디오를 일시 정지하고, 플레이어 창을 닫지 않으면 어떻게 될까요?</summary>
+      우리가 마지막으로 심장 박동을 본 지 15 분이 지난 때입니다. 기본적으로 활동이 부족합니다.</details>
+      <details><summary>캠페인 시청 데이터에서 사용할 수 있게 되면 시청자 데이터를 변경할 수 있습니까? 향후 어떤 종류의 로그 통합으로 해당 이벤트 데이터가 업데이트됩니까? </summary>
+      UI 또는 API를 통해 캠페인에서 데이터를 사용할 수 있게 되면 "정착"된 것으로 간주되며 변경되지 않습니다.</details>
+  </section>
+  <section class="bcls-section">
+    <h2 id="data-protection">데이터 보호 및 기록 보존</h2>
+    <details><summary>캠페인은 GDPR을 준수합니까?</summary>
+        <p>예, Campaign은 고객이 사용자를 대신하여 Campaign을 통해 수집한 모든 데이터를 조회하고 제거할 수 있는 기능을 제공합니다. </p>
+        <p><a href="/campaign/admin/managing-viewer-data.html">https://studio.support.brightcove.com/campaign/admin/managing-viewer-data.html</a></p>
+    </details>
+    <details><summary>Campaign에서 데이터를 얼마 동안 보관할 수 있습니까?</summary>
+      MAP 통합은 최대 6개월로 설정할 수 있으며 비맵 통합은 3년으로 설정할 수 있습니다. </details>
+    <details><summary>GUID 조회는 얼마나 오래 캐시됩니까?</summary>
+      알려진 경우 30일, 알 수 없는 경우 7일 (MAP 통합에만 적용, 비 맵 통합의 경우 조회는 필요 없음)</details>
+  </section>
+  <section class="bcls-section">
+    <h2 id="marketing-automation">마케팅 자동화 및 뷰어 분석</h2>
+    <details><summary>마케팅 자동화 플랫폼의 다른 미디어에서 비디오를 추적하는 것과 다른 점은 무엇입니까?</summary>
+    웹페이지나 다운로드 가능한 백서와는 달리 동영상이 있는 경우 시청자가 시청한 동영상의 양과 노출된 콘텐츠를 정확히 확인할 수 있습니다. </details>
+    <details><summary>내 엘로쿠/마케토/HubSpot 계정과 어떻게 연결하나요?</summary>
+    캠페인 모듈의 Video Marketing Suite를 통해 직접 Eloqua/Marketo/HubSpot 계정에 로그인할 수 있습니다. 여기에서 MAP 추적 기능이 내장된 플레이어 및 리드 양식을 만들 수 있으므로 비디오 분석 추적을 즉시 시작할 수 있습니다.</details>
+    <details><summary>Eloqua/Marketo/HubSpot 페이지뿐만 아니라 비엘로쿼/마케토/HubSpot 랜딩 페이지 (사이트 코어/워드 프레스/갤러리 등) 에서도 조회수를 추적할 수 있나요? </summary>
+    예, 사용 중인 플레이어가 "캠페인 활성화"(캠페인 플러그인이 설치되어 있는 경우)인 경우 플레이어가 MAP 랜딩 페이지에 있는지 또는 다른 랜딩 페이지에 있는지에 관계없이 모든 보기가 추적됩니다.</details>
+    <details><summary>이 통합으로 무엇을 추적할 수 있습니까?</summary>
+    Akamai의 통합을 통해 데이터베이스에 이미 있는 알려진 연락처에 대한 비디오 시청 분석 (비디오, 비디오 ID, 시청률, 시청 시간) 을 추적할 수 있습니다.</details>
+    <details><summary>알 수 없는 연락처는 어떻습니까? 나도 그들을 추적 할 수 있습니까?</summary>
+    Brightcove Campaign을 사용하면 알 수 없는 연락처를 추적할 수 있으며 Eloqua/HubSpot 양식을 제출하면(알려짐) Campaign은 시청률 정보를 새 연락처와 소급하여 연결할 수 있습니다. Campaign은 알 수 없는 연락처의 보기 데이터를 Oracle Eloqua/HubSpot 인스턴스와 일치시키기 위해 매일 시청률 정보를 다시 제출합니다. 이것은 사용중인 MAP에 따라 다릅니다. <a href="/campaign/integrations/eloqua/eloqua-integration-testing-guide.html">오라클 엘로쿠아</a> , <a href="/camapign/integrations/marketo/marketo-rest-integration-testing-guide.html">Marketo</a>및<a href="/campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html">HubSpot에</a>대한 다음 설명서를 참조하십시오.</details>
+    <details><summary>Salesforce에서 내 비디오 시청 데이터는 어디에 표시됩니까?</summary>
+    비디오 보기는 활동 섹션의 시청자 연락처 아래에 작업으로 Salesforce에 전달됩니다. 이에 대한 예는<a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html#sfdata">Salesforce에서 비디오 데이터 보기를</a>참조하십시오. </details>
+    <details><summary>내 연락처 중 하나가 비디오를 시청했을 때 Salesforce에 알림을 받을 수 있습니까?</summary>
+    직접은 아닙니다. 그러나 연락처의 활동을 알리는 보고서를 실행할 수 있습니다.</details>
+    <details><summary>세일즈포스와 오라클 엘로쿠/마케토와의 추적 사이에 차이가 있습니까?</summary>
+    가장 큰 차이점은 Salesforce가 쿠키를 사용하여 사용자를 추적하지 않는다는 것입니다. 따라서 뷰어를 식별하기 위해 고유 식별자를 전달해야합니다. 자세한<a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html#identify">내용은이 문서를</a>참조하십시오. 또한 CRM인 Salesforce는 자동화된 후속 조치 또는 잠재 고객 점수를 제공하지 않습니다. 그러나 Salesforce에서 작업을 만든 다음 실제 후속 작업을 위해 영업 팀에 할당되는 작업을 만들 수 있습니다.</details>
+    <details><summary>Campaign에는 "사용자 지정" 통합 옵션이 있습니다. Campaign이 이를 사용하여 통합할 수 있는 다른 플랫폼은 무엇입니까?</summary>
+        <p>Campaign은 다음과 같은 모든 데이터 플랫폼과 "통합"할 수 있습니다.</p>
+        <ol>
+          <li>각 연락처 레코드에 고유 식별자를 사용합니다.</li>
+          <li>타사 플랫폼(캠페인 등)에서 추가 데이터를 수신할 수 있는 API가 있습니다.</li>
+        </ol>
+      </details>
+      <details><summary>분석 모듈의 내 동영상 조회수가 캠페인 모듈의 조회수보다 많은 이유는 무엇입니까?</summary>
+        <p>애널리틱스 &amp; 캠페인 모듈은 두 개의 별도 시스템이며 각각 별도의 사용 사례를 캡처하므로 보기 이벤트가 1:1일 것으로 예상해서는 안 됩니다.</p>
+        <p>캠페인 리드 양식은 리드 양식을 표시하기 전에 <code>video_view</code> 이벤트가 트리거되어야 합니다. 이러한 <code>video_view</code> 이벤트는 사용자가 재생 버튼을 수동으로 클릭하도록 하여 재생을 시작할 때 트리거됩니다. 결과적으로 콘텐츠가 재생되지 않은 것처럼 보일 수 있지만 <code>video_view가</code> 등록되어 분석 모듈에서 동영상에 표시됩니다.</p>
+        <p>캠페인 모듈의 보기 이벤트와 비교하여 분석 모듈에서 더 많은 수의 비디오 보기가 표시되는 경우 가장 가능성이 높은 이유는 사용자가 리드 양식을 받았지만 재생을 계속하기 위해 작성하지 않았기 때문일 수 있습니다.</p>
+      </details>
+  </section>
+  <section class="bcls-section">
+    <h2 id="lead-forms">플레이어 리드 양식</h2>
+      <details><summary>Campaign은 언제 리드 양식을 표시합니까?</summary>
+      기본 설정은 MAP 데이터베이스의 알 수 없는 사용자 (알려진 사용자로 변환하려는 사용자) 에게만 리드 양식을 표시합니다. 항상 리드 양식을 표시하도록 선택한 경우 설정에서 이 설정을 재정의할 수 있습니다. 이것은 테스트에 가장 유용합니다. 알려진 사용자는 자동으로 추적되며 해당 데이터는 양식을 표시할 필요 없이 MAP의 연락처와 연결됩니다.</details>
+      <details><summary>리드 양식을 사용자 지정할 수 있습니까?</summary>
+      UI를 사용하여 표시되는 텍스트와 필드를 조정할 수 있습니다. UI에서 사용할 수있는 것 이상으로 수정할 수 없습니다 (갤러리는 양식이 사이트와 일치하도록 일부 스타일을 업데이트 할 수 있습니다) </details>
+  </section>
+  <section class="bcls-section">
+    <h2 id="general">일반 주제</h2>
+    
+    <details><summary>어떤 임베드 코드를 사용해야합니까? iframe 또는 페이지?</summary>
+     캠페인이 작동하려면 고급 삽입 코드를 사용해야 합니다. 표준(iframe) 포함 코드를 사용하면 플레이어가 페이지에서 격리됩니다. 즉, 캠페인 플러그인이 고유 식별자를 볼 수 없으므로 모든 사용자가 "알 수 없음"으로 표시됩니다.</details>
+     <details><summary>마케팅 자동화란 무엇입니까?</summary>
+     마케팅 자동화는 다른 온라인 마케팅 채널 (이메일, 웹, 양식, 콘텐츠, 비디오, 소셜 등) 과의 리드/사용자 상호 작용을 추적하는 기술입니다. 마케팅 자동화를 통해 마케터는 이러한 채널에서 보다 효과적으로 마케팅을 수행하고 반복적인 마케팅 작업 (예: 이메일 커뮤니케이션) 을 자동화할 수 있습니다. 마케팅 자동화를 통해 마케터는 사전 정의된 변수를 기반으로 자동화 및 개인화된 작업을 설정할 수 있습니다. 예를 들어 사용자가 특정 동영상의 75% 를 보는 경우 특정 주제에 대한 이메일을 보내지만 12% 만 시청하는 경우 다른 동영상을 보냅니다. </details>
+      <details><summary>브라이트코브는 마케팅 자동화 회사입니까?</summary>
+      아니요. 브라이트코브는 비디오 마케팅을 위한 완벽한 솔루션을 제공합니다. Adobe 솔루션을 사용하면 비디오를 온라인으로 가져오고, 콘텐츠를 구성하고, 플레이어를 만들고, 비디오 포털을 만들고, 분석을 추적하고, 기존 마케팅 자동화 플랫폼과 통합할 수 있습니다. 브라이트코브는 비디오 분석을 마케팅 자동화 플랫폼에 통합합니다.</details>
+      <details><summary> Marketo 사용자 지정 활동이 올바르게 설정되었는지 확인하려면 어떻게 해야 합니까?</summary>
+      Campaign에는 특정 유형의 통합을 위한 몇 가지 디버깅 도구를 제공하는 숨겨진 URL이 있으며 Marketo REST가 그 중 하나입니다. <a href="https://studio.brightcove.com/products/videocloud/campaign/debug">https://studio.brightcove.com/products/videocloud/campaign/debug</a>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="캠페인 설정 " src="/assets/images/s-campaign-img/general/faq-debug.png"/></figure> </details>
+        <details><summary>사용자 지정 통합을 구성하기 위해 수행해야 할 작업은 무엇입니까?</summary>
+      세 가지 작업을 수행해야합니다.
+        <ol>
+          <li>Campaign이 캡처할 수 있는 페이지의 URL 또는 코드에 고유 식별자를 노출해야 합니다.</li>
+          <li> Audience API를 사용하여 데이터를 JSON 파일로 검색하는 스크립트를 만듭니다 (브라이트코브 글로벌 서비스는 이 문제를 해결할 수 있습니다).</li>
+          <li> 대상 데이터베이스의 필드에 데이터를 매핑합니다 (스프레드시트 병합 생각).</li>
+        </ol>
+        다음 지원 설명서에서는 이러한 작업에 대해 설명합니다.
+        <ul>
+          <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">캠페인 모듈로 사용자 정의 통합 생성</a> - Campaign이 캡처할 수 있는 고유 식별자를 제공하는 방법을 다룹니다.</li>
+          <li> <a href="/campaign/develop/overview-audience-api.html">Audience API</a> - 프로그래밍 방식으로 모든 데이터를 JSON 파일로 검색하여 선택한 데이터 처리 시스템으로 가져올 수 있는 방법을 다룹니다.</li>
+        </ul>
+        </details>
+        <details><summary>Campaign은 CDO 데이터를 Eloqua로 어떻게 푸시합니까?</summary>
+      사용자 지정 개체 대량 API를 사용합니다. <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html </a></details>
+      <details><summary>Campaign은 외부 자산 활동을 어떻게 푸시합니까? 사용된 캠페인, 외부 자산 및 활동 유형을 어떻게 관리할 수 있습니까?</summary>
+      우리는 외부 활동 API ( <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html</a> ) 를 사용합니다. 캠페인 이름, 저작물 이름 또는 유형은 통제할 수 없습니다. 우리는 단순히 우리 자신의 캠페인 (브라이트코브비디오플레이라는 이름) 을 만든 다음 브라이트코브비디오플레이라는 활동을 만듭니다. </details>
+      <details><summary>Campaign이 서비스 X와 통신할 수 있도록 허용할 수 있는 IP 주소는 무엇입니까?</summary>
+      Campaign은 IP 화이트리스트에 사용해야 하는 IP 주소 집합을 설정했습니다. 목록을 보려면 Eloqua 연결을 편집하고 <a ng-click="showInfo()" ng-if="::!ctrl.hideWhitelistInfo &amp;&amp; ctrl.isEloqua(ctrl.integration)" context="troubleSeeing"><strong>Eloqua에서 캠페인 데이터를 볼 수 없습니까?</strong></a> 링크를 클릭하여 IP 주소 목록을 확인하십시오.</details>
+  </section>
+</article>
+
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">페이지 내용</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">브라이트코브 지원</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">시스템 상태</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">고객 지원 문의</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">모든 문서 검색</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">교육</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">온라인 코스</a></li>
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">강좌 등록</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">브라이트코브 아카데미</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">브라이트코브닷컴</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/s/">밝은 자리 커뮤니티 포럼</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">제품 릴리스 정보</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">설명서 업데이트</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. 판권 소유.</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">프라이버시</a><a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script translate="no">
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+
+  
+
+
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+
+  <!-- original footer components -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+  </body>
+</html> 

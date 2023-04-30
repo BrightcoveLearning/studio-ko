@@ -1,0 +1,533 @@
+﻿<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>플레이어 세부 정보</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  <!-- <link rel="stylesheet" href="assets/css/site/styles.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="assets/css/site/tabs.css"> -->
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/help.css">
+  <!-- <link rel="stylesheet" href="/assets/css/details.css"> -->
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <!-- <script src="/assets/s-site-assets-scripts/sajari-head.js"></script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="body">
+
+<h1>플레이어 세부 정보</h1>
+<article class="bcls-article">
+  <section class="bcls-section">
+    <p>플레이어 세부 정보 페이지는 다음으로 구성됩니다.</p>
+    <ul>
+      <li><a href="#toolbar">도구 모음 버튼</a></li>
+      <li><a href="#details">플레이어 세부 정보</a></li>
+    </ul>
+  </section>
+  <hr/>
+  <section id="toolbar" class="bcls-section">
+    <h3>도구 모음 버튼</h3>
+    <details>
+      <summary>플레이어 삭제</summary>
+      <section class="bcls-section">
+        <ol class="bcls-tasklist-restart">
+          <li><span class="button-red-text">삭제</span>를 클릭합니다.</li>
+        </ol>
+      </section>
+    </details>
+    <details>
+      <summary>플레이어 활성화/비활성화</summary>
+      <section class="bcls-section">
+        <p>활성화된 플레이어는 동영상을 재생할 수 있습니다.비활성화된 플레이어는 동영상을 재생할 수 없습니다.</p>
+        <ol class="bcls-tasklist-restart">
+          <li><span class="button-blue-text-bordered">활성화</span> 또는 <span class="button-blue-text-bordered">비활성화 를</span> 클릭합니다.</li>
+        </ol>
+      </section>
+    </details>
+    <details>
+      <summary>변경사항 되돌리기</summary>
+      <section class="bcls-section">
+        <p>변경 사항을 되돌리면 게시되지 않은 플레이어 변경 사항이 모두 삭제됩니다. 변경 사항을 플레이어로 되돌리려면:</p>
+        <ol class="bcls-tasklist-restart">
+          <li><span class="button-blue-text-bordered">변경사항 되돌리기 를</span> 클릭합니다.</li>
+          <li><span class="button-red">변경 사항 취소 를</span> 클릭합니다.</li>
+        </ol>
+      </section>
+    </details>
+    <details>
+      <summary>플레이어 미리보기</summary>
+      <section class="bcls-section">
+        <p>게시되기 전에 플레이어 변경 사항을 미리 봅니다. 플레이어를 미리 보려면 <span class="button-blue-text-bordered">미리보기 를</span> 클릭합니다. 미리보기 대화 상자는 다음을 제공합니다.</p>
+        <ul>
+          <li>미리보기 URL</li>
+          <li>표준 및 고급 플레이어 삽입 코드</li>
+        </ul>
+        <p>미리보기 URL 및 포함 코드는 프로덕션 사이트에서 사용하면 안 됩니다.</p>
+      </section>
+    </details>
+    <details>
+      <summary>게시 &amp; 포함시키다</summary>
+      <section class="bcls-section">
+        <p><strong>게시 &amp; 포함</strong> 버튼은 플레이어를 게시하고 게시된 플레이어에 대한 플레이어 포함 코드 및 URL을 생성하는 데 사용됩니다. 플레이어를 게시하고 포함 코드를 얻으려면:</p>
+        <ol class="bcls-tasklist-restart">
+          <li>딸깍 하는 소리<span class="button-gray-border">게시 및 삽입...</span> .</li>
+          <li><span class="button-blue">변경 사항 게시를</span>클릭합니다.</li>
+        </ol>
+      </section>
+    </details>
+  </section>
+  <section id="details" class="bcls-section">
+    <h3>플레이어 세부 정보</h3>
+    <p>플레이어 정보, 스타일 지정, 재생, 광고 등 플레이어 세부 정보를 보고 설정합니다.</p>
+    <details class="details-item">
+      <summary>선수 정보</summary>
+      <section class="bcls-section">
+        <p>플레이어 정보 속성을 사용하여 플레이어 이름, 크기, 종횡비, 크기, 업데이트 모드 및 플레이어 버전을 설정합니다.</p>
+        <ul>
+          <li><strong>플레이어 ID</strong> - 플레이어 고유 식별자</li>
+          <li><strong>이름</strong> - 내부 플레이어 이름</li>
+          <li><strong>플레이어 유형</strong> - 플레이어가 단일 비디오를 표시할지 또는 재생 목록을 지원할지 결정합니다.
+            <ul>
+              <li><strong>단일 비디오</strong> - 플레이어가 단일 비디오를 표시합니다.</li>
+              <li><strong>재생 목록</strong> - 플레이어가 재생 목록을 지원합니다.
+                <aside class="bcls-aside bcls-aside--information"><strong>재생 목록을</strong> 선택하면 <strong>스타일링</strong> 및 <strong>재생</strong> 섹션에서 몇 가지 추가 속성이 활성화됩니다.</aside>
+              </li>
+            </ul>
+          </li>
+          <li><strong>짧은 설명</strong> - 플레이어에 대한 내부 설명</li>
+          <li>크기 <strong>조정</strong> - 플레이어 크기 설정
+            <ul>
+              <li><strong>반응형</strong> - 브라우저 크기를 근거로 플레이어 크기가 자동으로 조정됩니다.</li>
+              <li><strong>고정형</strong> - 플레이어 크기를 너비 및 높이 파라미터를 근거로 정합니다.</li>
+            </ul>
+          </li>
+          <li><strong>종횡비</strong> - 플레이어의 너비와 높이의 비율
+            <ul>
+              <li><strong>1:1, 3:2, 4:3, 16:9, 21:9 또는 9:16</strong> - 선택 시 플레이어 너비를 입력하면 높이가 생성됩니다.</li>
+              <li><strong>사용자 지정</strong> - 플레이어 너비와 높이 모두에 대한 값을 입력합니다.</li>
+            </ul>
+          </li>
+          <li><strong>플레이어 크기</strong> - 플레이어의 너비와 높이를 제어합니다. 종횡비 관련 </li>
+          <li><strong>업데이트 모드</strong> - 플레이어 업데이트 시기 제어
+            <ul>
+              <li><strong>자동적 인</strong>
+                <ul>
+                  <li>기본값</li>
+                  <li>플레이어는 Brightcove가 새 버전의 플레이어를 출시할 때 업데이트됩니다.</li>
+                </ul>
+              </li>
+              <li><strong>수동</strong>
+                <ul>
+                  <li>권장하지 않음 - 버그 수정 및 개선 사항을 놓칠 수 있습니다.</li>
+                  <li>플레이어를 버전에 고정</li>
+                  <li>플레이어가 자동으로 업데이트되지 않음</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>플레이어 버전</strong> - <strong>업데이트 모드</strong> 관련. 자세한 내용은<a href="/players/properties/setting-player-update-mode-and-version.html" target="_blank">플레이어 업데이트 모드 및 버전 설정<i data-feather="external-link"></i></a>문서 </li>
+          <li><strong>게시된 플레이어 버전</strong> - 이 플레이어의 현재 버전</li>
+          <li><strong>현지화</strong> - 플레이어 인터페이스 요소를 현지화하여 다양한 언어로 표시
+            <ul>
+              <li>기본값은 영어입니다.</li>
+              <li>플레이어 현지화에 사용할 언어를 포함하세요.</li>
+            </ul>
+          </li>
+          <li><span class="button-blue">저장을</span> 클릭하여 변경 사항을 저장합니다.</li>
+        </ul>
+        <p><a href="/players/properties/setting-player-information-properties.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>스타일링</summary>
+      <section class="bcls-section">
+        <p>플레이어에 대한 몇 가지 기본 스타일 지정 옵션을 구성합니다.</p>
+        <aside class="bcls-aside bcls-aside--information">재생 목록 스타일 지정 옵션을 보려면 다음을 수행하십시오.
+          <ul>
+            <li>왼쪽 탐색에서 <strong>플레이어 정보를</strong> 선택합니다.</li>
+            <li><strong>플레이어 유형</strong> 에 대해 <strong>재생 목록을</strong> 선택합니다.</li>
+            <li><span class="button-blue">저장을</span>클릭합니다.</li>
+          </ul>
+        </aside>
+        <ul>
+          <li><strong>재생 목록 유형</strong> - 재생 목록 표시 방법 설정
+            <ul>
+              <li><strong>수평 재생 목록</strong> -플레이어는 수평 재생 목록을 표시합니다</li>
+              <li><strong>수직 재생 목록</strong> -플레이어는 수직 재생 목록을 표시합니다</li>
+              <li><strong>숨겨진 재생 목록</strong> -재생 목록이 숨겨집니다</li>
+            </ul>
+            <aside class="bcls-aside bcls-aside--information">변경 내용이 플레이어에 게시되기까지 최대 5분이 소요될 수 있습니다.</aside>
+          </li>
+          <li>비디오 <strong>제목과 설명을 플레이어에 표시하려면 제목 및 설명 표시를</strong> 선택합니다.</li>
+          <li><strong>재생 버튼 모양</strong> - 재생 버튼의 모양을 제어합니다.
+            <ul>
+              <li>원</li>
+              <li>정사각형</li>
+              <li>직사각형</li>
+            </ul>
+          </li>
+          <li><strong>재생 버튼 위치</strong> - 플레이어 내에서 재생 버튼의 위치를 제어합니다.
+            <ul>
+              <li>센터</li>
+              <li>왼쪽 상단</li>
+              <li>상단 오른쪽</li>
+            </ul>
+          </li>
+          <li><strong>색상 테마</strong> - 재생/일시 정지 버튼, 경과 시간, 볼륨, 자막, 전체 화면 및 공유 아이콘을 포함하여 플레이어에서 사용되는 색상을 제어합니다. </li>
+          <li>&nbsp;<strong>이전 플레이어의 기본 테마로 되돌리기</strong> - 분홍빛이 도는 색상의 재생 버튼과 진행률 표시줄을 표시하도록 선택합니다.</li>
+          <li><strong>로고 오버레이</strong> - 플레이어 상단에 이미지 추가:
+            <ul>
+              <li><strong>켜기</strong> - 이미지 업로드 및 배치:
+                <ul>
+                  <li>하단 오른쪽</li>
+                  <li>하단 왼쪽</li>
+                  <li>상단 오른쪽</li>
+                </ul>
+              </li>
+              <li><strong>꺼짐</strong> - 이미지 없음</li>
+            </ul>
+          </li>
+          <li><span class="button-blue">저장을</span> 클릭하여 변경 사항을 저장합니다.</li>
+        </ul>
+        <p><a href="/players/appearance/styling-players.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>재생</summary>
+      <section class="bcls-section">
+        <p>플레이어의 비디오 재생 속성을 설정합니다.</p>
+        <aside class="bcls-aside bcls-aside--information">재생 목록 재생 옵션을 보려면 다음을 수행하십시오.
+          <ul>
+            <li>왼쪽 탐색에서 <strong>플레이어 정보를</strong> 선택합니다.</li>
+            <li><strong>플레이어 유형</strong> 에 대해 <strong>재생 목록을</strong> 선택합니다.</li>
+            <li><span class="button-blue">저장을</span>클릭합니다.</li>
+          </ul>
+        </aside>
+        <ul>
+          <li><strong>플레이어 로드 시 비디오 자동 재생</strong> - 플레이어가 로드되면 비디오 재생 시작
+            <ul>
+              <li>자동 재생은 브라우저에 따라 다르게 작동할 수 있습니다.</li>
+              <li>자세한 내용은<a href="https://player.support.brightcove.com/playback/autoplay-considerations.html" target="_blank">자동 재생 고려 사항<i data-feather="external-link"></i></a>문서</li>
+            </ul>
+          </li>
+          <li><strong>음소거 재생</strong> - 비디오 재생을 음소거할 수 있습니다.</li>
+          <li><strong>재생 전 비디오 미리 로드</strong> - 사용자가 재생을 시작하기 전에 플레이어가 비디오 콘텐츠를 미리 로드할지 여부를 제어합니다.
+            <ul>
+              <li><strong>비디오 미리 로드(가장 빠름)</strong> - 한 번도 본 적이 없는 경우에도 전체 비디오 파일이 다운로드됩니다. 이렇게 하면 대역폭 소비가 증가하지만 동영상이 즉시 재생됩니다.</li>
+              <li><strong>메타데이터 미리 로드</strong> - 기본값: 비디오 메타데이터만 미리 로드됩니다.</li>
+              <li><strong>미리로드하지 마십시오</strong> -동영상이 미리로드되지 않았습니다.</li>
+              <li>자세한 내용은<a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html#preload_details" target="_blank">프리로드 세부 정보<i data-feather="external-link"></i></a>부분</li>
+            </ul>
+          </li>
+          <li><strong>DRM 활성화</strong> - 플레이어가 DRM으로 보호된 콘텐츠를 재생할 수 있도록 합니다.</li>
+          <li>재생 목록 속성 - <strong>플레이어 정보</strong> 섹션에서 <strong>재생 목록</strong> 의 <strong>플레이어 유형을</strong> 선택한 경우 추가 속성:
+            <ul>
+              <li><strong>무작위 재생 순서</strong> - 동영상이 무작위 순서로 재생됩니다.</li>
+              <li><strong>선택 시 비디오 재생</strong> - 이전 비디오가 일시 중지된 경우에도 재생 목록에서 선택하면 비디오를 재생합니다.</li>
+              <li><strong>연속 재생 모드</strong> - 비디오가 자동으로 진행되고 무한 반복됩니다.</li>
+              <li><strong>비디오 카운트다운</strong> - <strong>연속 재생 모드</strong> 가 선택되면 활성화됨
+                <ul>
+                  <li><strong>다음 카드 위로 (자동 사전)</strong> - 최대 다음 카드가 플레이어에 표시됩니다</li>
+                  <li><strong>다음 최종 화면 위로 (카운트다운)</strong> - 최종 화면 카운트다운이 플레이어에 표시됩니다</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p><a href="/players/properties/configuring-player-playback-properties.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>통제 수단</summary>
+      <section class="bcls-section">
+        <p>플레이어 컨트롤 바를 구성합니다.</p>
+        <ul>
+          <li><strong>품질 선택기</strong> - 비디오가 재생되는 동안 사용자가 수동으로 다른 변환을 선택할 수 있습니다.
+            <ul>
+              <li><strong>해상도 표시(예: 720p)</strong> - 렌디션은 수평 해상도 라인으로 표시됩니다.</li>
+              <li><strong>HD/SD 표시</strong> - 플레이어는 비트 전송률 정보를 사용하여 렌디션이 HD인지 SD인지 확인합니다.</li>
+            </ul>
+          </li>
+          <li><strong>재생 속도</strong> - 사용자가 수동으로 다른 재생 속도를 선택할 수 있습니다.</li>
+          <li><strong>전체 화면</strong> - 전체 화면을 채우도록 플레이어 크기를 조정하는 전체 화면 컨트롤을 활성화합니다.</li>
+          <li><strong>세로 볼륨 슬라이더</strong> - 볼륨 슬라이더를 세로로 표시합니다.</li>
+          <li><strong>썸네일 검색</strong> - 진행률 표시줄 위에 비디오 썸네일 표시를 활성화합니다.</li>
+          <li><strong>다음 비디오(재생 목록)로 건너뛰기</strong> - 사용자가 재생 목록의 다음 비디오로 이동할 수 있도록 건너뛰기 컨트롤을 활성화합니다.</li>
+        </ul>
+        <p><a href="/players/appearance/configuring-player-controls.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>소셜</summary>
+      <section class="bcls-section">
+        <p>플레이어의 소셜 공유 속성을 구성합니다.</p>
+        <ul>
+          <li><strong>공유 활성화</strong> - 활성화되면 공유 아이콘이 나타납니다. 비디오를 공유할 수 있는 소셜 미디어 사이트 선택</li>
+          <li><strong>플레이어 임베드 코드 표시</strong> - 소셜 공유 옵션이 표시되면 사용자가 플레이어 임베드 코드를 복사할 수 있습니다.</li>
+          <li><strong>플레이어 직접 링크 표시</strong> - 소셜 공유 옵션이 표시되면 사용자가 플레이어가 포함된 페이지에 대한 링크를 복사할 수 있습니다.</li>
+        </ul>
+        <p><a href="/players/appearance/configuring-social-properties-player.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>플러그인</summary>
+      <section class="bcls-section">
+        <p>플레이어 플러그인, 스타일시트 및/또는 스크립트를 Brightcove Player에 추가합니다.</p>
+        <ul>
+          <li>플러그인 추가:
+            <ol class="bcls-tasklist-restart">
+              <li><strong>플러그인</strong> 링크를 클릭합니다.</li>
+              <li><span class="button-blue">플러그인 추가를</span> 클릭하고 플러그인 유형을 클릭합니다.
+                <ul>
+                  <li><strong>사용자 정의 플러그인</strong> - 귀하 또는 제3자가 개발한 플러그인 추가</li>
+                  <li><strong>Brightcove 플러그인</strong> - Brightcove에서 개발 및 제공하는 플러그인 추가</li>
+                </ul>
+              </li>
+              <li>플러그인 속성을 편집하려면 플러그인 이름을 클릭하십시오. 플러그인을 삭제하려면 <img class="ui-image" width="16px" src="/assets/images/admin/help/delete-icon-red.png" alt="삭제 아이콘"/></li>
+            </ol>
+          </li>
+          <li>스타일시트 추가:
+            <ol class="bcls-tasklist-restart">
+              <li>클릭<strong>스타일 시트</strong>링크.</li>
+              <li>딸깍 하는 소리<span class="button-blue">스타일 시트 추가</span> .</li>
+              <li>CSS URL을 추가합니다.</li>
+              <li><span class="button-blue">저장을</span>클릭합니다.</li>
+              <li>파일 경로를 편집하려면 파일 이름을 클릭합니다. 파일을 삭제하려면 다음을 클릭하십시오. <img class="ui-image" width="16px" src="/assets/images/admin/help/delete-icon-red.png" alt="삭제 아이콘"/></li>
+            </ol>
+          </li>
+          <li>스크립트 추가:
+            <ol class="bcls-tasklist-restart">
+              <li>클릭<strong>스크립트</strong>링크.</li>
+              <li><span class="button-blue">스크립트 추가를</span>누릅니다.</li>
+              <li>자바스크립트 URL을 추가하세요.</li>
+              <li><span class="button-blue">저장을</span>클릭합니다.</li>
+              <li>파일 경로를 편집하려면 파일 이름을 클릭합니다. 파일을 삭제하려면 다음을 클릭하십시오. <img class="ui-image" width="16px" src="/assets/images/admin/help/delete-icon-red.png" alt="삭제 아이콘"/></li>
+            </ol>
+          </li>
+        </ul>
+        <p><a href="/players/general/configuring-player-plugins.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>최종 화면</summary>
+      <section class="bcls-section">
+        <p>비디오가 끝날 때 종료 화면을 표시하도록 플레이어를 구성합니다.</p>
+        <ul>
+          <li><strong>플레이어 종료 화면</strong> - 종료 화면 옵션을 선택합니다.
+            <ul>
+              <li><strong>없음</strong> - 종료 화면이 표시되지 않습니다.</li>
+              <li><strong>사회적인</strong> -동영상이 종료되면 소셜 공유 대화 상자 표시</li>
+              <li><strong>사용자 지정</strong> - 비디오가 끝날 때 사용자 지정 종료 화면 표시
+                <ol class="bcls-tasklist-restart">
+                  <li>재생 및 공유 아이콘 위에 추가 텍스트 또는 이미지를 표시하려면 사용자 정의 HTML을 추가하십시오.</li>
+                  <li><span class="button-blue">저장을</span>클릭합니다.</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p><a href="/players/appearance/configuring-player-endscreen.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>광고하는</summary>
+      <section class="bcls-section">
+        <p>클라이언트측 및/또는 서버측 광고를 지원하도록 플레이어를 구성합니다.</p>
+        <aside class="bcls-aside bcls-aside--tip">클라이언트측 및 서버측 광고를 모두 활성화하면 광고 대체 작동이 자동으로 켜집니다. 즉, Brightcove Player가 브라우저에서 광고 차단기를 감지하면 플레이어가 서버 측 광고를 요청합니다. 그렇지 않으면 클라이언트 측 광고를 사용합니다.</aside>
+        <ul>
+          <li><strong>클라이언트 측(IMA) 활성화</strong> - 플레이어에 대한 클라이언트 측 광고 구성
+            <ul>
+              <li><strong>광고 태그</strong> - 광고 태그 URL을 입력합니다. 테스트를 위해 <strong>샘플 광고 태그 삽입을</strong> 선택합니다.</li>
+              <li><strong>광고 요청</strong> - 광고 요청 시 설정
+                <ul>
+                  <li><strong>로드 시</strong> - 플레이어가 로드되는 즉시 광고가 요청됩니다(일반적으로 DFP/VPAID에 대한 최상의 환경).</li>
+                  <li><strong>재생 중</strong> - 첫 번째 광고 요청은 재생이 시작될 때까지 지연됩니다.</li>
+                  <li><strong>온디맨드</strong> - 모든 광고 요청은 다음<code translate="No">player.ima3.adrequest()</code>메서드를 사용하여 프로그래밍 방식으로 시작됩니다.</li>
+                </ul>
+              </li>
+              <li><strong>VPAID 모드</strong> - VPAID 모드는 IMA 광고에서 VPAID 2 지원을 활성화하는 데 사용됩니다.
+                <ul>
+                  <li><strong>사용</strong> - 도메인이 다른 iframe에서 VPAID 광고 재생</li>
+                  <li><strong>안전하지 않음</strong> - 동일한 도메인의 iframe에서 VPAID 광고 재생</li>
+                  <li><strong>비활성화됨</strong> - VPAID 광고에서 오류 발생</li>
+                </ul>
+              </li>
+              <li><strong>제한 시간</strong> - 광고가 재생되기 전에 초기화될 때까지 대기하는 최대 시간(밀리초)</li>
+              <li><strong>하드 타임아웃</strong> - 느리게 로드되는 광고가 표시되지 않도록 합니다. 이 옵션을 선택 취소하면 광고가 느리게 로드되어 동영상 재생이 중단될 수 있습니다.</li>
+              <li><strong>최대 리디렉션 수</strong> - 후속 리디렉션이 거부되고 광고 로드가 중단되기 전에 최대 리디렉션 수를 설정합니다. 리디렉션 수는 대기 시간과 사용자 경험에 직접적인 영향을 미칩니다.</li>
+              <li><strong>플러그인 버전</strong> - 사용할 IMA 플러그인 버전을 선택합니다.</li>
+              <li><span class="button-blue">저장을</span>클릭합니다.</li>
+            </ul>
+          </li>
+          <li><strong>서버 측(SSAI) 활성화</strong> - 플레이어에 대한 서버 측 광고 구성
+            <aside class="bcls-aside bcls-aside--information">서버 측 광고 옵션은 귀하의 계정이 서버 측 광고에 대해 활성화된 경우에만 나타납니다.</aside>
+            <aside class="bcls-aside bcls-aside--information">정확한 광고 노출을 얻으려면 <strong>미리 로드하지 않도록</strong> <strong>재생</strong> 섹션에서 설정을 변경하십시오.</aside>
+            <ul>
+              <li><strong>구성 선택</strong> - 이 플레이어와 연결할 광고 구성을 선택합니다.</li>
+              <li><strong>광고 정보 오버레이 활성화</strong> - 플레이어가 광고 위에 오버레이를 표시할 수 있도록 합니다. 여기에는 <strong>자세히 알아보기</strong> 및 광고 카운트다운 오버레이가 포함됩니다.</li>
+              <li><span class="button-blue">저장을</span>클릭합니다.</li>
+            </ul>
+          </li>
+        </ul>
+        <p><a href="/players/general/configuring-player-advertising-using-players-module.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>콘텐츠 제한</summary>
+      <section class="bcls-section">
+        <p>재생을 특정 도메인으로 제한하고 특정 국가에서 시청을 허용/차단하도록 플레이어를 구성합니다.</p>
+        <aside class="bcls-aside bcls-aside--tip">도메인 제한은모든 계정에서 사용할 수 있습니다. 지리적 제한은 Enterprise 및 Professional 계정에서만 사용할 수 있습니다.</aside>
+        <ul>
+          <li><strong>허용된 도메인</strong> - 플레이어의 가용성을 이 도메인으로 제한하려면 하나 이상의 도메인 URL을 입력하십시오.
+            <ul>
+              <li>와일드카드 없이 완전한 URL을 사용해야 합니다.</li>
+              <li>URL은 다음과 같이 끝나지 않아야 합니다. <code translate="No">/</code> </li>
+              <li>특정 경로가 아닌 도메인만 지원됩니다. 예:
+                <ul>
+                  <li>예: <code translate="No">https://www.brightcove.com</code></li>
+                  <li>아니요: <code translate="No">https://www.brightcove.com/documentation</code></li>
+                </ul>
+              </li>
+              <li><span class="button-blue">저장을</span>클릭합니다.</li>
+            </ul>
+          </li>
+          <li><strong>지역 필터링</strong> - 플레이어를 사용할 수 있는 국가와 사용할 수 없는 국가 제어
+            <ol class="bcls-tasklist-restart">
+              <li>하나를 고르세요:
+                <ul>
+                  <li><strong>무제한</strong></li>
+                  <li><strong>다음 국가에서 보기 허용</strong></li>
+                  <li><strong>다음 국가에서 시청 금지</strong></li>
+                </ul>
+              </li>
+              <li>국가 이름을 입력합니다. 입력할 때 국가 목록이 필터링됩니다.</li>
+              <li>국가를 클릭하고 Enter 키를 눌러 추가합니다.</li>
+              <li><span class="button-blue">저장을 클릭합니다</span> .</li>
+            </ol>
+          </li>
+        </ul>
+        <p><a href="/players/properties/configuring-player-content-restrictions.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>운동</summary>
+      <section class="bcls-section">
+        <p>Brightcove Campaign은 마케팅 담당자의 리드 생성 프로세스를 지원하는 일련의 도구를 제공합니다.</p>
+        <p><a href="/campaign/index.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>JSON 편집기</summary>
+      <section class="bcls-section">
+        <p>JSON 편집기를 사용하면 고급 사용자가 이름/값 쌍을 사용하여 플레이어 구성을 관리할 수 있습니다.</p>
+        <p><a href="https://apis.support.brightcove.com/player-management/guides/player-configuration-guide.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>Google Analytics</summary>
+      <section class="bcls-section">
+        <p>Google Analytics 이벤트 추적을 사용하도록 플레이어를 구성합니다. 이렇게 하면 보고 목적으로 이벤트 및 맞춤 측정기준을 Google 애널리틱스 계정으로 보낼 수 있습니다.</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>Google 애널리틱스 사용을</strong>선택합니다.</li>
+          <li><span class="button-blue">Google 계정에 로그인을</span>클릭합니다.</li>
+          <li>자격 증명으로 Google 계정에 로그인합니다.</li>
+          <li><strong>허용을</strong>클릭하여 브라이트코브가 Google 계정에 액세스할 수 있도록 합니다.</li>
+          <li><strong>계정 선택</strong>드롭다운을 사용하여 추적 데이터를 전송할 Google 계정을 선택합니다.</li>
+          <li><strong>추적을 위한 이벤트를</strong>선택합니다.</li>
+          <li><span class="button-blue">저장</span>을 클릭합니다.</li>
+        </ol>
+        <aside class="bcls-aside bcls-aside--tip">변경 사항을 플레이어에 게시해야 합니다.</aside>
+        <p><a href="/players/general/configuring-google-analytics-event-tracking.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+    <details class="details-item">
+      <summary>Adobe Analytics</summary>
+      <section class="bcls-section">
+        <p>Adobe Analytics 이벤트 추적을 사용하도록 플레이어를 구성합니다. 이렇게 하면 보고 목적으로 추적 데이터를 Adobe Analytics 계정으로 보낼 수 있습니다.</p>
+        <ol class="bcls-tasklist-restart">
+          <li>
+            <p>Adobe Analytics 계정에 로그인하고 사용자 지정 성공 이벤트를 만듭니다.</p>
+            <p>추적되는 모든 브라이트코브 이벤트는 Adobe Analytics에서 맞춤 성공 이벤트로 만들어야 합니다.</p>
+          </li>
+          <li>
+            <p>Adobe Analytics에서 트래픽 변수를 만듭니다.</p>
+            <p>기록될 모든 Brightcove 매개변수는 트래픽 변수로 생성되어야 합니다.</p>
+          </li>
+          <li>Beacon Studio로 돌아갑니다.</li>
+          <li><strong>Adobe 애널리틱스 사용을</strong>선택합니다.</li>
+          <li>Adobe 계정 정보를 입력합니다.
+            <ul>
+              <li><strong>보고서 세트 ID</strong></li>
+              <li><strong>Marketing Cloud 조직 ID</strong></li>
+              <li><strong>추적 서버</strong></li>
+              <li><strong>CNAME 사용</strong></li>
+              <li><strong>방문자 네임스페이스</strong></li>
+            </ul>
+          </li>
+          <li>추적하려는 각 이벤트에 대해 Adobe Analytics 이벤트 ID를 해당 Brightcove 이벤트 필드에 입력하십시오.</li>
+          <li>
+            <p>캡처하려는 각 매개변수에 대해 Adobe Analytics 매개변수 번호를 해당 Brightcove 매개변수 필드에 입력합니다.</p>
+            <p>사용<code translate="No">propX</code>여기서 형식<code translate="No">X</code>에 해당<strong>재산 #</strong> Adobe Analytics에서.</p>
+            <p>예: <strong>속성</strong> #1의 값은 입니다<code translate="No">prop1</code> .</p>
+          </li>
+          <li><span class="button-blue">저장</span>을 클릭합니다.</li>
+        </ol>
+        <aside class="bcls-aside bcls-aside--tip">변경 사항을 플레이어에 게시해야 합니다.</aside>
+        <p><a href="/players/general/configuring-adobe-analytics-event-tracking.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+      </section>
+    </details>
+  </section>
+</article>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitehttps-fix.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/js/details.js"></script>
+  <!-- <script src="/assets/js/expand-dl.js"></script> -->
+
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetabs.js"></script> -->
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetoc.js"></script> -->
+  <!-- <script src="/assets/js/sites_nav.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitelocal-link-fix.js"></script> -->
+  <!-- <script src="/assets/js/feedback.js"></script> -->
+  <!-- <script src="/assets/js/local.js"></script> -->
+  <script translate="no">
+    feather.replace()
+  </script>
+</body>
+
+</html>

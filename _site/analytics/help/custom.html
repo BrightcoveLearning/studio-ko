@@ -1,0 +1,214 @@
+﻿<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>맞춤 보고서</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  <!-- <link rel="stylesheet" href="assets/css/site/styles.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="assets/css/site/tabs.css"> -->
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/help.css">
+  <!-- <link rel="stylesheet" href="/assets/css/details.css"> -->
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <!-- <script src="/assets/s-site-assets-scripts/sajari-head.js"></script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="body">
+
+<h1>맞춤 보고서</h1>
+<article class="bcls-article">
+    <section class="bcls-section">
+        <p>일정 기간 동안 선택한 데이터 및 메트릭을 표시하는 사용자 지정 분석 보고서를 만듭니다.</p>
+   
+        <details class="details-item">
+          <summary>시간대 보고</summary>
+          <section class="bcls-section">
+            <p>맞춤 보고서의 데이터는 계정의 보고 시간대를 기반으로 합니다. 시간대를 구성하려면:</p>
+            <ol class="bcls-tasklist-restart">
+              <li>Video Cloud Studio에서<strong>관리자</strong>쓰러지 다.</li>
+              <li><strong>계정 설정을</strong> 선택합니다.</li>
+              <li><strong>현재 시간대를</strong> 설정하십시오.</li>
+              <li><span class="button-blue">저장</span>을 클릭합니다.</li>
+            </ol>
+            <aside class="bcls-aside bcls-aside--information">보고 시간대를 변경하면 향후 데이터에만 영향을 미치며 변경사항은 소급 적용되지 않습니다.</aside>
+            <p><a href="/analytics/reports/creating-custom-analytics-reports.html#timezone" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>보고서 데이터</summary>
+          <section class="bcls-section">
+            <ul>
+              <li><strong>계정 포함</strong> - 현재 Video Cloud 계정의 데이터를 포함하거나 여러 계정을 선택합니다.</li>
+              <li><strong>보고서 유형</strong> 
+                <ul>
+                  <li><strong>일회성</strong> - 보고서가 즉시 한 번 실행됩니다.
+                  <li><strong>날짜 범위</strong> - 일회성 보고서의 경우 분석 데이터의 기간을 지정합니다.</li>
+                  </li>
+                  <li><strong>반복</strong> - 보고서가 매일, 매주 또는 매월 실행되도록 예약할 수 있습니다.
+                  <li><strong>빈도</strong> - 반복 보고서용
+                    <ul>
+                      <li><strong>매일</strong> -보고서는 하루 종일 포함됩니다.</li>
+                      <li><strong>매주</strong> - 보고서는 월요일부터 일요일까지로 정의된 전체 주를 다룹니다.</li>
+                      <li><strong>월간 간행물</strong> -보고서는 한 달 전체를 다룹니다.</li>
+                    </ul>
+                  </li>
+                  <aside class="bcls-aside bcls-aside--information">반복 보고서는 일반적으로 보고 기간 종료 후 3~5일 후에 분석 조정 후에 실행됩니다.</aside>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>데이터 그룹</strong> - 데이터 그룹은 보고서에 포함된 데이터 필드를 결정합니다.
+                <ul>
+                  <li>표시되는 데이터 필드는 선택한 데이터 그룹을 기반으로 합니다.</li>
+                  <li>여러 데이터 그룹을 선택할 수 있지만 일부 조합은 유효하지 않습니다.</li>
+                  <li>하나 이상의 데이터 그룹을 선택해야 합니다.</li>
+                </ul>
+              </li>
+              <li><strong>데이터 필드</strong> - 데이터 그룹을 선택하면 반환할 수 있는 데이터 필드를 선택할 수 있습니다.
+                <ul>
+                  <li>선택한 데이터 그룹에 대해 회색으로 표시된 필드를 반환할 수 없습니다.</li>
+                </ul>
+              </li>
+            
+              
+              <li><span class="button-blue">저장을</span> 클릭하여 변경 사항을 저장합니다.</li> 
+            </ul>
+            <p><a href="/analytics/reports/creating-custom-analytics-reports.html" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>보고서 필터 추가</summary>
+          <section class="bcls-section">
+            <p>필터를 추가하여 반환되는 데이터의 양을 제한할 수 있습니다.</p>
+            <ul>
+              <li>여러 필터를 사용하는 경우 AND 연산이 사용됩니다.</li>
+              <li>필터는 일치하는 데이터 그룹을 선택한 경우에만 보고서에 표시됩니다.
+                <ul>
+                  <li>예를 들어 <strong>동영상 태그를</strong> 필터링하려면 <strong>동영상</strong> 측정기준을 선택해야 합니다.</li>
+                </ul>
+              </li>
+            </ul>
+            <p>다음을 필터링할 수 있습니다.</p>
+            <ul>
+              <li><strong>비디오</strong> -계정에있는 하나 이상의 활성 동영상 ID</li>
+              <li><strong>비디오 태그</strong> -하나 이상의 비디오 태그</li>
+              <li><strong>사용자 정의 필드</strong> -계정에있는 하나 이상의 사용자 정의 필드</li>
+              <li><strong>플레이어</strong> - 하나 이상의 플레이어 ID를 쉼표로 구분하여 입력합니다.</li>
+              <li><strong>소스 유형</strong></li>
+              <li><strong>기기 종류</strong></li>
+              <li><strong>장치 OS</strong></li>
+              <li><strong>장치 제조업체</strong></li>
+              <li><strong>브라우저 유형</strong></li>
+              <li><strong>검색어</strong></li>
+              <li><strong>국가</strong></li>
+              <li><strong>대상 도메인</strong></li>
+              <li><strong>검색어</strong></li>
+            </ul>
+            <p><a href="/analytics/reports/creating-custom-analytics-reports.html#filter" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>보고서 미리보기</summary>
+          <section class="bcls-section">
+            <p>보고서 미리보기에 표시되는 데이터는 다음과 같습니다. 샘플 데이터 , Video Cloud 계정의 실제 데이터가 아닙니다.</p>
+            <ul>
+              <li><strong>미리보기 보고서</strong> 섹션에는 샘플 데이터로 채워진 선택된 데이터 열이 표시됩니다.</li>
+              <li>딸깍 하는 소리 <img class="ui-image" alt="삭제 아이콘" src="/assets/images/admin/help/delete-icon.png"/> 연결된 데이터 항목을 삭제하려면</li>
+              <li>미리보기의 정렬 순서는 다운로드한 보고서의 정렬 순서에 영향을 미치지 않습니다.</li>
+              <li>스프레드시트 애플리케이션을 사용하여 다운로드한 데이터를 정렬할 수 있습니다.</li>
+            </ul>
+           
+            <p><a href="/analytics/reports/creating-custom-analytics-reports.html#preview" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>보고서 구성 및 전달</summary>
+          <section class="bcls-section">
+            <ul>
+              <li><strong>보고서 이름</strong> - 보고서에 의미 있는 이름을 지정하여 시작합니다.</li>
+              <li><strong>형식</strong> 
+                <ul>
+                  <li><strong>CSV</strong> - 쉼표로 구분된 값 </li>
+                  <li><strong>XLSX</strong> - 마이크로소프트 엑셀</li>
+                </ul>
+              </li>
+              <li><strong>내 보고서가 준비되면 나에게 이메일 보내기</strong> - 보고서가 완료되면 자신에게 이메일 알림 받기</li>
+              <li><strong>다른 사람에게 알리기</strong> - 쉼표로 구분된 이메일 주소 입력</li>
+              <li>Brighcove 이메일에서 보고서 다운로드 링크는 90일 동안 유효합니다.</li>
+              
+              <li>일회성 보고서의 경우, 
+                <ul>
+                  <li><span class="button-blue">보고서 요청을</span> 클릭하십시오.</li>
+                  <li>완료되면 보고서가 다운로드됩니다.</li>
+                </ul>
+              </li>
+              <li>반복 보고서의 경우 
+                <ul>
+                  <li><span class="button-blue">보고서 예약을</span> 클릭합니다.</li>
+                  <li>보고서는 대기 중이며 데이터가 준비되면 실행됩니다.</li>
+                </ul>
+              </li>
+            </ul>
+            <li>예약된 보고서를 모두 보려면 왼쪽 탐색 메뉴에서 <span class="button-blue">예약된 보고서를</span> 클릭하세요.</li>
+           
+            <p><a href="/analytics/reports/creating-custom-analytics-reports.html#options" target="_blank">더 알아보기 <i data-feather="external-link"></i></a></p>
+          </section>
+        </details> 
+   
+  </section>
+</article>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitehttps-fix.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/js/details.js"></script>
+  <!-- <script src="/assets/js/expand-dl.js"></script> -->
+
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetabs.js"></script> -->
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetoc.js"></script> -->
+  <!-- <script src="/assets/js/sites_nav.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitelocal-link-fix.js"></script> -->
+  <!-- <script src="/assets/js/feedback.js"></script> -->
+  <!-- <script src="/assets/js/local.js"></script> -->
+  <script translate="no">
+    feather.replace()
+  </script>
+</body>
+
+</html>
