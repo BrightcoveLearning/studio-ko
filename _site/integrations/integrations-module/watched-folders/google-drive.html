@@ -3604,204 +3604,209 @@
       <br>
       
       
-<h1>Setting Up an Automatic Ingestion Folder on Google Drive</h1>
-<article class="bcls-article">
-  <summary>This topic explains how to set up a connection to Google Drive and select a folder that Video Cloud will watch to automatically ingest videos placed in the folder.</summary>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>Brightcove allows you to select a folder on the popular cloud storage platform Google Drive that we will
-      automatically ingest videos from.</p>
-    <p>A watched folder allows you to have users who can upload videos without having to go to Studio, and even if they don't have access to Studio. This is ideal if you need a UGC (user-generated content) solution.</p>
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1764260024649955877">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
-  </section>
-  <section class="bcls-section">
-    <h2 id="Requirements">Requirements</h2>
-    <ul>
-      <li>You must have a Google Drive account.</li>
-      <li>You must create a folder specifically for the Brightcove integration.</li>
-      <li> You must <a href="/admin/creating-custom-metadata-fields.html">create a custom metadata field</a> with these values:
+      <h1>Google Drive에서 자동 수집 폴더 설정</h1>
+      <article class="bcls-article">
+      <summary>이 주제에서는 Google Drive에 대한 연결을 설정하고 Video Cloud에서 자동으로 폴더에 있는 비디오를 수집하기 위해 감시할 폴더를 선택하는 방법을 설명합니다.</summary>
+      <section class="bcls-section">
+      <h2 id="Introduction">소개</h2>
+      <p>Brightcove를 사용하면 인기 있는 클라우드 스토리지 플랫폼인 Google Drive에서 자동으로 비디오를 수집할 폴더를 선택할 수 있습니다.</p>
+      <p>감시 폴더를 사용하면 Studio에 갈 필요 없이 비디오를 업로드할 수 있는 사용자가 있고, Studio에 액세스할 수 없는 경우에도 가능합니다. UGC(사용자 생성 콘텐츠) 솔루션이 필요한 경우 이상적입니다.</p>
+      <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1764260024649955877">&nbsp;</div>
+      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+      </section>
+  
+      <section class="bcls-section">
+        <h2 id="Requirements">요구사항</h2>
         <ul>
-          <li><strong>Display Name:</strong> Ingestion GUID</li>
-          <li><strong>Internal Name:</strong> ingestion_guid</li>
-          <li><strong>Type: Text</strong></li>
+        <li>Google Drive 계정이 있어야 합니다.</li>
+        <li>Brightcove 통합을 위해 특별히 폴더를 만들어야 합니다.</li>
+        <li> 다음 값으로 <a href="/admin/creating-custom-metadata-fields.html">사용자 지정 메타데이터 필드를 만들어야 합니다</a>.
+        <ul>
+        <li><strong>표시 이름:</strong> 수집 GUID</li>
+        <li><strong>내부 이름:</strong> 수집_guid</li>
+        <li><strong>유형: 텍스트</strong></li>
         </ul>
-        <aside class="bcls-aside bcls-aside--information language-editable"> Notes:
-          <ul>
-            <li>Do <strong>not</strong> give a value to the field - this will be done by the Brightcove system.</li>
-            <li>Do <strong>not</strong> make this a required field.</li>
-            <li>This field may already exist because of other services set up for your account. If so, you do not need to do anything more.</li>
-          </ul>
+        <aside class="bcls-aside bcls-aside--information language-editable"> 참고:
+        <ul>
+        <li>필드에 값을 제공하지 <strong>마세요</strong>. Brightcove 시스템에서 값을 제공합니다.</li>
+        <li>해야 할 일 <strong>필수 필드로 만들지 마세요</strong>.</li>
+        <li>계정에 설정된 다른 서비스로 인해 이 필드가 이미 존재할 수 있습니다. 그렇다면 더 이상 아무것도 할 필요가 없습니다.</li>
+        </ul>
         </aside>
-      </li>
-      <li>
-        You must whitelist the Brightcove app in your Google Cloud console - instructions follow in the <a href="#whitelisting_app">next section</a>.
-      </li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="whitelisting_app">Whitelist the Brightcove app</h2>
-    <p>You must whitelist the Brightcove app in your Google Cloud console (this must be done by an admin for the Google account):</p>
-    <ol>
-      <li><a href="https://supportportal.brightcove.com/">Submit a Support request</a> to get the Client ID for the Brightcove Google Cloud app.</li>
-      <li>
-        Once you have the client id from Support, in the Google Cloud Console Admin (https://admin.google.com), go to <strong>Security &gt; Access and data control &gt; API controls</strong>:
-        <aside class="bcls-aside bcls-aside--information language-editable">Note: To sign in to <a href=" https://admin.google.com"> https://admin.google.com</a>, you need an administrator account to manage Google services, such as Google Workspace or Cloud Identity. </aside>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-admin-security-api-access.webp" alt="Google Cloud Console Admin">
-          <figcaption class="bcls-caption--image">Google Cloud Console Admin</figcaption>
-        </figure>
-      </li>
-      <li>
-        Click on <strong>MANAGE THIRD PARTY APP ACCESS</strong>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-security-manage-3rd-party-access.webp" alt="Third Party App Access">
-          <figcaption class="bcls-caption--image">Third Party App Access</figcaption>
-        </figure>
-      </li>
-      <li>
-        Click on <strong>Add app</strong> and select <strong>OAuth App Name or Client ID</strong>:
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/add-app-for-access.webp" alt="Add App">
-            <figcaption class="bcls-caption--image">Add App</figcaption>
-          </figure>
-      </li>
-      <li>
-        Enter the client id given to you by Support and search for app:
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/search-for-app-by-client-id.webp" alt="Search for App by Client ID">
-            <figcaption class="bcls-caption--image">Search for App by Client ID</figcaption>
-          </figure>
-      </li>
-      <li>
-        The Brightcove app should be found - click the <strong>Select</strong> button beside it.
-      </li>
-      <li>
-        This will display a new dialog showing the client id for the Brightcove app - select it and click <strong>Select</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-client-id-for-found-app.webp" alt="Select the App">
-          <figcaption class="bcls-caption--image">Select the App</figcaption>
-        </figure>
-      </li>
-      <li>
-        A new screen opens where you can configure the app access - select <strong>Trusted: Can access all Google services</strong> and click <strong>Configure</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/configure-app-access.webp" alt="Configure App Access">
-          <figcaption class="bcls-caption--image">Configure App Access</figcaption>
-        </figure>
-      </li>
-      <li>
-        The app will now show up in the list of configured apps as Trusted but Not Google Verified. That completes the whitelisting of the app for your Google Drive account.
-      </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Setting_title">Setting Up Google Drive</h2>
-    <ol class="bcls-tasklist">
-      <li>Login to Video Cloud Studio.</li>
-      <li>In the left navigation, click <strong>Integrations</strong>.
-        <p>
-          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/integrations-module.webp" alt="integrations module"> </figure>
-        </p>
-      </li>
-      <li>Click <span class="button-blue-text">Google Drive</span>.</li>
-      <li>There are two ways to connect your Google Drive account with the integrations module:
-        <ol>
-          1. Click <span class="button-blue-text">Connect account</span>.
-          <p>
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/conect-account-1.webp" alt="Option one"> </figure>
-          </p>
-        </ol>
-        <ol>
-          2. Click <span class="button-blue">Connect account</span>.
-          <p>
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connect-account-2.webp" alt="Option two"> </figure>
-          </p>
-        </ol>
-      </li>
-      <li>A dialog opens requesting permission to access your Google account. After selecting the account you want
-        to work with, set all permissions for Brightcove to access Google Drive data. Click <strong>Continue</strong>.
-        <p>
-          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/dialog-access-window.webp" alt="dialogo access"> </figure>
-        </p>
-      </li>
-      <li>Select the folder where the videos you want to work on are located. Click <strong>Select</strong>.
-        <p>
-          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-video.webp" alt="select video"> </figure>
-        </p>
-      </li>
-      <li>A dialog confirms that the folder has been successfully ingested, and the files are now available in the <strong>Media</strong> module.
-        <p>
-          <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connected-successfully-dialog.webp" alt="connected dialog"> </figure>
-        </p>
-      </li>
-      <li>The files are now synchronized with the <strong>Media</strong> module in <strong>inactive</strong> status. For more information about the behavior of the videos in the Media module, see <a href="https://studio.support.brightcove.com/media/module/getting-started-media-module.html"> Getting
-        Started with the Media Module.</a>
-        <p>
-          <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/docs-sync.webp" alt="account sync"> </figure>
-        </p>
-        <ul>
-          <li>How videos are shown in the media module:
-            <p>
-              <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/videos-media-module.webp" alt="videos in media module"> </figure>
-            </p>
-          </li>
+        </li>
+        <li>
+        Google Cloud 콘솔에서 Brightcove 앱을 허용 목록에 추가해야 합니다. 지침은 <a href="#whitelisting_app">다음 섹션</a>에 나와 있습니다.
+        </li>
         </ul>
-      </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="notes_and_limitations">Notes and limitations</h2>
-    <ul>
-      <li> Currently, Brightcove will only ingest videos from the Google Drive folder. Everything in the folder will be ingested, so do not include any files that Brightcove should not have access to.
-        <p>If items other than video files are put in the folder, Brightcove will try to ingest them and those ingests will fail, but video objects will be created and show up in the Media module for these non-videos:</p>
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/non-video-files.png" alt="Non-Video Items Ingested">
-          <figcaption class="bcls-caption--image">Non-Video Items Ingested</figcaption>
-        </figure>
-        <p>These items can be safely deleted.</p>
-      </li>
-      <li>Videos ingested from your Google Drive folder will be added as <strong>inactive</strong>. You will need to activate them in the Media module (or via the CMS API) before they will be playable. (If you are a Beacon customer, note that the videos will also need to activated before they will be synced to your Beacon account.) See <a href="/get-started/basics/activating-and-deactivating-video.html">Activating and Deactivating Videos</a> for details on how to activate the videos.</li>
-      <li>You need to create a folder specific to Brightcove only.</li>
-      <li>For each Brightcove account, only one Google Drive folder is allowed for the connection.</li>
-      <li>A Google drive folder can only be connected to one Brightcove account. You can connect different Google Drive folders to different Brightcove accounts.</li>
-      <li> If you have (or add) a large number of videos to the folder, they will be ingested in batches of 50 until ingestion is complete. If you have one or two videos that you need to ingest immediately, you can add those using Studio or the Dynamic Ingest API, and those videos will be prioritized ahead of the ones in your folder.
-        <aside class="bcls-aside bcls-aside--information language-editable">Also note that once ingestion has begun, all videos in the folder will be ingested, even if the folder or even the account is disconnected.</aside>
-      </li>
-      <li>If you remove a video from the folder and later add it back (or add another video with the same file name), it will be ingested <strong>as a new video</strong>. You cannot replace an existing video by adding a new version to the folder.</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="disconnecting_a_folder">Disconnecting a folder</h2>
-    <p>If you wish to disconnect the folder, follow the steps below.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Go to the Integrations module and click on <strong>Google Drive</strong>.</li>
-      <li> Click on the email address of the connection creator:
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/click-on-email-for-folder-configuration.webp" alt="Click on Email Address">
-          <figcaption class="bcls-caption--image">Click on Email Address</figcaption>
-        </figure>
-      </li>
-      <li> The connected folder will appear - click on the three dots to the right of it and select <strong>Disconnect folder</strong>:
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-folder.webp" alt="Disconnect Folder">
-          <figcaption class="bcls-caption--image">Disconnect Folder</figcaption>
-        </figure>
-      </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that any user can do this, but only the user who connected the Google Drive account can reconnect the folder (or connect a different one).</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="disconnecting_an_account">Disconnecting an account</h2>
-    <p>To disconnect your Google Drive account, follow the steps below.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>First <strong><a href="#disconnecting_a_folder">disconnect the folder</a></strong> using the instructions in the previous section. Disconnecting the account will fail unless the folder is disconnected first.</li>
-      <li>Go to the Integrations module and click on <strong>Google Drive</strong>.</li>
-      <li> Click on the three dots to right of the email address of the user who connected the account and select <strong>Disconnect account</strong>:
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-account.webp" alt="Disconnect the Account">
-          <figcaption class="bcls-caption--image">Disconnect the Account</figcaption>
-        </figure>
-      </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information language-editable">Any user can reconnect the Google Drive account or a different one.</aside>
-  </section>
+        </section>
+  
+        <section class="bcls-section">
+            <h2 id="whitelisting_app">Brightcove 앱 허용 목록에 추가</h2>
+            <p>Google Cloud 콘솔에서 Brightcove 앱을 허용 목록에 추가해야 합니다(Google 계정의 관리자가 수행해야 함):</p>
+            <ol>
+            <li><a href="https://supportportal.brightcove.com/">지원 요청 제출</a>하여 Brightcove Google Cloud 앱의 클라이언트 ID를 받으세요.</li>
+            <li>
+            지원에서 클라이언트 ID를 받으면 Google Cloud Console 관리자(https://admin.google.com)에서 <strong>보안 &gt; 액세스 및 데이터 제어 &gt;로 이동합니다. API 컨트롤</strong>:
+            <aside class="bcls-aside bcls-aside--information language-editable">참고: <a href=" https://admin.google.com"> https://admin.google.com</a>에 로그인하려면 Google Workspace 또는 Cloud Identity와 같은 Google 서비스를 관리할 수 있는 관리자 계정이 필요합니다. </aside>
+            <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-admin-security-api-access.webp" alt="Google Cloud Console 관리자">
+            <figcaption class="bcls-caption--image">Google Cloud Console 관리자</figcaption>
+            </figure>
+            </li>
+            <li>
+            <strong>타사 앱 액세스 관리</strong>를 클릭합니다.
+            <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-security-manage-3rd-party-access.webp" alt="타사 앱 액세스">
+            <figcaption class="bcls-caption--image">타사 앱 액세스</figcaption>
+            </figure>
+            </li>
+            <li>
+            <strong>앱 추가</strong>를 클릭하고 <strong>OAuth 앱 이름 또는 클라이언트 ID</strong>를 선택합니다.
+            <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/add-app-for-access.webp" alt="앱 추가">
+            <figcaption class="bcls-caption--image">앱 추가</figcaption>
+            </figure>
+            </li>
+            <li>
+            지원에서 제공한 클라이언트 ID를 입력하고 앱을 검색합니다.
+            <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/search-for-app-by-client-id.webp" alt="클라이언트 ID로 앱 검색">
+            <figcaption class="bcls-caption--image">클라이언트 ID로 앱 검색</figcaption>
+            </figure>
+            </li>
+            <li>
+            Brightcove 앱을 찾을 수 있습니다. 옆에 있는 <strong>선택</strong> 버튼을 클릭하세요.
+            </li>
+            <li>
+            그러면 Brightcove 앱의 클라이언트 ID를 보여주는 새 대화 상자가 표시됩니다. 선택하고 <strong>선택</strong>을 클릭합니다.
+            <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-client-id-for-found-app.webp" alt="앱 선택">
+            <figcaption class="bcls-caption--image">앱 선택</figcaption>
+            </figure>
+            </li>
+            <li>
+            앱 액세스를 구성할 수 있는 새 화면이 열립니다. <strong>신뢰할 수 있음: 모든 Google 서비스에 액세스할 수 있음</strong>을 선택하고 <strong>구성</strong>을 클릭합니다.
+            <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/configure-app-access.webp" alt="앱 액세스 구성">
+            <figcaption class="bcls-caption--image">앱 액세스 구성</figcaption>
+            </figure>
+            </li>
+            <li>
+            이제 앱이 구성된 앱 목록에 신뢰할 수 있지만 Google에서 검증되지 않음으로 표시됩니다. 그러면 Google Drive 계정에 대한 앱 허용 목록이 완료됩니다.
+            </li>
+            </ol>
+            </section>
+
+            <section class="bcls-section">
+                <h2 id="Setting_title">Google Drive 설정</h2>
+                <ol class="bcls-tasklist">
+                <li>Video Cloud Studio에 로그인합니다.</li>
+                <li>왼쪽 탐색에서 <strong>통합</strong>을 클릭합니다.
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/integrations-module.webp" alt="통합 모듈"> </figure>
+                </p>
+                </li>
+                <li><span class="button-blue-text">Google Drive</span>를 클릭합니다.</li>
+                <li>Google Drive 계정을 통합 모듈에 연결하는 방법은 두 가지가 있습니다.
+                <ol>
+                1. <span class="button-blue-text">계정 연결</span>을 클릭합니다.
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/conect-account-1.webp" alt="옵션 1"> </figure>
+                </p>
+                </ol>
+                <ol>
+                2. <span class="button-blue">계정 연결</span>을 클릭합니다.
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connect-account-2.webp" alt="옵션 2"> </figure>
+                </p>
+                </ol>
+                </li>
+                <li>Google 계정에 액세스할 수 있는 권한을 요청하는 대화 상자가 열립니다. 작업하려는 계정을 선택한 후
+                Brightcove가 Google Drive 데이터에 액세스할 수 있도록 모든 권한을 설정합니다. <strong>계속</strong>을 클릭합니다.
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/dialog-access-window.webp" alt="dialogo access"> </figure>
+                </p>
+                </li>
+                <li>작업하려는 비디오가 있는 폴더를 선택합니다. <strong>선택</strong>을 클릭합니다.
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-video.webp" alt="select video"> </figure>
+                </p>
+                </li>
+                <li>대화 상자가 폴더가 성공적으로 수집되었으며 이제 <strong>미디어</strong> 모듈에서 파일을 사용할 수 있음을 확인합니다.
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connected-successfully-dialog.webp" alt="connected dialog"> </figure>
+                </p>
+                </li>
+                <li>파일은 이제 <strong>미디어</strong> 모듈과 <strong>비활성</strong> 상태로 동기화되었습니다. 미디어 모듈에서 비디오의 동작에 대한 자세한 내용은 <a href="https://studio.support.brightcove.com/media/module/getting-started-media-module.html"> 미디어 모듈 시작하기</a>를 참조하세요.
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/docs-sync.webp" alt="account sync"> </figure>
+                </p>
+                <ul>
+                <li>미디어 모듈에서 비디오가 표시되는 방식:
+                <p>
+                <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/videos-media-module.webp" alt="미디어 모듈의 비디오"> </figure>
+                </p>
+                </li>
+                </ul>
+                </li>
+                </ol>
+                </section>
+
+                <section class="bcls-section">
+                    <h2 id="notes_and_limitations">참고 및 제한 사항</h2>
+                    <ul>
+                    <li> 현재 Brightcove는 Google Drive 폴더에서만 비디오를 수집합니다. 폴더의 모든 것이 수집되므로 Brightcove가 액세스해서는 안 되는 파일은 포함하지 마세요.
+                    <p>비디오 파일 이외의 항목이 폴더에 저장되면 Brightcove에서 해당 항목을 수집하려고 시도하고 해당 수집은 실패하지만 비디오 객체가 생성되어 이러한 비비디오의 미디어 모듈에 표시됩니다.</p>
+                    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/non-video-files.png" alt="수집된 비비디오 항목">
+                    <figcaption class="bcls-caption--image">수집된 비비디오 항목</figcaption>
+                    </figure>
+                    <p>이러한 항목은 안전하게 삭제할 수 있습니다.</p>
+                    </li>
+                    <li>Google Drive 폴더에서 수집된 비디오는 <strong>비활성</strong>으로 추가됩니다. 재생 가능하려면 미디어 모듈(또는 CMS API를 통해)에서 활성화해야 합니다. (Beacon 고객인 경우, 비디오를 Beacon 계정과 동기화하기 전에 활성화해야 합니다.) 비디오를 활성화하는 방법에 대한 자세한 내용은 <a href="/get-started/basics/activating-and-deactivating-video.html">비디오 활성화 및 비활성화</a>를 참조하세요.</li>
+                    <li>Brightcove에만 해당하는 폴더를 만들어야 합니다.</li>
+                    <li>Brightcove 계정마다 연결에 허용되는 Google Drive 폴더는 하나만 있습니다.</li>
+                    <li>Google Drive 폴더는 Brightcove 계정 하나에만 연결할 수 있습니다. 다른 Google Drive 폴더는 다른 Brightcove 계정에 연결할 수 있습니다.</li>
+                    <li>폴더에 많은 수의 비디오가 있거나 추가한 경우, 수집이 완료될 때까지 50개씩 일괄 수집됩니다. 즉시 수집해야 할 비디오가 하나나 두 개 있는 경우 Studio나 Dynamic Ingest API를 사용하여 추가할 수 있으며, 해당 비디오는 폴더에 있는 비디오보다 우선 순위가 높습니다.
+                    <aside class="bcls-aside bcls-aside--information language-editable">또한 수집이 시작되면 폴더나 계정이 연결 해제된 경우에도 폴더의 모든 비디오가 수집됩니다.</aside>
+                    </li>
+                    <li>폴더에서 비디오를 제거한 후 나중에 다시 추가하거나(또는 같은 파일 이름으로 다른 비디오를 추가하면) <strong>새 비디오</strong>로 수집됩니다. 폴더에 새 버전을 추가하여 기존 비디오를 대체할 수 없습니다.</li>
+                    </ul>
+                    </section>
+
+                    <section class="bcls-section">
+                        <h2 id="disconnecting_a_folder">폴더 연결 해제</h2>
+                        <p>폴더 연결을 해제하려면 아래 단계를 따르세요.</p>
+                        <ol class="bcls-tasklist-restart">
+                        <li>통합 모듈로 이동하여 <strong>Google Drive</strong>를 클릭합니다.</li>
+                        <li> 연결 생성자의 이메일 주소를 클릭합니다.
+                        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/click-on-email-for-folder-configuration.webp" alt="이메일 주소 클릭">
+                        <figcaption class="bcls-caption--image">이메일 주소 클릭</figcaption>
+                        </figure>
+                        </li>
+                        <li> 연결된 폴더가 나타납니다. 세 개의 오른쪽에 있는 점을 클릭하고 <strong>폴더 연결 해제</strong>를 선택하세요:
+                        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-folder.webp" alt="폴더 연결 해제">
+                        <figcaption class="bcls-caption--image">폴더 연결 해제</figcaption>
+                        </figure>
+                        </li>
+                        </ol>
+                        <aside class="bcls-aside bcls-aside--information language-editable">모든 사용자가 이 작업을 수행할 수 있지만 Google Drive 계정을 연결한 사용자만 폴더를 다시 연결(또는 다른 계정을 연결)할 수 있습니다.</aside>
+                        </section>
+
+                        <section class="bcls-section">
+                            <h2 id="disconnecting_an_account">계정 연결 해제</h2>
+                            <p>Google Drive 계정을 연결 해제하려면 아래 단계를 따르세요.</p>
+                            <ol class="bcls-tasklist-restart">
+                            <li>먼저 이전 섹션의 지침에 따라 <strong><a href="#disconnecting_a_folder">폴더 연결을 해제</a></strong>하세요. 폴더가 먼저 연결 해제되지 않으면 계정 연결 해제가 실패합니다.</li>
+                            <li>통합 모듈로 이동하여 <strong>Google Drive</strong>를 클릭합니다.</li>
+                            <li> 계정을 연결한 사용자의 이메일 주소 오른쪽에 있는 세 개의 점을 클릭하고 <strong>계정 연결 해제</strong>를 선택합니다.
+                            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-account.webp" alt="계정 연결 해제">
+                            <figcaption class="bcls-caption--image">계정 연결 해제</figcaption>
+                            </figure>
+                            </li>
+                            </ol>
+                            <aside class="bcls-aside bcls-aside--information language-editable">모든 사용자가 Google Drive 계정이나 다른 계정을 다시 연결할 수 있습니다.</aside>
+                            </section>
+
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
